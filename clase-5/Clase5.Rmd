@@ -11,7 +11,7 @@ output: html_document
 * Lectura de datos en R (excel)
 * Breve introdución a los datos faltantes
 
-### Funciones en R
+## Funciones en R
 
 Las funciones permiten la automatización de tareas. La escritura de funciones tiene tres grandes ventajas:
 
@@ -21,15 +21,15 @@ Las funciones permiten la automatización de tareas. La escritura de funciones t
 
 Aprender a escrbir buenas funciones es un proceso que nunca termina. Siempre se encontrarán maneras novedosas de mejorar estilos a la hora de escribir funciones. Esta sección no tiene como objetivo profundizar en la escritura de funciones, si no empezar a escribir funciones útiles lo más pronto posible. 
 
-#### ¿Cuándo me conviene escribir funciones?
+### ¿Cuándo es conveniente escribir funciones?
 
-Como regla de dedo, si notas que para llevar a cabo una cierta tarea en R estás copiando y pegando un bloque de código más de dos veces, es hora de escribir una función para ello.
+Como regla general, si notamos que para llevar a cabo una cierta tarea se está copiando y pegando un bloque de código más de dos veces, es hora de escribir una función para ello. Motivaremos la discusión con el cálculo de areas y volúmenes. Si escribimos una función en R que permita llevar a cabo estas operaciones, las podremos usar en cualquier momento.
 
-Por ejemplo sabemos que para calcular el área de un círculo se puede utilizar siempre la misma fórmula. Lo único cambiante es el radio del círculo de interés. Si escribimos una función en R que permita llevar a cabo este cálculo podremos usarla en cualquier momento.
+![](./imagenes/volume.png)
 
-Como un primer ejemplo escribamos una función que permita calcular el área de un círculo.
 
-#### Escribiendo funciones en R
+
+### Escribiendo funciones en R
 
 Pasos para crear una función:
 
@@ -37,353 +37,318 @@ Pasos para crear una función:
 * Pensar en qué hace y cuántos argumentos necesita para ejecutarse
 * Traducir lo que queremos que haga a código de R dentro de un bloque asociado a una función y a los argumentos anteriores
 
-Pensando en estos pasos decidamos que nuestra función se llame area_circulo() (sin acento, es en general, mala práctica utilizar caractéres especiales en código). Luego sabemos que la función recibe un único parámetro, el radio del círculo al que se le va a calcular el área. Finalmente se debe plazmar la fórmula para el cálculo del área de un círculo en R.
+Pensando en estos pasos decidamos que nuestra función se llame area_circulo() (sin acento, es en general, mala práctica utilizar caractéres especiales en código). Luego sabemos que la función recibe un único parámetro, el radio del círculo al que se le va a calcular el área. Finalmente se debe plasmar la fórmula para el cálculo del área de un círculo en R.
+
+Como un primer ejemplo escribamos una función que permita calcular el área de un círculo.
 
 ```{r}
 
 # nombre ------------- argumentos
-area_rectangulo    <- function(base, altura)
-
-# aquí inicia el cuerpo de la función   
-{
-  
-  # operamos sobre el radio del círculo
-  area_calculada <- base * altura
-  
-  # regresamos el resultado (esto es lo que se asigna después de aplicar esta función)
-  return(area_calculada)
+area_circulo <- function (radio) {
+  if (radio < 0) # expresión condicional se ejecuta en caso de que el radio sea negativo.
+  {
+    stop("Para calcular un area es necesario un valor positivo o igual a 0.") # detiene la ejecución
+  } else # sigue la expresión condicional, este bloque se ejecutará cuando el radio sea positivo.
+  {
+    area_calculada <- pi * radio ** 2 # operamos sobre el radio del círculo
+    return(area_calculada) # regresamos el resultado (se asigna después de aplicar esta función)
+  }
   
 }
-# aquí termina el cuerpo de la función
-
-
-# probemos nuestra función para un círculo de tamaño 10 unidades
-area_resultante <- area_rectangulo(base=10, altura=7)
-
-area_resultante
 ```
 
-Dentro de una función pueden colocarse cualquiera de los elementos que se han visto en las clases pasadas. Por ejemplo se pueden incluir expresiones condicionales e incluso se pueden incluir otras funciones.
+Para probar la función la llamamos como cualquier función de una libreria, notemos que es posible asignar el resultado a una variable:
 
-Por poner un ejemplo, escribamos una función que use la función anterior, pero que con una expresión condicional cheque si el vector de entrada ya está escalado (entre 0 y 1).
+```{r}
+area_radio_cinco <- area_circulo(5)
+area_radio_cinco
+```
 
-Las expresiones condicionales tiene la forma 
 
-si { expresión } entonces
+![](./imagenes/manicule2.jpg) Ejercicio 1: Escribir una función análoga a la anterior pero para calcular el área de un rectángulo.
 
-si no entonces
+![](./imagenes/manicule2.jpg) Ejercicio 2: ¿Como podría usar la función del ejercicio 1 para calcular el area de un cuadrado?
 
-Esto es, checa si "expresión" es VERDADERA y si lo es, ejecuta el correspondiente bloque de código. Si expresión es falsa, ejecuta otro bloque de código o nada.
+### Expresiones condicionales
 
-Por ejemplo, no tiene sentido pensar en radios de círculos de magnitud negativa. Para nuestra mala fortuna la fórmula del círculo elimina el efecto de un radio negativo y calcula una misma área para un radio independiéntemente si es positivo o negativo. 
+En ocasiones es deseable ejecutar bloques de código únicamente cuando cierta condición se cumple. Existe una sentencia que nos permite hacer esto y tiene la forma siguiente:
 
-Aún así, como ejemplo, introduciremos una expresión condicional que permita "atrapar" radios negativos y que nos de un aviso de que algo anda raro cuando esto suceda.
+```{r eval=FALSE}
+if (cond) {
+  # código ejecutado en caso de que la condición sea verdadera (TRUE).
+} else {
+  # código ejecutado en caso de que la condición sea falsa (FALSE).
+}
+```
+Es posible omitir la segunda condición:
+
+```{r eval=FALSE}
+if (cond) {
+  # si la condición es verdadera se ejecutará este bloque, en caso contrario no hará nada.
+}
+```
+
+También es posible encadenar sentencias condicionales:
+
+```{r eval=FALSE}
+if (cond_1) {
+  # código ejecutado en caso de que la condición 1 sea verdadera.
+} else if (cond_2) {
+  # código ejecutado en caso de que la condición 1 sea falsa pero la condición 2 es verdadera.
+} else {
+  # cuando ambas condiciones son falsas se ejecuta este bloque.
+}
+```
+
+Regresando a nuestra función *area_circulo*, notemos que nuestra formulación tiene un problema. ¿Qué pasa cuando la función recibe números negativos? ¿Tiene sentido hablar de areas negativas? Usaremos las sentencias condicionales para arreglar este detalle:
 
 ```{r}
 
 # nombre ------------- argumentos
-area_circulo    <- function(radio)
-
-# aquí inicia el cuerpo de la función   
-{
-  # expresión condicional (si TRUE se ejecuta)
-  if (radio<0)
+area_circulo <- function (radio) {
+  if (radio < 0) # expresión condicional se ejecuta en caso de que el radio sea negativo.
   {
-    print("No se permiten radios negativos")
-  }
-  # sigue la expresión condicional (esto se ejecuta cuando FALSE)
-  else
+    stop("Para calcular un area es necesario un valor positivo o igual a 0.") # detiene la ejecución
+  } else # sigue la expresión condicional, este bloque se ejecutará cuando el radio sea positivo.
   {
-    # operamos sobre el radio del círculo
-    area_calculada <- pi * radio^2
-  
-    # regresamos el resultado (esto es lo que se asigna después de aplicar esta función)
-    return(area_calculada)
+    area_calculada <- pi * radio^2 # operamos sobre el radio del círculo
+    return(area_calculada) # regresamos el resultado (se asigna después de aplicar esta función)
   }
   
 }
-# aquí termina el cuerpo de la función
-
-
-# probemos nuestra función para un círculo de tamaño 10 unidades
-area_resultante <- area_circulo(radio=-10)
-
-area_resultante
 ```
 
-![](./imagenes/manicule2.jpg) Ejercicio: escribir una función análoga a la anterior pero para calcular el área de un rectángulo. Tampoco debe permitir parámetros negativos.
+Probemos nuestra función mejorada con ambos tipos de valores. ¿Qué pasa cuando la usamos con un número negativo?
 
-Siguiendo con lo aprendido en clases pasadas podemos crear otra función que calcule el volumen de una 
+```{r eval=FALSE}
+# probemos nuestra función en
+area_resultante <- area_circulo(-10)
+```
 
-![](./imagenes/volume.png)
 
 ```{r}
-
-volumen_regular <- function(base, altura) {
-  volumen <- base * altura
-  return(volumen)
-}
-
+# probemos nuestra función en
+area_resultante <- area_circulo(7)
 ```
 
+![](./imagenes/manicule2.jpg) Ejercicio 3: reescribir la función que calcula el área de un rectángulo para solventar el error permitir parámetros negativos.
 
-Hint: recordar que expresiones condicionales se pueden agregar con las operaciones "y" en R "&" y "o" en R "|".
 
-#### un ejemplo más complejo y una introducción más formal a data.frames y tibbles
+![](./imagenes/manicule2.jpg) Ejercicio 4: Escribir una función llamada salario que reciba un número que representara el salario de un empleado. Si el salario es mayor a 25,000 deberá regresar el texto "alto", si el salario es menor a 5000 regresará "bajo", en otro caso regresará "medio". Si recibe un salario negativo la función debera detenerse y lanzar un mensaje de error.
 
-##### data.frames
+### De regreso al tidyverse
 
-Un data.frame se utiliza para almacenar tablas de datos. Es una lista de vectores de la misma longitud. Pueden ser de distintos tipos. Se puede pensar a los data.frames como las tablas de datos que se utilizan en excel. Siempre son matrices donde se accede a las celdas a través de coordenadas de la forma (rango de números para las filas , rango de letras para las columnas). En R se accede a las celdas utilizando las funciones vistas anteriormente y de manera más básica a través de coordenadas de la forma (rango de números para las filas , rango de números para las columnas).
+![](./imagenes/ceci.jpg)
 
-Revisemos esto con base en un data.frame artificial que generaremos.
-
-La primera columna es el resultado de generar de manera aleatoria 5 números a partir de una distribución normal estándar. Pueden checar el funcionamiento de ?rnorm para entender cómo se utiliza, se permite simular a partir de normales con los parámetros de nuestro elección, y tantas veces como queramos (en nuestro caso 10 veces para cada columna).
-
-La segunda columna es simplemente un vector con valores booleanos.
-
-La tercera tiene elementos texto que representan nombres.
-
-```{r}
-
-nuestro_df <- data.frame(
-  
-  # nombre de la columna --- # vector de datos
-  normal_estandar = rnorm(5),
-  booleano = c(TRUE,TRUE,FALSE,TRUE,FALSE),
-  perritos = c("Pancho","Juana","Frijol","Fido","puppie")
-)
-
-View(nuestro_df)
-
-```
-
-Como se mencionó se puede acceder a las celdas de nuestro_df con coordenadas de la forma (rango de números para las filas , rango de números para las columnas).
-
-Observación importante, en los data.frames las columnas se pueden elegir con números o con su nombre. Dejar una de las dimensiones de vacías indica que se elige todo lo disponible en esa dimensión. 
-
-![](./imagenes/manicule2.jpg) Ejercicio: Ejecutar una por una las siguientes maneras de acceder a partes de nuestro_df y poner atención a cómo se comportan.
-
-```{r,eval=FALSE}
-
-# elegir el elemento de la primera fila y la primera columna de nuestro_df
-nuestro_df[1,1]
-
-# elegir los elementos de todas las filas y todas las columnas de nuestro_df
-nuestro_df[,]
-
-# elegir todos los elementos de la primer columna de nuestro_df
-nuestro_df[,1]
-
-# elegir todos los elementos de la primer columna de nuestro_df
-nuestro_df[[1]]
-
-# elegir todos los elementos de la primer columna de nuestro_df
-nuestro_df[,"normal_estandar"]
-
-# elegir todos los elementos de la primera y tercera columna de nuestro_df
-nuestro_df[,c("normal_estandar","perritos")]
-
-# elegir todos los elementos de la primera y tercera columna de nuestro_df
-nuestro_df[,c(1,3)]
-
-# elegir todos los elementos de la primera, segunda y tercera columna de nuestro_df
-nuestro_df[,c(1,2,3)]
-
-# elegir todos los elementos de la primera, segunda y tercera columna de nuestro_df
-nuestro_df[,1:3]
-
-# elegir todos los primeros 3 elementos de la primera, segunda y tercera columna de nuestro_df
-nuestro_df[1:3,1:3]
-
-```
-
-Una vez que se elige una columna, esta se puede tratar como un vector. Como este tiene una sola dimensión entonces acceder a las celdas se hace teniendo esto en mente.
-
-Por ejemplo, sobre el vector de nombres de perritos se puede hacer lo siguiente para obtener sólo los primeros tres nombres.
+Para conectar con lo visto en clases pasadas veremos que es posible encadenar nuestras funciones con el método de los pipes. Para ejemplificar esto regresaremos a nuestro objetivo inicial, el cálculo de volúmenes. Recordemos que los volúmenes de figuras regulares se pueden calcular multiplicando el area de la base del objeto por su altura, nuestra función queda definida de la siguiente forma:
 
 
 ```{r}
 
-# elegimos el vector de nombres de perritos y lo asignamos a un nuevo objeto
-
-vector_perritos <- nuestro_df[,"perritos"]
-
-# elegimos sólo los primeros tres nombres
-vector_perritos[1:3]
-
-```
-
-Se observa que data.frame tiene como comportamiento default convertir vectores texto en variables categóricas, en R "factores". Esto es un comportamiento hoy en día poco deseado y se evita colocando en la instrucción que genera el data.frame, esto es la función data.frame(), el parámetro stringsToFactors=FALSE. 
-
-Esto es tan poco popular que la versión más moderna de los data.frames, llamados tibbles (y que hemos venido usando), tiene esto apagado por default.
-
-##### tibbles
-
-Las "tibbles" simplemente son data.frames que han sido modificados para hacer nuestra vida, sobretodo utilizando el tidyverse, un poco más fácil.
-
-Para convertir un data.frame en un tibble basta con utilizar la función (todo esto en realidad pertenece al paquete tibble) 
-
-as_tibble()
-
-```{r}
-
-library("tidyverse")
-
-# convertimos nuestro_df a un tibble y lo asignamos al objeto nuestro_tibble
-nuestro_tibble <- as_tibble(nuestro_df)
-
-nuestro_tibble
-
-```
-
-Como se puede observar, algo default de un tibble es que a la hora de consultarlo indica la naturaleza de cada una de las columnas.
-
-Para acceder a la información de las tibbles se recomienda utilizar las funciones que se han venido enseñando hasta la fecha (en las clasese de transformación y manipulación de datos).
-
-Si se quiere acceder crudamente a las celdas de objetos tibble se puede utilizar sintaxis análoga a la vista en la subsección anterior pero usando un pipe y colocando un punto, llamado placeholder, antes del corte de nuestra tabla de datos.
-
-
-```{r}
-
-# elegir el elemento de la primera fila y la primera columna de nuestro_df
-nuestro_df[1,1]
-nuestro_tibble  %>% .[1,1]
-
-# elegir todos los elementos de la primer columna de nuestro_df
-nuestro_df[[1]]
-nuestro_tibble  %>% .[[1]]
-
-# elegir todos los elementos de la primera, segunda y tercera columna de nuestro_df
-nuestro_df[,1:3]
-nuestro_tibble  %>% .[,1:3]
-
-# elegir todos los primeros 3 elementos de la primera, segunda y tercera columna de nuestro_df
-nuestro_df[1:3,1:3]
-nuestro_tibble  %>% .[1:3,1:3]
-
-```
-
-##### Un ejemplo más complejo de uso de funciones
-
-Como un ejemplo más complejo de uso de funciones, generemos otrra tabla de datos artificial. Esto es un data.frame donde cada columna es el resultado de generar de manera aleatoria 10 números a partir de una distribución normal estándar.
-
-```{r}
-
-library("tidyverse")
-
-df <- tibble(
-  a = rnorm(10),
-  b = rnorm(10),
-  c = rnorm(10),
-  d = rnorm(10)
-)
-
-df$a <- (df$a - min(df$a, na.rm = TRUE)) / 
-  (max(df$a, na.rm = TRUE) - min(df$a, na.rm = TRUE))
-df$b <- (df$b - min(df$b, na.rm = TRUE)) / 
-  (max(df$b, na.rm = TRUE) - min(df$a, na.rm = TRUE))
-df$c <- (df$c - min(df$c, na.rm = TRUE)) / 
-  (max(df$c, na.rm = TRUE) - min(df$c, na.rm = TRUE))
-df$d <- (df$d - min(df$d, na.rm = TRUE)) / 
-  (max(df$d, na.rm = TRUE) - min(df$d, na.rm = TRUE))
-
-```
-
-¿Alguien puede decir qué proceso se llevó a cabo sobre cada una de las columnas? Más aún, existe un error en uno de los pasos de este proceso ¿alguien puede identificar cuál es?
-
-Escribir una función que lleve a cabo este proceso para después aplicarlo a cada una de estas cuatro columnas es la mejor manera de evitar errores como el anterior.
-
-Lo primero que se necesita para escribir una función es pensar en qué queremos que haga, seguido de pensar en cuántos argumentos requiere.
-
-El proceso anterior actúa sobre una columna de nuestra tabla de datos y no requiere de nada más que una de estas columnas para llevarse a cabo. 
-
-Nosotros queremos escribir una función que escale un vector de datos (por ejemplo la columna de un data frame). Esto se logra restándole el mínimo y dividiendo entre el rango del mismo a cada una de sus entradas. Llamemos a la función "estandarizar":
-
-```{r}
-
-# nombre ------------- argumentos
-estandarizar    <- function(vector)
-
-# aquí inicia el cuerpo de la función   
-{
-  
-  # operamos sobre el vector
-  vector <- (vector - min(vector, na.rm = TRUE)) / 
-  (max(vector, na.rm = TRUE) - min(vector, na.rm = TRUE))
-  
-  # regresamos el resultado (esto es lo que se asigna después de aplicar esta función)
-  return(vector)
-  
-}
-# aquí termina el cuerpo de la función
-
-
-# probemos nuestra función
-a_estandarizada <- estandarizar(df$a)
-
-a_estandarizada
-
-
-```
-
-Recordando que dentro de una función pueden colocarse cualquiera de los elementos que se han visto en las clases pasadas. Por ejemplo expresiones condicionales, vamos a incluir en la función anterior código que cheque si el vector que se va a estandarizar, lo está ya, para no realizar la operación de nuevo si no se necesita. 
-
-
-```{r}
-
-library("tidyverse")
-
-df <- tibble(
-  a = rnorm(10),
-  b = rnorm(10),
-  c = rnorm(10),
-  d = rnorm(10)
-)
-
-# nombre ------------- argumentos
-estandarizar_check    <- function(vector)
-
-# aquí inicia el cuerpo de la función   
-{
-  
-  # expresión condicional: ¿ya está entre 0 y 1 el vector de entrada?
-  
-  if (0<=min(vector) & max(vector)<=1)
-  {
-    # avísame si ya está estandarizado
-    print("Ya está estandarizado, no hice nada")
+volumen_regular <- function (area_base, altura) {
+  if (area_base < 0 || altura < 0) { # nos aseguramos que ninguno de los argumentos sea negativo.
+    stop("Tanto el area como la altura deben ser mayores o iguales a 0.")
+  } else {
+    volumen <- area_base * altura
+    return(volumen)
   }
-  else
-  {
-    # avísame si no lo está
-    print("No está estandrizado, lo estandarizo")
-    
-    # operamos sobre el vector
-    vector <- (vector - min(vector, na.rm = TRUE)) / 
-    (max(vector, na.rm = TRUE) - min(vector, na.rm = TRUE))
-  
-  }
-  
-  # regresamos el resultado (esto es lo que se asigna después de aplicar esta función)
-  return(vector)
 }
-# aquí termina el cuerpo de la función
-
-
-# probemos nuestra función
-a_estandarizada <- estandarizar_check(df$a)
-
-a_estandarizada <- estandarizar_check(a_estandarizada)
-
 
 ```
 
-Ahora que ya tengo una función que hace lo que quiero, puedo ejecutar de manera más sucinta y con menos posibilidad de errores lo que quería en un principio, que era estandarizar cada columna de nuestro data frame (df).
+Podemos calcular el volumen de un cilindro de area 3 y altura 7 de la siguiente forma:
+
+```{r}
+# definimos las dimensiones
+radio <- 3
+altura <- 7
+# calculamos área y volumen 
+area_base <- area_circulo(radio)
+volumen_cilindro <- volumen_regular(area_base, altura)
+#imprimimos el resultado
+volumen_cilindro
+```
+
+En una sola sentencia:
+
+```{r}
+volumen_cilindro <- volumen_regular(area_circulo(3), 7)
+#imprimimos el resultado
+volumen_cilindro
+```
+
+Sin embargo nada impide hacer el uso del flujo que implementan los pipes. De este modo es posible hacer que el código sea más legible al encadenar las operaciones de izquierda a derecha en vez de adentro hacia afuera:
+
+```{r}
+library(tidyverse)
+volumen_cilindro <- 3 %>%
+                      area_circulo %>%
+                      volumen_regular(7)
+volumen_cilindro
+```
+
+Nota: Recordemos que al usar los pipes, el resulado de una función en la cadena será el argumento de la siguiente. En caso de que la siguiente función requiera más de un argumento el resultado de la función se usará como el primer argumento y resto se tienen que especificar explícitamente.
+
+![](./imagenes/manicule2.jpg) Ejercicio 5: Reusa este procedimiento para calcular el volumen de un cubo de lado 6 y un paralelepípedo de dimensiones 4, 5 y 7.
+
+### Ambientes
+
+Otro componente de las funciones es el ambiente. Hasta ahora no ha sido mencionado porque hemos sido muy correctos en la definición de nuestras funciones. Cada variable dentro de la función ha sido pasada como un argumento o bien definida dentro de la función. ¿Qué pasaria si usaramos una variable que no ha sido definida dentro del cuerpo de la función ni ha sido pasada como argumento? Resulta que R es laxo con este tipo de situaciones y lo que hace es buscar si la variable ha sido definida en el contexto en el que se definió la función:
 
 ```{r}
 
+y <- 19
 
-df$a <- estandarizar_check(df$a)
+suma_incorrecta <- function(x) {
+  return(x + y)
+}
 
+suma_incorrecta(6)
+```
+
+Esto no es recomendable ya que el valor de *y* puede perderse cuando se vuelva a reiniciar RStudio. Este tipo de código puede introducir errores difíciles de rastrear.
+
+### Estilos de código y buenas prácticas
+
+Existen diversos estilos de programación, especialmente en R. Ninguno de estos estilos es correcto, pero la consistencia permite que leer y mantener el código sea más sencillo. Para nombrar variables y funciones existen varias convenciones:
 
 ```
+este_se_llama_snake_case
+losProgramadoresSuelenUsarSnakeCase
+a.mi.no.me.gusta.usar.puntos
+Some.menJust_WantTO.Watch.theWorld_BURN
+```
+Como han podido darse cuenta nosotros usamos snake case.
+
+Cuando los statements condicionales son de una sola sentencia es posible no usar las llaves { }. Sin embargo esto reduce la legilibidad del código.
+
+```{r eval=FALSE}
+# BIEN las llaves permiten identificar que el código será ejecutado cuando la condición se cumple
+muestra_mensaje <- TRUE
+if (y < 0 && muestra_mensaje) {
+  message("y es negativo")
+}
+
+# MAL no hay jerarquía visual
+muestra_mensaje <- TRUE
+if (y < 0 && muestra_mensaje)
+message("y es negativo")
+
+```
+
+Ahora que saben que se puede hacer... ¡No lo hagan!
+
+La elección de nombres es un tema importante a considerar. El código es un vínculo entre las instrucciones que una computadora puede ejecutar y la forma en la que nosotros resolvemos un problema. El lenguaje de programación nos permite expresar la serie de pasos necesarios para llegar a una solución. Por esto el lenguaje debe no solo ejecutarse correctamente sino también legible para el ojo humano. Los nombres en las variables nos pueden ayudar a esto. Revisemos los nombres de nuestras funciones de área:
+
+```{r eval=FALSE}
+# BIEN la ayuda de r aparece cuando escribo area y me permite recordar que nombre asigné a cada función
+area_circulo(4)
+area_cuadrado(3)
+area_rectangulo(5,6)
+
+# MAL
+circulo_area(4) # el elemento en comun de las funciones no está al principio, dificulta la búsqueda
+calcula_area_cuadrado(3) # nomrbe demasiado largo, el verbo sobra porque está implícito
+mi_funcion(5,6) # todo mal, ¡no tenemos idea que hace la función!
+```
+
+Repitiendo lo que se menciona al principio de la sección no hay una forma correcta de escribir código (existen muchas incorrectas), pero lo más importante es __ser consistente__.
+
+### Temas avanzados de funciones (OPCIONAL)
+
+Esta sección solo es demostrativa de las cosas que permite el lenguaje R sobre las funciones. Se mencionan para hacer más amplio el repertorio en caso de que alguien se interese en indagar más al respecto.
+
+#### Funciones recursivas
+
+## *Las funciones pueden llamarse a si mismas.*
+
+![](./imagenes/fear.png)
+
+¿Para que querríamos algo así? Las funciones recursivas permiten calcular problemas cuya repesentación se puede formular en terminos de si mismas. El ejemplo por exelencia es la operación factorial:
+
+$$
+n!=n\times(n-1)\times(n-2)\times\ldots\times2\times1
+$$
+
+Notemos que:
+
+$$
+n!=n\times(n-1)!
+$$
+Y a su vez es:
+
+$$
+n!=n\times(n-1)\times(n-2)!
+$$
+
+Y sí sucesivamente hasta que llegamos hasta el $1$.
+
+Por lo que podemos definir una función que calcule dicha operación haciendo uso de la misma definición:
+
+```{r}
+factorial <- function (n) {
+  if(n == 1) {
+    return(1) # caso base, no hace falta calcular más
+  } else{
+    return(n * factorial(n - 1)) # multiplico el número actual y calculo el factorial del número menos una unidad
+  }
+}
+
+factorial(5)
+```
+
+#### Funciones de orden alto
+
+## *Las funciones pueden regresar funciones*:
+
+![](./imagenes/mind.png)
+
+R es un lenguaje en el que las funciones son objetos que se pueden operar como los números, las cadenas de texto, los data frames.
+
+Con lo que hemos aprendido es posible crear una funcion que permita calcular el cuadrado de un número con ayuda del operador **:
+
+```{r}
+cuadrado <- function (x) {
+  return(x ** 2)
+}
+
+cuadrado(4)
+```
+
+De la misma forma podemos obtener una función que calcule el cubo de un número:
+
+```{r}
+cubo <- function (x) {
+  return(x ** 3)
+}
+
+cubo(4)
+```
+
+Pero la estructura es básicamente la misma. ¿Es indispensable repetir el mismo código cuando el patrón es tan claro? Resulta que R nos permite hacer plantillas para este tipo de casos:
+
+```{r}
+fabrica_potencia <- function (n) {
+  function(x) {
+    return(x ** n)
+  }
+}
+```
+
+Probemos el resultado:
+
+```{r}
+cuadrado <- fabrica_potencia(2)
+cuadrado(4)
+```
+
+```{r}
+cubo <- fabrica_potencia(3)
+cubo(4)
+```
+
+```{r}
+potencia_doce <- fabrica_potencia(12)
+potencia_doce(4)
+```
+
