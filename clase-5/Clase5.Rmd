@@ -179,7 +179,7 @@ volumen_cilindro
 
 Sin embargo nada impide hacer el uso del flujo que implementan los pipes. De este modo es posible hacer que el código sea más legible al encadenar las operaciones de izquierda a derecha en vez de adentro hacia afuera:
 
-```{r}
+```{r message=FALSE}
 library(tidyverse)
 volumen_cilindro <- 3 %>%
                       area_circulo %>%
