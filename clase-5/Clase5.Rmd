@@ -2,7 +2,9 @@
 title: "Clase 5"
 author: "Amaury Gutiérrez"
 date: "4/15/2018"
-output: html_document
+output:
+  html_document: default
+  pdf_document: default
 ---
 
 ## ¿Qué aprendimos la clase pasada?
@@ -131,7 +133,7 @@ area_resultante <- area_circulo(-10)
 area_resultante <- area_circulo(7)
 ```
 
-![](./imagenes/manicule2.jpg) Ejercicio 3: reescribir la función que calcula el área de un rectángulo para solventar el error permitir parámetros negativos.
+![](./imagenes/manicule2.jpg) Ejercicio 3: Reescribir la función que calcula el área de un rectángulo para solventar el error permitir parámetros negativos.
 
 
 ![](./imagenes/manicule2.jpg) Ejercicio 4: Escribir una función llamada salario que reciba un número que representara el salario de un empleado. Si el salario es mayor a 25,000 deberá regresar el texto "alto", si el salario es menor a 5000 regresará "bajo", en otro caso regresará "medio". Si recibe un salario negativo la función debera detenerse y lanzar un mensaje de error.
@@ -187,7 +189,7 @@ volumen_cilindro <- 3 %>%
 volumen_cilindro
 ```
 
-Nota: Recordemos que al usar los pipes, el resulado de una función en la cadena será el argumento de la siguiente. En caso de que la siguiente función requiera más de un argumento el resultado de la función se usará como el primer argumento y resto se tienen que especificar explícitamente.
+Nota: Recordemos que al usar los pipes, el resultado de una función en la cadena será el argumento de la siguiente. En caso de que la siguiente función requiera más de un argumento el resultado de la función se usará como el primer argumento y resto se tienen que especificar explícitamente.
 
 ![](./imagenes/manicule2.jpg) Ejercicio 5: Reusa este procedimiento para calcular el volumen de un cubo de lado 6 y un paralelepípedo de dimensiones 4, 5 y 7.
 
@@ -214,7 +216,7 @@ Existen diversos estilos de programación, especialmente en R. Ninguno de estos 
 
 ```
 este_se_llama_snake_case
-losProgramadoresSuelenUsarSnakeCase
+losProgramadoresSuelenUsarCamelCase
 a.mi.no.me.gusta.usar.puntos
 Some.menJust_WantTO.Watch.theWorld_BURN
 ```
@@ -264,7 +266,7 @@ Esta sección solo es demostrativa de las cosas que permite el lenguaje R sobre 
 
 ![](./imagenes/fear.png)
 
-¿Para que querríamos algo así? Las funciones recursivas permiten calcular problemas cuya repesentación se puede formular en terminos de si mismas. El ejemplo por exelencia es la operación factorial:
+¿Para que querríamos algo así? Las funciones recursivas permiten calcular problemas cuya repesentación se puede formular en terminos de si mismas. El ejemplo por excelencia es la operación factorial:
 
 $$
 n!=n\times(n-1)\times(n-2)\times\ldots\times2\times1
