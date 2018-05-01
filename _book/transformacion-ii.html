@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>A Minimal Book Example</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook.">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="A Minimal Book Example" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="A Minimal Book Example" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Yihui Xie">
+
+
+<meta name="date" content="2018-05-01">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="transformacion-i.html">
+<link rel="next" href="funciones.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
+<li class="chapter" data-level="2" data-path="transformacion-i.html"><a href="transformacion-i.html"><i class="fa fa-check"></i><b>2</b> Transformación-I</a><ul>
+<li class="chapter" data-level="2.1" data-path="transformacion-i.html"><a href="transformacion-i.html#que-aprendimos-la-clase-pasada"><i class="fa fa-check"></i><b>2.1</b> ¿Qué aprendimos la clase pasada?</a></li>
+<li class="chapter" data-level="2.2" data-path="transformacion-i.html"><a href="transformacion-i.html#esta-clase"><i class="fa fa-check"></i><b>2.2</b> Esta clase:</a></li>
+<li class="chapter" data-level="2.3" data-path="transformacion-i.html"><a href="transformacion-i.html#esta-seccion-del-curso-se-compone-por-dos-clases.-en-la-siguiente"><i class="fa fa-check"></i><b>2.3</b> Esta sección del curso se compone por dos clases. En la siguiente:</a></li>
+<li class="chapter" data-level="2.4" data-path="transformacion-i.html"><a href="transformacion-i.html#conceptos-preliminares"><i class="fa fa-check"></i><b>2.4</b> Conceptos preliminares:</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="transformacion-i.html"><a href="transformacion-i.html#r-como-una-calculadora"><i class="fa fa-check"></i><b>2.4.1</b> R como una calculadora</a></li>
+<li class="chapter" data-level="2.4.2" data-path="transformacion-i.html"><a href="transformacion-i.html#asignacion-de-objetos-en-r"><i class="fa fa-check"></i><b>2.4.2</b> Asignación de objetos en R</a></li>
+<li class="chapter" data-level="2.4.3" data-path="transformacion-i.html"><a href="transformacion-i.html#funciones-en-r"><i class="fa fa-check"></i><b>2.4.3</b> Funciones en R</a></li>
+<li class="chapter" data-level="2.4.4" data-path="transformacion-i.html"><a href="transformacion-i.html#scripts-en-r"><i class="fa fa-check"></i><b>2.4.4</b> Scripts en R</a></li>
+<li class="chapter" data-level="2.4.5" data-path="transformacion-i.html"><a href="transformacion-i.html#diagnosticos-de-rstudio"><i class="fa fa-check"></i><b>2.4.5</b> Diagnósticos de RStudio</a></li>
+<li class="chapter" data-level="2.4.6" data-path="transformacion-i.html"><a href="transformacion-i.html#operadores-relacionales"><i class="fa fa-check"></i><b>2.4.6</b> Operadores relacionales</a></li>
+<li class="chapter" data-level="2.4.7" data-path="transformacion-i.html"><a href="transformacion-i.html#operadores-booleanos"><i class="fa fa-check"></i><b>2.4.7</b> Operadores booleanos</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="transformacion-i.html"><a href="transformacion-i.html#el-paquete-dplyr-instalado-con-el-tidyverse"><i class="fa fa-check"></i><b>2.5</b> El paquete dplyr (instalado con el tidyverse)</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="transformacion-i.html"><a href="transformacion-i.html#seleccionar-campos-de-un-data-frame-selectdf-columnas_a_seleccionar"><i class="fa fa-check"></i><b>2.5.1</b> 1. Seleccionar campos de un data frame: select(df, columnas_a_seleccionar)</a></li>
+<li class="chapter" data-level="2.5.2" data-path="transformacion-i.html"><a href="transformacion-i.html#filtrar-registros-de-un-data-frame-que-cumplen-cierta-condicion-filterdf-condiciones"><i class="fa fa-check"></i><b>2.5.2</b> 2. Filtrar registros de un data frame que cumplen cierta condición: filter(df, condiciones)</a></li>
+<li class="chapter" data-level="2.5.3" data-path="transformacion-i.html"><a href="transformacion-i.html#ordenar-registros-de-un-data-frame-por-los-valores-en-una-o-mas-variables-arrangedf-variables_de_ordenamiento"><i class="fa fa-check"></i><b>2.5.3</b> 3. Ordenar registros de un data frame por los valores en una o más variables: arrange(df, variables_de_ordenamiento)</a></li>
+<li class="chapter" data-level="2.5.4" data-path="transformacion-i.html"><a href="transformacion-i.html#crear-nuevas-variables-mutatedf-formulas"><i class="fa fa-check"></i><b>2.5.4</b> 4. Crear nuevas variables: mutate(df, formulas)</a></li>
+<li class="chapter" data-level="2.5.5" data-path="transformacion-i.html"><a href="transformacion-i.html#agrupar-por-ciertas-variables-group_bydata_frame-variables-y-crear-resumenes-por-grupo-summarisedata_frame-formulas"><i class="fa fa-check"></i><b>2.5.5</b> 5. Agrupar por ciertas variables: group_by(data_frame, variables) y crear resúmenes por grupo: summarise(data_frame, formulas)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="transformacion-ii.html"><a href="transformacion-ii.html"><i class="fa fa-check"></i><b>3</b> Transformación-II</a><ul>
+<li class="chapter" data-level="3.1" data-path="transformacion-ii.html"><a href="transformacion-ii.html#que-aprendimos-la-clase-pasada-1"><i class="fa fa-check"></i><b>3.1</b> ¿Qué aprendimos la clase pasada?</a></li>
+<li class="chapter" data-level="3.2" data-path="transformacion-ii.html"><a href="transformacion-ii.html#el-operador-pipeline"><i class="fa fa-check"></i><b>3.2</b> El operador pipeline %&gt;%</a></li>
+<li class="chapter" data-level="3.3" data-path="transformacion-ii.html"><a href="transformacion-ii.html#miscelanea-de-funcionalidades-avanzadas-de-transformacion-de-datos"><i class="fa fa-check"></i><b>3.3</b> Miscelánea de funcionalidades avanzadas de transformación de datos</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="transformacion-ii.html"><a href="transformacion-ii.html#joins-inner_joindf1-df2-columnas_a_seleccionar"><i class="fa fa-check"></i><b>3.3.1</b> 1. Joins: inner_join(df1, df2, columnas_a_seleccionar)</a></li>
+<li class="chapter" data-level="3.3.2" data-path="transformacion-ii.html"><a href="transformacion-ii.html#un-intermedio.-lectura-de-datos-en-r"><i class="fa fa-check"></i><b>3.3.2</b> Un intermedio. Lectura de datos en R</a></li>
+<li class="chapter" data-level="3.3.3" data-path="transformacion-ii.html"><a href="transformacion-ii.html#usar-spread-para-transformar-registros-de-un-data-frame-en-campos."><i class="fa fa-check"></i><b>3.3.3</b> 2. Usar spread para transformar registros de un data frame en campos.</a></li>
+<li class="chapter" data-level="3.3.4" data-path="transformacion-ii.html"><a href="transformacion-ii.html#usar-gather-para-transformar-campos-de-un-data-frame-en-registros"><i class="fa fa-check"></i><b>3.3.4</b> 3. Usar gather para transformar campos de un data frame en registros</a></li>
+<li class="chapter" data-level="3.3.5" data-path="transformacion-ii.html"><a href="transformacion-ii.html#separar-una-columna-en-dos-o-mas-separatedf-col-columna-into-cnueva_variable_1-nueva_variable_2-etc"><i class="fa fa-check"></i><b>3.3.5</b> 4. Separar una columna en dos o más: separate(df, col = columna, into = c(nueva_variable_1, nueva_variable_2, etc)</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="transformacion-ii.html"><a href="transformacion-ii.html#datos-faltantes"><i class="fa fa-check"></i><b>3.4</b> Datos faltantes</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="funciones.html"><a href="funciones.html"><i class="fa fa-check"></i><b>4</b> Funciones</a><ul>
+<li class="chapter" data-level="4.1" data-path="funciones.html"><a href="funciones.html#que-aprendimos-la-clase-pasada-2"><i class="fa fa-check"></i><b>4.1</b> ¿Qué aprendimos la clase pasada?</a></li>
+<li class="chapter" data-level="4.2" data-path="funciones.html"><a href="funciones.html#funciones-en-r-1"><i class="fa fa-check"></i><b>4.2</b> Funciones en R</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="funciones.html"><a href="funciones.html#cuando-es-conveniente-escribir-funciones"><i class="fa fa-check"></i><b>4.2.1</b> ¿Cuándo es conveniente escribir funciones?</a></li>
+<li class="chapter" data-level="4.2.2" data-path="funciones.html"><a href="funciones.html#escribiendo-funciones-en-r"><i class="fa fa-check"></i><b>4.2.2</b> Escribiendo funciones en R</a></li>
+<li class="chapter" data-level="4.2.3" data-path="funciones.html"><a href="funciones.html#expresiones-condicionales"><i class="fa fa-check"></i><b>4.2.3</b> Expresiones condicionales</a></li>
+<li class="chapter" data-level="4.2.4" data-path="funciones.html"><a href="funciones.html#de-regreso-al-tidyverse"><i class="fa fa-check"></i><b>4.2.4</b> De regreso al tidyverse</a></li>
+<li class="chapter" data-level="4.2.5" data-path="funciones.html"><a href="funciones.html#ambientes"><i class="fa fa-check"></i><b>4.2.5</b> Ambientes</a></li>
+<li class="chapter" data-level="4.2.6" data-path="funciones.html"><a href="funciones.html#estilos-de-codigo-y-buenas-practicas"><i class="fa fa-check"></i><b>4.2.6</b> Estilos de código y buenas prácticas</a></li>
+<li class="chapter" data-level="4.2.7" data-path="funciones.html"><a href="funciones.html#temas-avanzados-de-funciones-opcional"><i class="fa fa-check"></i><b>4.2.7</b> Temas avanzados de funciones (OPCIONAL)</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="funciones.html"><a href="funciones.html#las-funciones-pueden-llamarse-a-si-mismas."><i class="fa fa-check"></i><b>4.3</b> <em>Las funciones pueden llamarse a si mismas.</em></a></li>
+<li class="chapter" data-level="4.4" data-path="funciones.html"><a href="funciones.html#las-funciones-pueden-regresar-funciones"><i class="fa fa-check"></i><b>4.4</b> <em>Las funciones pueden regresar funciones</em>:</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="vectores.html"><a href="vectores.html"><i class="fa fa-check"></i><b>5</b> Vectores</a><ul>
+<li class="chapter" data-level="5.1" data-path="vectores.html"><a href="vectores.html#que-aprendimos-la-clase-pasada-3"><i class="fa fa-check"></i><b>5.1</b> ¿Qué aprendimos la clase pasada?</a></li>
+<li class="chapter" data-level="5.2" data-path="vectores.html"><a href="vectores.html#vectores-listas-y-arreglos"><i class="fa fa-check"></i><b>5.2</b> Vectores, listas y arreglos</a></li>
+<li class="chapter" data-level="5.3" data-path="vectores.html"><a href="vectores.html#iteracion-en-r"><i class="fa fa-check"></i><b>5.3</b> Iteración en R</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="vectores.html"><a href="vectores.html#iteracion-imperativa"><i class="fa fa-check"></i><b>5.3.1</b> Iteración imperativa</a></li>
+<li class="chapter" data-level="5.3.2" data-path="vectores.html"><a href="vectores.html#iteracion-funcional"><i class="fa fa-check"></i><b>5.3.2</b> Iteración funcional</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="modelado.html"><a href="modelado.html"><i class="fa fa-check"></i><b>6</b> Modelado</a><ul>
+<li class="chapter" data-level="6.1" data-path="modelado.html"><a href="modelado.html#que-aprendimos-la-clase-pasada-4"><i class="fa fa-check"></i><b>6.1</b> ¿Qué aprendimos la clase pasada?</a></li>
+<li class="chapter" data-level="6.2" data-path="modelado.html"><a href="modelado.html#modelos"><i class="fa fa-check"></i><b>6.2</b> Modelos</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="modelado.html"><a href="modelado.html#generacion-de-hipotesis-vs-confirmacion-de-hipotesis"><i class="fa fa-check"></i><b>6.2.1</b> Generación de hipótesis vs confirmación de hipótesis</a></li>
+<li class="chapter" data-level="6.2.2" data-path="modelado.html"><a href="modelado.html#especificacion-de-modelos"><i class="fa fa-check"></i><b>6.2.2</b> Especificación de modelos</a></li>
+<li class="chapter" data-level="6.2.3" data-path="modelado.html"><a href="modelado.html#un-primer-modelo-simple"><i class="fa fa-check"></i><b>6.2.3</b> Un primer modelo simple</a></li>
+<li class="chapter" data-level="6.2.4" data-path="modelado.html"><a href="modelado.html#un-modelo-sobre-datos-mas-interesantes"><i class="fa fa-check"></i><b>6.2.4</b> Un modelo sobre datos más interesantes</a></li>
+<li class="chapter" data-level="6.2.5" data-path="modelado.html"><a href="modelado.html#visualizacion-de-predicciones"><i class="fa fa-check"></i><b>6.2.5</b> visualización de predicciones</a></li>
+<li class="chapter" data-level="6.2.6" data-path="modelado.html"><a href="modelado.html#visualizacion-de-residuales"><i class="fa fa-check"></i><b>6.2.6</b> visualización de residuales</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Minimal Book Example</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="transformacion-ii" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Transformación-II</h1>
+<div id="que-aprendimos-la-clase-pasada-1" class="section level2">
+<h2><span class="header-section-number">3.1</span> ¿Qué aprendimos la clase pasada?</h2>
+<ul>
+<li>Utilizamos R para saber si comparaciones entre dos cantidades son ciertas o no (5 &gt; 6 #FALSE, 6 == 6 #TRUE)</li>
+<li>Aprendimos el uso de los operadores y (&amp;), o (|) y no (!): (5 &gt; 6) | (3 &lt; 4) #TRUE</li>
+<li>Aprendimos las funciones básicas para manipular <strong>tablas de datos</strong> (paquete <strong>dplyr</strong> contenido en el tidyverse):</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Funcionalidad</th>
+<th align="left">Función</th>
+<th align="left">Interpretación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Seleccionar campos</td>
+<td align="left">select(diamonds, carat, cut)</td>
+<td align="left">Del data frame diamonds <strong>seleccióname los campos</strong> carat y cut</td>
+</tr>
+<tr class="even">
+<td align="left">Seleccionar registros de acuerdo a un criterio</td>
+<td align="left">filter(diamonds, cut == “Ideal” | x &gt; 4)</td>
+<td align="left">Del data frame diamonds <strong>seleccióname los registros (filter)</strong> que cumplen “cut ==”Ideal&quot; o (|) “x &gt; 4”</td>
+</tr>
+<tr class="odd">
+<td align="left">Ordenar registros de acuerdo a uno o más campos</td>
+<td align="left">arrange(diamonds, carat, depth)</td>
+<td align="left">Del data frame diamonds <strong>ordéname los registros</strong> primero por carat y luego, los que tengan valores iguales, por depth</td>
+</tr>
+<tr class="even">
+<td align="left">Crear nuevas variables</td>
+<td align="left">mutate(diamonds, dollars_per_carat = price / carat)</td>
+<td align="left">Usando el data frame diamonds <strong>créame la nueva columna</strong> dollars_per_carat definida como price / carat</td>
+</tr>
+<tr class="odd">
+<td align="left">Preparar un data frame para calcular resúmenes por grupo</td>
+<td align="left">diamonds_agrupado &lt;- group_by(diamonds, cut)</td>
+<td align="left">Usando el data frame diamonds, <strong>prepárame los datos</strong> para calcular resúmenes por valor de la columna cut, y <strong>asigna</strong> el resultado a la variable diamonds_agrupado</td>
+</tr>
+<tr class="even">
+<td align="left">Calcular resúmenes por grupo</td>
+<td align="left">summarise(diamonds_agrupado, promedio_depth = mean(depth))</td>
+<td align="left">Usando diamonds agrupado, <strong>calcúlame el resumen</strong> llamado promedio depth definido como la media de depth</td>
+</tr>
+</tbody>
+</table>
+<p>En esta clase aprenderemos a:</p>
+<ul>
+<li>Utilizar el operador <strong>pipeline</strong> para simplificar la aplicación de funciones de transformación de datos, una tras otra (recordar la tarea, ejercicio 3).</li>
+<li>Miscelánea de funcionalidades avanzadas de transformación de datos:
+<ul>
+<li><strong>joins</strong> (uniones de dos o más tablas).</li>
+<li>El paquete <strong>tidyr</strong> para transformar la <strong>estructura</strong> de los datos en una tabla.</li>
+</ul></li>
+<li>Un poco acerca de datos faltantes.</li>
+<li>Leer datos en R.</li>
+</ul>
+</div>
+<div id="el-operador-pipeline" class="section level2">
+<h2><span class="header-section-number">3.2</span> El operador pipeline %&gt;%</h2>
+<p>El ejercicio 3 de la tarea nos introduce a lo tedioso que es aplicar varias funciones para transformar datos una tras otra sin ayuda. Aquí es cuando el operador pipeline entra en acción:</p>
+<p>Nos permite encadenar operaciones de manera sencilla, comenzando por el data frame original (diamonds), luego aplicar una transformación, al resultado aplicar otra y así sucesivamente.</p>
+<p>Retomemos el ejemplo de la tarea 3. En lugar de:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">diamonds_dollars_per_carat &lt;-<span class="st"> </span><span class="kw">mutate</span>(diamonds, <span class="dt">dollars_per_carat =</span> price <span class="op">/</span><span class="st"> </span>carat)
+diamonds_dollars_per_carat</code></pre></div>
+<pre><code>## # A tibble: 53,940 x 11
+##    carat       cut color clarity depth table price     x     y     z
+##    &lt;dbl&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;ord&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1  0.23     Ideal     E     SI2  61.5    55   326  3.95  3.98  2.43
+##  2  0.21   Premium     E     SI1  59.8    61   326  3.89  3.84  2.31
+##  3  0.23      Good     E     VS1  56.9    65   327  4.05  4.07  2.31
+##  4  0.29   Premium     I     VS2  62.4    58   334  4.20  4.23  2.63
+##  5  0.31      Good     J     SI2  63.3    58   335  4.34  4.35  2.75
+##  6  0.24 Very Good     J    VVS2  62.8    57   336  3.94  3.96  2.48
+##  7  0.24 Very Good     I    VVS1  62.3    57   336  3.95  3.98  2.47
+##  8  0.26 Very Good     H     SI1  61.9    55   337  4.07  4.11  2.53
+##  9  0.22      Fair     E     VS2  65.1    61   337  3.87  3.78  2.49
+## 10  0.23 Very Good     H     VS1  59.4    61   338  4.00  4.05  2.39
+## # ... with 53,930 more rows, and 1 more variables: dollars_per_carat &lt;dbl&gt;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">diamonds_dollars_per_carat_filtrado &lt;-<span class="st"> </span><span class="kw">filter</span>(diamonds_dollars_per_carat, dollars_per_carat <span class="op">&lt;</span><span class="st"> </span><span class="dv">4000</span>)
+diamonds_dollars_per_carat_filtrado</code></pre></div>
+<pre><code>## # A tibble: 32,083 x 11
+##    carat       cut color clarity depth table price     x     y     z
+##    &lt;dbl&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;ord&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1  0.23     Ideal     E     SI2  61.5    55   326  3.95  3.98  2.43
+##  2  0.21   Premium     E     SI1  59.8    61   326  3.89  3.84  2.31
+##  3  0.23      Good     E     VS1  56.9    65   327  4.05  4.07  2.31
+##  4  0.29   Premium     I     VS2  62.4    58   334  4.20  4.23  2.63
+##  5  0.31      Good     J     SI2  63.3    58   335  4.34  4.35  2.75
+##  6  0.24 Very Good     J    VVS2  62.8    57   336  3.94  3.96  2.48
+##  7  0.24 Very Good     I    VVS1  62.3    57   336  3.95  3.98  2.47
+##  8  0.26 Very Good     H     SI1  61.9    55   337  4.07  4.11  2.53
+##  9  0.22      Fair     E     VS2  65.1    61   337  3.87  3.78  2.49
+## 10  0.23 Very Good     H     VS1  59.4    61   338  4.00  4.05  2.39
+## # ... with 32,073 more rows, and 1 more variables: dollars_per_carat &lt;dbl&gt;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">diamonds_dollars_per_carat_filtrado_ordenado &lt;-<span class="st"> </span><span class="kw">arrange</span>(diamonds_dollars_per_carat_filtrado, <span class="kw">desc</span>(dollars_per_carat))
+diamonds_dollars_per_carat_filtrado_ordenado</code></pre></div>
+<pre><code>## # A tibble: 32,083 x 11
+##    carat       cut color clarity depth table price     x     y     z
+##    &lt;dbl&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;ord&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1  1.05 Very Good     J     SI1  62.5    58  4199  6.47  6.52  4.06
+##  2  0.92 Very Good     E     SI2  63.2    54  3679  6.29  6.25  3.96
+##  3  0.92   Premium     E     SI2  61.8    59  3679  6.19  6.11  3.80
+##  4  0.91   Premium     E     SI2  61.1    59  3639  6.24  6.20  3.80
+##  5  0.91   Premium     E     SI2  62.8    61  3639  6.09  6.07  3.82
+##  6  0.90   Premium     E     SI2  62.6    60  3599  6.18  6.09  3.84
+##  7  0.90   Premium     E     SI2  62.2    60  3599  6.19  6.15  3.84
+##  8  0.90     Ideal     E     SI2  62.0    55  3599  6.23  6.15  3.84
+##  9  1.51   Premium     H      I1  61.9    58  6038  7.39  7.34  4.56
+## 10  0.74      Fair     G    VVS2  65.2    58  2959  5.70  5.60  3.69
+## # ... with 32,073 more rows, and 1 more variables: dollars_per_carat &lt;dbl&gt;</code></pre>
+<p>El ejemplo de la tarea 3 queda:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">diamonds <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Comenzando con el df diamonds:</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">dollars_per_carat =</span> price <span class="op">/</span><span class="st"> </span>carat) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Calcúlame la variable dollars per carat ... LUEGO</span>
+<span class="st">  </span><span class="kw">filter</span>(dollars_per_carat <span class="op">&lt;</span><span class="st"> </span><span class="dv">4000</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Seleccióname los registros en que la variable dollars_per_carat &lt; 4000 LUEGO</span>
+<span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(dollars_per_carat)) <span class="co"># Ordéname en orden descendente por la variable dollars per carat</span></code></pre></div>
+<pre><code>## # A tibble: 32,083 x 11
+##    carat       cut color clarity depth table price     x     y     z
+##    &lt;dbl&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;ord&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1  1.05 Very Good     J     SI1  62.5    58  4199  6.47  6.52  4.06
+##  2  0.92 Very Good     E     SI2  63.2    54  3679  6.29  6.25  3.96
+##  3  0.92   Premium     E     SI2  61.8    59  3679  6.19  6.11  3.80
+##  4  0.91   Premium     E     SI2  61.1    59  3639  6.24  6.20  3.80
+##  5  0.91   Premium     E     SI2  62.8    61  3639  6.09  6.07  3.82
+##  6  0.90   Premium     E     SI2  62.6    60  3599  6.18  6.09  3.84
+##  7  0.90   Premium     E     SI2  62.2    60  3599  6.19  6.15  3.84
+##  8  0.90     Ideal     E     SI2  62.0    55  3599  6.23  6.15  3.84
+##  9  1.51   Premium     H      I1  61.9    58  6038  7.39  7.34  4.56
+## 10  0.74      Fair     G    VVS2  65.2    58  2959  5.70  5.60  3.69
+## # ... with 32,073 more rows, and 1 more variables: dollars_per_carat &lt;dbl&gt;</code></pre>
+<p>Podemos también asignar el resultado de TODAS las transformaciones anteriores a una variable</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">diamonds_transformado_<span class="dv">1</span> &lt;-<span class="st"> </span>diamonds <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">dollars_per_carat =</span> price <span class="op">/</span><span class="st"> </span>carat) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(dollars_per_carat <span class="op">&lt;</span><span class="st"> </span><span class="dv">4000</span>) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(dollars_per_carat))
+diamonds_transformado_<span class="dv">1</span></code></pre></div>
+<pre><code>## # A tibble: 32,083 x 11
+##    carat       cut color clarity depth table price     x     y     z
+##    &lt;dbl&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;ord&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1  1.05 Very Good     J     SI1  62.5    58  4199  6.47  6.52  4.06
+##  2  0.92 Very Good     E     SI2  63.2    54  3679  6.29  6.25  3.96
+##  3  0.92   Premium     E     SI2  61.8    59  3679  6.19  6.11  3.80
+##  4  0.91   Premium     E     SI2  61.1    59  3639  6.24  6.20  3.80
+##  5  0.91   Premium     E     SI2  62.8    61  3639  6.09  6.07  3.82
+##  6  0.90   Premium     E     SI2  62.6    60  3599  6.18  6.09  3.84
+##  7  0.90   Premium     E     SI2  62.2    60  3599  6.19  6.15  3.84
+##  8  0.90     Ideal     E     SI2  62.0    55  3599  6.23  6.15  3.84
+##  9  1.51   Premium     H      I1  61.9    58  6038  7.39  7.34  4.56
+## 10  0.74      Fair     G    VVS2  65.2    58  2959  5.70  5.60  3.69
+## # ... with 32,073 more rows, and 1 more variables: dollars_per_carat &lt;dbl&gt;</code></pre>
+<p>Otro ejemplo:</p>
+<ul>
+<li>Por combinación de cut y color,</li>
+<li>Calcular el mínimo de x, y también el máximo de y.</li>
+<li>Al resultado ordenarlo por color de manera descendente.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">diamonds_transformado_<span class="dv">2</span> &lt;-<span class="st"> </span>diamonds <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="co"># Primero agrupo por combinación de cut y color, ya que lo necesito para calcular</span>
+<span class="st">  </span><span class="co"># los resúmenes por grupo</span>
+<span class="st">  </span><span class="kw">group_by</span>(cut, color) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="co"># Luego calculo los resúmenes por grupo</span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">minimo_x =</span> <span class="kw">min</span>(x), <span class="dt">maximo_y =</span> <span class="kw">max</span>(y)) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="co"># Finalmente ordeno por color</span>
+<span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(color))
+diamonds_transformado_<span class="dv">2</span></code></pre></div>
+<pre><code>## # A tibble: 35 x 4
+## # Groups:   cut [5]
+##          cut color minimo_x maximo_y
+##        &lt;ord&gt; &lt;ord&gt;    &lt;dbl&gt;    &lt;dbl&gt;
+##  1      Fair     J     4.24    10.54
+##  2      Good     J     4.22     9.19
+##  3 Very Good     J     3.94     8.93
+##  4   Premium     J     4.22     9.94
+##  5     Ideal     J     3.93     9.20
+##  6      Fair     I     4.62     9.02
+##  7      Good     I     4.19     9.31
+##  8 Very Good     I     3.95     9.94
+##  9   Premium     I     3.97    10.10
+## 10     Ideal     I     3.94     9.42
+## # ... with 25 more rows</code></pre>
+</div>
+<div id="miscelanea-de-funcionalidades-avanzadas-de-transformacion-de-datos" class="section level2">
+<h2><span class="header-section-number">3.3</span> Miscelánea de funcionalidades avanzadas de transformación de datos</h2>
+<p>Con <strong>dplyr</strong>:</p>
+<ol style="list-style-type: decimal">
+<li>Realizar <strong>joins</strong> entre dos tablas.</li>
+</ol>
+<p>Con <strong>tidyr</strong>:</p>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Spread</strong>: transformar registros en campos</li>
+<li><strong>Gather</strong>: transformar campos en registros</li>
+<li><strong>Separate</strong>: separar variables</li>
+</ol>
+<div id="joins-inner_joindf1-df2-columnas_a_seleccionar" class="section level3">
+<h3><span class="header-section-number">3.3.1</span> 1. Joins: inner_join(df1, df2, columnas_a_seleccionar)</h3>
+<p>Es común encontrarse tablas que hacer referencia la una a la otra, por ejemplo:</p>
+<table>
+<caption><span id="tab:unnamed-chunk-29">Table 3.1: </span>Tipos de caracter</caption>
+<thead>
+<tr class="header">
+<th align="right">id</th>
+<th align="left">tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left">letra</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="left">número</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="left">caracter especial</td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption><span id="tab:unnamed-chunk-29">Table 3.1: </span>Caracteres</caption>
+<thead>
+<tr class="header">
+<th align="center">id</th>
+<th align="center">caracter</th>
+<th align="center">tipo_caracter_id</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">a</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">2</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">2</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">1</td>
+<td align="center">2</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">z</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">5</td>
+<td align="center">2</td>
+</tr>
+<tr class="odd">
+<td align="center">7</td>
+<td align="center">m</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="center">8</td>
+<td align="center">7</td>
+<td align="center">2</td>
+</tr>
+<tr class="odd">
+<td align="center">9</td>
+<td align="center">s</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="center">10</td>
+<td align="center">x</td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<p>Para asociar a cada caracter su tipo, podemos utilizar una funcionalidad llamada <strong>join</strong>, que básicamente asocia registros de dos tablas usando campos en común.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Definiendo las tablas anteriores (normalmente estas tablas se leerán de archivos</span>
+<span class="co"># CSV o bases de datos como se verá en esta clase).</span>
+
+tipos_caracter &lt;-<span class="st"> </span><span class="kw">data_frame</span>(
+  <span class="dt">id =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>),
+  <span class="dt">tipo =</span> <span class="kw">c</span>(<span class="st">&quot;letra&quot;</span>, <span class="st">&quot;número&quot;, &quot;</span>caracter especial<span class="st">&quot;)</span>
+<span class="st">)</span>
+<span class="st">tipos_caracter</span></code></pre></div>
+<pre><code>## # A tibble: 3 x 2
+##      id              tipo
+##   &lt;dbl&gt;             &lt;chr&gt;
+## 1     1             letra
+## 2     2            número
+## 3     3 caracter especial</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">caracteres &lt;-<span class="st"> </span><span class="kw">data_frame</span>(
+  <span class="dt">id =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>,
+  <span class="dt">caracter =</span> <span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;2&quot;</span>, <span class="st">&quot;3&quot;</span>, <span class="st">&quot;1&quot;</span>, <span class="st">&quot;z&quot;</span>, <span class="st">&quot;5&quot;</span>, <span class="st">&quot;m&quot;</span>, <span class="st">&quot;7&quot;</span>, <span class="st">&quot;s&quot;</span>, <span class="st">&quot;x&quot;</span>),
+  <span class="dt">tipo_caracter_id =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>)
+)
+caracteres</code></pre></div>
+<pre><code>## # A tibble: 10 x 3
+##       id caracter tipo_caracter_id
+##    &lt;int&gt;    &lt;chr&gt;            &lt;dbl&gt;
+##  1     1        a                1
+##  2     2        2                2
+##  3     3        3                2
+##  4     4        1                2
+##  5     5        z                1
+##  6     6        5                2
+##  7     7        m                1
+##  8     8        7                2
+##  9     9        s                1
+## 10    10        x                1</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Haciendo el join de las tablas anteriores</span>
+<span class="kw">inner_join</span>(caracteres, tipos_caracter, <span class="dt">by =</span> <span class="kw">c</span>(<span class="st">&quot;tipo_caracter_id&quot;</span> =<span class="st"> &quot;id&quot;</span>))</code></pre></div>
+<pre><code>## # A tibble: 10 x 4
+##       id caracter tipo_caracter_id   tipo
+##    &lt;int&gt;    &lt;chr&gt;            &lt;dbl&gt;  &lt;chr&gt;
+##  1     1        a                1  letra
+##  2     2        2                2 número
+##  3     3        3                2 número
+##  4     4        1                2 número
+##  5     5        z                1  letra
+##  6     6        5                2 número
+##  7     7        m                1  letra
+##  8     8        7                2 número
+##  9     9        s                1  letra
+## 10    10        x                1  letra</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Notemos que el orden importa para renombrar y ordenarlas columnas</span>
+<span class="kw">inner_join</span>(tipos_caracter, caracteres, <span class="dt">by =</span> <span class="kw">c</span>(<span class="st">&quot;id&quot;</span> =<span class="st"> &quot;tipo_caracter_id&quot;</span>))</code></pre></div>
+<pre><code>## # A tibble: 10 x 4
+##       id   tipo  id.y caracter
+##    &lt;dbl&gt;  &lt;chr&gt; &lt;int&gt;    &lt;chr&gt;
+##  1     1  letra     1        a
+##  2     1  letra     5        z
+##  3     1  letra     7        m
+##  4     1  letra     9        s
+##  5     1  letra    10        x
+##  6     2 número     2        2
+##  7     2 número     3        3
+##  8     2 número     4        1
+##  9     2 número     6        5
+## 10     2 número     8        7</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Existen muchos tipos de joins, y también joins por más de un campo. Para ver</span>
+<span class="co"># estas opciones consultar la ayuda de R: ?inner_join.</span></code></pre></div>
+<p><img src="imagenes/manicule2.jpg" /> Expresa el join anterior usando el pipeline.</p>
+<p><img src="imagenes/manicule2.jpg" /> Evalúa las siguientes expresiones y explica con tus palabras el resultado.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">left_join</span>(tipos_caracter, caracteres, <span class="dt">by =</span> <span class="kw">c</span>(<span class="st">&quot;id&quot;</span> =<span class="st"> &quot;tipo_caracter_id&quot;</span>))
+<span class="kw">semi_join</span>(tipos_caracter, caracteres, <span class="dt">by =</span> <span class="kw">c</span>(<span class="st">&quot;id&quot;</span> =<span class="st"> &quot;tipo_caracter_id&quot;</span>))
+<span class="kw">anti_join</span>(tipos_caracter, caracteres, <span class="dt">by =</span> <span class="kw">c</span>(<span class="st">&quot;id&quot;</span> =<span class="st"> &quot;tipo_caracter_id&quot;</span>))</code></pre></div>
+</div>
+<div id="un-intermedio.-lectura-de-datos-en-r" class="section level3">
+<h3><span class="header-section-number">3.3.2</span> Un intermedio. Lectura de datos en R</h3>
+<p>La mecánica de lectura en R es sencilla y, sin importar el tipo de archivo que se quiera cargar a nuestro espacio de trabajo, siempre tiene la misma forma: se utiliza una función preparada para cargar un cierto tipo de archivo y luego se le debe indicar a R dónde está el archivo (de este tipo) que se desea cargar.</p>
+<p>R tiene tiene una única manera de saber dónde buscar un archivo. Debe recibir una dirección que le indique dónde buscar físicamente el archivo de interés.</p>
+<p><img src="imagenes/1_ojo.png" width="488" /></p>
+<p>R puede “ver” lo que sea que le muestres, esto es, puedes decirle exáctamente dónde debe buscar un archivo, por ejemplo indicando con una cadena de texto una ruta completa en nuestro sistema de archivos (disco duro): “D:\repositories\intro-r\”. Estas rutas se pueden escribir manualmente, o se pueden copiar del explorador de archivos de nuestro sistema operativo y luego pegarla en R.</p>
+<p><img src="imagenes/2_ruta.png" width="324" /></p>
+<p>Es muy importante notar que en Windows, la convención es usar diagonales invertidas “\” para separar los niveles de nuestra ruta. R no va a entender que algo es una ruta si está construída con estos símbolos. Si se copia y pega una ruta desde nuestro explorador de archivos en Windows, debemos cambiar las diagonales invertidas por diagonales: “D:/repositories/intro-r/”.</p>
+<p>Otra posibilidad, también ya mencionada, es indicarle a R que “vea” una carpeta de trabajo. En este momento R está “viendo” la siguiente carpeta:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">getwd</span>()</code></pre></div>
+<pre><code>## [1] &quot;/Users/agutierrez/Documents/R/r&quot;</code></pre>
+<p>Estoy indica que R no necesita una ruta completa para leer cualquier cosa incluída en la carpeta anterior. Únicamente el archivo. Para cambiar la carpeta de trabajo se utiliza la funcón setwd() que como argumento escencial recibe una ruta.</p>
+<p>Se recomienda trabajar un proyecto dado en un carpeta que a su vez contenga una carpeta que amacene los datos que se usen para ese proyecto en particular. Por ejemplo una carpeta llamada “datos”, así las rutas a los archivos siempre pueden ser carpetas relativas. No importa si la carpeta del proyecto se copia a otro equipo de cómputo, bastará con hacer setwd() a la carpeta del proyecto para que todo el código funcione.</p>
+<p>Otra cosa que vale la pena mencionar es que RStudio incluye un explorador de archivos, ahí se puede navegar en las carpetas de nuestra computadora y con las opciones disponibles en el ícono de engrane se puede también asignar la carpeta de trabajo.</p>
+<p><img src="imagenes/3_setwd.png" width="368" /></p>
+<p>Es común que las tablas de datos se distribuyan como archivos de texto. Existen numerosas variaciones de estos archivos de texto y csvs.</p>
+<p>El tidyverse incluye al paquete readr que tiene como objetivo convertir este tipo de archivos en data frames, aunque archivos de este tipo delimitados por comas es lo más común, nos podemos encontrar con archivos delimitados por otros símbolos, de aquí que existan las siguiente funciones:</p>
+<ul>
+<li>read_csv2() que lee archivos separados por punto y comas “;”</li>
+<li>read_tsv() lee archivos separados por Tabs</li>
+<li>read_delim() lee archivos separados por cualquier símbolo (tú lo determinas con un argumento)</li>
+<li>read_fwf() lee archivos de anchos fijos, se pueden especificar los anchos con fwf_widths() o su posición en el espacio (fila de datos) con fwf_positions().</li>
+<li>read_table() lee un caso muy particular y popular de lo anterior que son archivos con datos separados por un único espacio.</li>
+</ul>
+<p>Como ya se mencionó, todas estas funciones tienen una sintaxtis similar. Lo más importante es alimentarles bien la ruta del archivo que se desea leer.</p>
+<p>Aunque este tipos de archivos son extremadamente populares en el mundo de los archivos de datos, existen numerosas otras presentaciones. Por ejemplo, es muy común el uso de Microsoft Excel para análisis cuantitativo. R está bien preparado para leer y escribir archivos excel.</p>
+<p>Bajaremos datos de Incidencia de Víctimas de homicidio, secuestro y extorsión de datos.gob.mx:</p>
+<p><a href="https://datos.gob.mx/busca/dataset/victimas-de-homicidio-secuestro-y-extorsion-excel" class="uri">https://datos.gob.mx/busca/dataset/victimas-de-homicidio-secuestro-y-extorsion-excel</a></p>
+<p>Para leer estos datos se utilizaremos el paquete readxl (no se les olvide instalarlo)</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># cargar el paquete</span>
+<span class="kw">library</span>(<span class="st">&quot;readxl&quot;</span>)
+
+<span class="co"># ¿dónde está el archivo? recordar usar rutas relativas:</span>
+ruta_relativa &lt;-<span class="st"> &quot;./datos/Estatal_Victimas_2015_2018_feb.xlsx&quot;</span>
+
+<span class="co"># leer este archivo </span>
+datos &lt;-<span class="st"> </span><span class="kw">read_excel</span>(ruta_relativa,<span class="dt">sheet=</span><span class="dv">1</span>)</code></pre></div>
+</div>
+<div id="usar-spread-para-transformar-registros-de-un-data-frame-en-campos." class="section level3">
+<h3><span class="header-section-number">3.3.3</span> 2. Usar spread para transformar registros de un data frame en campos.</h3>
+<p>Al transformar registros en campos, se quitan renglones y se agregan columnas, lo que se llama datos <strong>anchos</strong>.</p>
+<p>Es importante notar que gather y spread son funciones inversas.</p>
+<p>Primero veamos el estado original de la tabla de datos, tiene múltiples columnas que corresponden a muchos cortes en la naturaleza de los crímenes cometidos (Estado donde se comentió, mes cuando se comentió, sexo de la víctima, tipo de crimen, etc).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># renombrar la primera variable porque incluye un molesto símbolo especial: ~</span>
+datos &lt;-<span class="st"> </span><span class="kw">rename</span>(datos, <span class="dt">Anio =</span> Año)
+
+
+<span class="co"># generar totales por mes</span>
+datos &lt;-<span class="st"> </span>datos <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">         </span><span class="kw">mutate</span>(<span class="dt">total =</span> <span class="kw">select</span>(.,Enero<span class="op">:</span>Diciembre) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">rowSums</span>())</code></pre></div>
+<p>Ahora sí vamos a pasar la tabla de datos a un formato largo con base en los tipos de delitos</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># trabajar sólo Homicidios y Feminicidios, pasar a los datos a formato largo por año</span>
+
+<span class="co"># Usando la función spread para transformar registros en campos:</span>
+<span class="co"># key: variable cuyos valores definirán los nombres de nuestros campos. Para</span>
+<span class="co"># revertir el data frame usaremos &quot;enfermedad&quot;</span>
+
+tipos_delito =<span class="st"> </span>datos <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">                  </span><span class="kw">spread</span>(<span class="dt">key =</span> <span class="st">`</span><span class="dt">Tipo de delito</span><span class="st">`</span>, <span class="dt">value =</span> total)</code></pre></div>
+<p>Ya que está en formato largo, se puede generar una útil tabla de conteo de delitos cruzado por Entidad, Año y Sexo.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># cantidad de subtipos de delito por entidad, año y sexo</span>
+cantidad_tipos &lt;-<span class="st">    </span>tipos_delito <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">                     </span><span class="kw">group_by</span>(Entidad,Anio,Sexo) <span class="op">%&gt;%</span>
+<span class="st">                     </span><span class="kw">summarise_at</span> (<span class="dt">.vars=</span><span class="kw">vars</span>(Aborto<span class="op">:</span>Secuestro),<span class="dt">.funs=</span>sum,<span class="dt">na.rm=</span><span class="ot">TRUE</span>)</code></pre></div>
+</div>
+<div id="usar-gather-para-transformar-campos-de-un-data-frame-en-registros" class="section level3">
+<h3><span class="header-section-number">3.3.4</span> 3. Usar gather para transformar campos de un data frame en registros</h3>
+<p>Al transformar campos en registros, se quitan columnas y se agregan renglones al data frame. Esto se llama datos <strong>largos</strong>.</p>
+<p>Podemos usar esta operación para eliminar las columnas-delitos de la tabla de datos anterior y agregarla a unas columnas de conteos por delito (estructura: nombre delito, conteo)</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Usando la función gather para transformar campos en registros:</span>
+<span class="co"># key: nombre de la columna con los nombres de los campos (ahora registros)</span>
+<span class="co"># value: nombre de la columna con los valores de los campos (numero_pacientes)</span>
+<span class="co"># lo que sigue son las columnas que definen los campos que se transformarán en renglones</span>
+cantidad_tipos_largos &lt;-<span class="st"> </span><span class="kw">gather</span>(cantidad_tipos, 
+                                <span class="dt">key =</span> <span class="st">&quot;tipo_delito&quot;</span>, 
+                                <span class="dt">value =</span> <span class="st">&quot;num_delitos_cometidos&quot;</span>,
+                                Aborto<span class="op">:</span>Secuestro)</code></pre></div>
+<p><img src="imagenes/manicule2.jpg" /> A partir de los datos originales, crear otra tabla que sea interesante utilizando las funciones gather o spread y las otras funciones de manipulación vistas hasta ahora. Investigar el uso de la función de escritura de texto delimitado write_csv(), también del paquete reader, y utilizarla para guardar la tabla de datos anterior a su carpeta “datos”.</p>
+</div>
+<div id="separar-una-columna-en-dos-o-mas-separatedf-col-columna-into-cnueva_variable_1-nueva_variable_2-etc" class="section level3">
+<h3><span class="header-section-number">3.3.5</span> 4. Separar una columna en dos o más: separate(df, col = columna, into = c(nueva_variable_1, nueva_variable_2, etc)</h3>
+<p>Separate es una función útil para separar una columna de un data frame en varias columnas, cuyos nombres se especifican. La separación default se realiza por caracteres especiales (., _, espacios, etc). Por ejemplo:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">instructores_curso_r &lt;-<span class="st"> </span><span class="kw">data_frame</span>(
+  <span class="dt">id =</span> <span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>),
+  <span class="dt">nombre =</span> <span class="kw">c</span>(
+    <span class="st">&quot;Amaury Gutiérrez&quot;</span>,
+    <span class="st">&quot;Teresa Ortiz&quot;</span>,
+    <span class="st">&quot;Julian_Equihua&quot;</span>
+  )
+)
+instructores_curso_r</code></pre></div>
+<pre><code>## # A tibble: 3 x 2
+##      id           nombre
+##   &lt;dbl&gt;            &lt;chr&gt;
+## 1     1 Amaury Gutiérrez
+## 2     2     Teresa Ortiz
+## 3     3   Julian_Equihua</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">separate</span>(instructores_curso_r, nombre, <span class="dt">into =</span> <span class="kw">c</span>(<span class="st">&quot;nombre&quot;</span>, <span class="st">&quot;apellido_1&quot;</span>))</code></pre></div>
+<pre><code>## # A tibble: 3 x 3
+##      id nombre apellido_1
+## * &lt;dbl&gt;  &lt;chr&gt;      &lt;chr&gt;
+## 1     1 Amaury  Gutiérrez
+## 2     2 Teresa      Ortiz
+## 3     3 Julian    Equihua</code></pre>
+<p><img src="imagenes/manicule2.jpg" /> Evalúa las siguientes expresiones, y explica con tus palabras lo que sucede</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">instructores_curso_r_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">data_frame</span>(
+  <span class="dt">id =</span> <span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>),
+  <span class="dt">nombre =</span> <span class="kw">c</span>(
+    <span class="st">&quot;Fernando Pardo Urrutia&quot;</span>,
+    <span class="st">&quot;Teresa Ortiz&quot;</span>,
+    <span class="st">&quot;Julian_Equihua&quot;</span>
+  )
+)
+
+<span class="kw">separate</span>(instructores_curso_r_<span class="dv">1</span>, nombre, <span class="dt">into =</span> <span class="kw">c</span>(<span class="st">&quot;nombre&quot;</span>, <span class="st">&quot;apellido_1&quot;</span>))
+<span class="kw">separate</span>(instructores_curso_r_<span class="dv">1</span>, nombre, <span class="dt">into =</span> <span class="kw">c</span>(<span class="st">&quot;nombre&quot;</span>, <span class="st">&quot;apellido_1&quot;</span>, <span class="st">&quot;apellido_2&quot;</span>))</code></pre></div>
+<p><img src="imagenes/manicule2.jpg" /> Da una explicación intuitiva de lo que es el <strong>NA</strong></p>
+</div>
+</div>
+<div id="datos-faltantes" class="section level2">
+<h2><span class="header-section-number">3.4</span> Datos faltantes</h2>
+<p>Un <strong>NA</strong> es un dato faltante, es decir, un vacío en una tabla. Como en R los data frames contienen un elemento en cada campo, estos vacíos se traducen como datos faltantes.</p>
+<p><strong>Como son vacíos de información, los datos faltantes se pueden pensar como “no sé”</strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="ot">NA</span> <span class="co"># Dato Faltante</span></code></pre></div>
+<pre><code>## [1] NA</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="ot">NA</span> <span class="op">+</span><span class="st"> </span><span class="dv">3</span> <span class="co"># No se + 3 = No sé</span></code></pre></div>
+<pre><code>## [1] NA</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="ot">NA</span> <span class="op">*</span><span class="st"> </span><span class="dv">3</span> <span class="co"># No se * 3 = No sé</span></code></pre></div>
+<pre><code>## [1] NA</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.na</span>(<span class="ot">NA</span>) <span class="co"># Un operador binario para preguntar si un dato es faltante (NA)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.na</span>(<span class="fl">5.3</span>)</code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.na</span>(<span class="ot">FALSE</span>)</code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="ot">FALSE</span> <span class="op">|</span><span class="st"> </span><span class="ot">NA</span> <span class="co"># No se cuánto da FALSE ó NA</span></code></pre></div>
+<pre><code>## [1] NA</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="ot">TRUE</span> <span class="op">|</span><span class="st"> </span><span class="ot">NA</span> <span class="co"># Pero TRUE o NA sí, porque sabemos que verdadero ó lo que sea ya es verdadero: como (5 &gt; 3) | (1 &gt; 3)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="ot">NA</span> <span class="op">&gt;</span><span class="st"> </span><span class="dv">5</span> <span class="co"># ¿Es NO SE &gt; 5? NO Sé</span></code></pre></div>
+<pre><code>## [1] NA</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="ot">NA</span> <span class="op">==</span><span class="st"> </span><span class="ot">NA</span> <span class="co">#¿Es NO SE igual a NO SÉ? NO SÉ</span></code></pre></div>
+<pre><code>## [1] NA</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(<span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="ot">NA</span>)) <span class="co"># No se cuanto da la suma de algo 4, 5, 6, y no sé.</span></code></pre></div>
+<pre><code>## [1] NA</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(<span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="ot">NA</span>), <span class="dt">na.rm =</span> <span class="ot">TRUE</span>) <span class="co"># Pero puedo decirle a R que remueva los NA&#39;s</span></code></pre></div>
+<pre><code>## [1] 15</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(<span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="ot">NA</span>), <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<pre><code>## [1] 5</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Dado un data frame con datos faltantes</span>
+registro &lt;-<span class="st"> </span><span class="kw">data_frame</span>(
+  <span class="dt">id =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>),
+  <span class="dt">persona =</span> <span class="kw">c</span>(<span class="st">&quot;Fernando&quot;</span>, <span class="ot">NA</span>, <span class="st">&quot;Julián&quot;</span>),
+  <span class="dt">numero_socio =</span> <span class="kw">c</span>(<span class="dv">13</span>, <span class="dv">12</span>, <span class="ot">NA</span>)
+)
+registro</code></pre></div>
+<pre><code>## # A tibble: 3 x 3
+##      id  persona numero_socio
+##   &lt;dbl&gt;    &lt;chr&gt;        &lt;dbl&gt;
+## 1     1 Fernando           13
+## 2     2     &lt;NA&gt;           12
+## 3     3   Julián           NA</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Puedo seleccionar renglones con NA:</span>
+registro <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(<span class="kw">is.na</span>(persona))</code></pre></div>
+<pre><code>## # A tibble: 1 x 3
+##      id persona numero_socio
+##   &lt;dbl&gt;   &lt;chr&gt;        &lt;dbl&gt;
+## 1     2    &lt;NA&gt;           12</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># O renglones sin NA:</span>
+registro <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(<span class="op">!</span><span class="kw">is.na</span>(persona))</code></pre></div>
+<pre><code>## # A tibble: 2 x 3
+##      id  persona numero_socio
+##   &lt;dbl&gt;    &lt;chr&gt;        &lt;dbl&gt;
+## 1     1 Fernando           13
+## 2     3   Julián           NA</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Puedo usar las reglas anteriores para calcular nuevas columnas:</span>
+registro <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">numero_socio_nuevo =</span> numero_socio <span class="op">+</span><span class="st"> </span><span class="dv">1</span>)</code></pre></div>
+<pre><code>## # A tibble: 3 x 4
+##      id  persona numero_socio numero_socio_nuevo
+##   &lt;dbl&gt;    &lt;chr&gt;        &lt;dbl&gt;              &lt;dbl&gt;
+## 1     1 Fernando           13                 14
+## 2     2     &lt;NA&gt;           12                 13
+## 3     3   Julián           NA                 NA</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Puedo ordenar y los NA&#39;s quedan al final</span>
+registro <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">arrange</span>(numero_socio)</code></pre></div>
+<pre><code>## # A tibble: 3 x 3
+##      id  persona numero_socio
+##   &lt;dbl&gt;    &lt;chr&gt;        &lt;dbl&gt;
+## 1     2     &lt;NA&gt;           12
+## 2     1 Fernando           13
+## 3     3   Julián           NA</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Puedo ordenar y los NA&#39;s quedan al final</span>
+registro <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(numero_socio))</code></pre></div>
+<pre><code>## # A tibble: 3 x 3
+##      id  persona numero_socio
+##   &lt;dbl&gt;    &lt;chr&gt;        &lt;dbl&gt;
+## 1     1 Fernando           13
+## 2     2     &lt;NA&gt;           12
+## 3     3   Julián           NA</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Tengo que tener cuidado con calcular resúmenes de data frames que contienen NA&#39;s</span>
+registro <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">promedio =</span> <span class="kw">mean</span>(numero_socio))</code></pre></div>
+<pre><code>## # A tibble: 1 x 1
+##   promedio
+##      &lt;dbl&gt;
+## 1       NA</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Pero puedo arreglarlo fácilmente</span>
+registro <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">promedio =</span> <span class="kw">mean</span>(numero_socio, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>))</code></pre></div>
+<pre><code>## # A tibble: 1 x 1
+##   promedio
+##      &lt;dbl&gt;
+## 1     12.5</code></pre>
+<p><img src="imagenes/manicule.jpg" /> Entregar un script donde se lleve a cabo un proceso de manipulación y transformación de datos sobre la tabla de delitos. Adicionalmente generar un gráfico interesante utilizando lo visto en las clases de visualización de datos. Comentar cada paso y explicar qué comunica la gráfica generada.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="transformacion-i.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="funciones.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/clase-4.Rmd",
+"text": "Edit"
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

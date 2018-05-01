@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>A Minimal Book Example</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook.">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="A Minimal Book Example" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="A Minimal Book Example" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Yihui Xie">
+
+
+<meta name="date" content="2018-05-01">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="transformacion-ii.html">
+<link rel="next" href="vectores.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
+<li class="chapter" data-level="2" data-path="transformacion-i.html"><a href="transformacion-i.html"><i class="fa fa-check"></i><b>2</b> Transformación-I</a><ul>
+<li class="chapter" data-level="2.1" data-path="transformacion-i.html"><a href="transformacion-i.html#que-aprendimos-la-clase-pasada"><i class="fa fa-check"></i><b>2.1</b> ¿Qué aprendimos la clase pasada?</a></li>
+<li class="chapter" data-level="2.2" data-path="transformacion-i.html"><a href="transformacion-i.html#esta-clase"><i class="fa fa-check"></i><b>2.2</b> Esta clase:</a></li>
+<li class="chapter" data-level="2.3" data-path="transformacion-i.html"><a href="transformacion-i.html#esta-seccion-del-curso-se-compone-por-dos-clases.-en-la-siguiente"><i class="fa fa-check"></i><b>2.3</b> Esta sección del curso se compone por dos clases. En la siguiente:</a></li>
+<li class="chapter" data-level="2.4" data-path="transformacion-i.html"><a href="transformacion-i.html#conceptos-preliminares"><i class="fa fa-check"></i><b>2.4</b> Conceptos preliminares:</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="transformacion-i.html"><a href="transformacion-i.html#r-como-una-calculadora"><i class="fa fa-check"></i><b>2.4.1</b> R como una calculadora</a></li>
+<li class="chapter" data-level="2.4.2" data-path="transformacion-i.html"><a href="transformacion-i.html#asignacion-de-objetos-en-r"><i class="fa fa-check"></i><b>2.4.2</b> Asignación de objetos en R</a></li>
+<li class="chapter" data-level="2.4.3" data-path="transformacion-i.html"><a href="transformacion-i.html#funciones-en-r"><i class="fa fa-check"></i><b>2.4.3</b> Funciones en R</a></li>
+<li class="chapter" data-level="2.4.4" data-path="transformacion-i.html"><a href="transformacion-i.html#scripts-en-r"><i class="fa fa-check"></i><b>2.4.4</b> Scripts en R</a></li>
+<li class="chapter" data-level="2.4.5" data-path="transformacion-i.html"><a href="transformacion-i.html#diagnosticos-de-rstudio"><i class="fa fa-check"></i><b>2.4.5</b> Diagnósticos de RStudio</a></li>
+<li class="chapter" data-level="2.4.6" data-path="transformacion-i.html"><a href="transformacion-i.html#operadores-relacionales"><i class="fa fa-check"></i><b>2.4.6</b> Operadores relacionales</a></li>
+<li class="chapter" data-level="2.4.7" data-path="transformacion-i.html"><a href="transformacion-i.html#operadores-booleanos"><i class="fa fa-check"></i><b>2.4.7</b> Operadores booleanos</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="transformacion-i.html"><a href="transformacion-i.html#el-paquete-dplyr-instalado-con-el-tidyverse"><i class="fa fa-check"></i><b>2.5</b> El paquete dplyr (instalado con el tidyverse)</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="transformacion-i.html"><a href="transformacion-i.html#seleccionar-campos-de-un-data-frame-selectdf-columnas_a_seleccionar"><i class="fa fa-check"></i><b>2.5.1</b> 1. Seleccionar campos de un data frame: select(df, columnas_a_seleccionar)</a></li>
+<li class="chapter" data-level="2.5.2" data-path="transformacion-i.html"><a href="transformacion-i.html#filtrar-registros-de-un-data-frame-que-cumplen-cierta-condicion-filterdf-condiciones"><i class="fa fa-check"></i><b>2.5.2</b> 2. Filtrar registros de un data frame que cumplen cierta condición: filter(df, condiciones)</a></li>
+<li class="chapter" data-level="2.5.3" data-path="transformacion-i.html"><a href="transformacion-i.html#ordenar-registros-de-un-data-frame-por-los-valores-en-una-o-mas-variables-arrangedf-variables_de_ordenamiento"><i class="fa fa-check"></i><b>2.5.3</b> 3. Ordenar registros de un data frame por los valores en una o más variables: arrange(df, variables_de_ordenamiento)</a></li>
+<li class="chapter" data-level="2.5.4" data-path="transformacion-i.html"><a href="transformacion-i.html#crear-nuevas-variables-mutatedf-formulas"><i class="fa fa-check"></i><b>2.5.4</b> 4. Crear nuevas variables: mutate(df, formulas)</a></li>
+<li class="chapter" data-level="2.5.5" data-path="transformacion-i.html"><a href="transformacion-i.html#agrupar-por-ciertas-variables-group_bydata_frame-variables-y-crear-resumenes-por-grupo-summarisedata_frame-formulas"><i class="fa fa-check"></i><b>2.5.5</b> 5. Agrupar por ciertas variables: group_by(data_frame, variables) y crear resúmenes por grupo: summarise(data_frame, formulas)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="transformacion-ii.html"><a href="transformacion-ii.html"><i class="fa fa-check"></i><b>3</b> Transformación-II</a><ul>
+<li class="chapter" data-level="3.1" data-path="transformacion-ii.html"><a href="transformacion-ii.html#que-aprendimos-la-clase-pasada-1"><i class="fa fa-check"></i><b>3.1</b> ¿Qué aprendimos la clase pasada?</a></li>
+<li class="chapter" data-level="3.2" data-path="transformacion-ii.html"><a href="transformacion-ii.html#el-operador-pipeline"><i class="fa fa-check"></i><b>3.2</b> El operador pipeline %&gt;%</a></li>
+<li class="chapter" data-level="3.3" data-path="transformacion-ii.html"><a href="transformacion-ii.html#miscelanea-de-funcionalidades-avanzadas-de-transformacion-de-datos"><i class="fa fa-check"></i><b>3.3</b> Miscelánea de funcionalidades avanzadas de transformación de datos</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="transformacion-ii.html"><a href="transformacion-ii.html#joins-inner_joindf1-df2-columnas_a_seleccionar"><i class="fa fa-check"></i><b>3.3.1</b> 1. Joins: inner_join(df1, df2, columnas_a_seleccionar)</a></li>
+<li class="chapter" data-level="3.3.2" data-path="transformacion-ii.html"><a href="transformacion-ii.html#un-intermedio.-lectura-de-datos-en-r"><i class="fa fa-check"></i><b>3.3.2</b> Un intermedio. Lectura de datos en R</a></li>
+<li class="chapter" data-level="3.3.3" data-path="transformacion-ii.html"><a href="transformacion-ii.html#usar-spread-para-transformar-registros-de-un-data-frame-en-campos."><i class="fa fa-check"></i><b>3.3.3</b> 2. Usar spread para transformar registros de un data frame en campos.</a></li>
+<li class="chapter" data-level="3.3.4" data-path="transformacion-ii.html"><a href="transformacion-ii.html#usar-gather-para-transformar-campos-de-un-data-frame-en-registros"><i class="fa fa-check"></i><b>3.3.4</b> 3. Usar gather para transformar campos de un data frame en registros</a></li>
+<li class="chapter" data-level="3.3.5" data-path="transformacion-ii.html"><a href="transformacion-ii.html#separar-una-columna-en-dos-o-mas-separatedf-col-columna-into-cnueva_variable_1-nueva_variable_2-etc"><i class="fa fa-check"></i><b>3.3.5</b> 4. Separar una columna en dos o más: separate(df, col = columna, into = c(nueva_variable_1, nueva_variable_2, etc)</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="transformacion-ii.html"><a href="transformacion-ii.html#datos-faltantes"><i class="fa fa-check"></i><b>3.4</b> Datos faltantes</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="funciones.html"><a href="funciones.html"><i class="fa fa-check"></i><b>4</b> Funciones</a><ul>
+<li class="chapter" data-level="4.1" data-path="funciones.html"><a href="funciones.html#que-aprendimos-la-clase-pasada-2"><i class="fa fa-check"></i><b>4.1</b> ¿Qué aprendimos la clase pasada?</a></li>
+<li class="chapter" data-level="4.2" data-path="funciones.html"><a href="funciones.html#funciones-en-r-1"><i class="fa fa-check"></i><b>4.2</b> Funciones en R</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="funciones.html"><a href="funciones.html#cuando-es-conveniente-escribir-funciones"><i class="fa fa-check"></i><b>4.2.1</b> ¿Cuándo es conveniente escribir funciones?</a></li>
+<li class="chapter" data-level="4.2.2" data-path="funciones.html"><a href="funciones.html#escribiendo-funciones-en-r"><i class="fa fa-check"></i><b>4.2.2</b> Escribiendo funciones en R</a></li>
+<li class="chapter" data-level="4.2.3" data-path="funciones.html"><a href="funciones.html#expresiones-condicionales"><i class="fa fa-check"></i><b>4.2.3</b> Expresiones condicionales</a></li>
+<li class="chapter" data-level="4.2.4" data-path="funciones.html"><a href="funciones.html#de-regreso-al-tidyverse"><i class="fa fa-check"></i><b>4.2.4</b> De regreso al tidyverse</a></li>
+<li class="chapter" data-level="4.2.5" data-path="funciones.html"><a href="funciones.html#ambientes"><i class="fa fa-check"></i><b>4.2.5</b> Ambientes</a></li>
+<li class="chapter" data-level="4.2.6" data-path="funciones.html"><a href="funciones.html#estilos-de-codigo-y-buenas-practicas"><i class="fa fa-check"></i><b>4.2.6</b> Estilos de código y buenas prácticas</a></li>
+<li class="chapter" data-level="4.2.7" data-path="funciones.html"><a href="funciones.html#temas-avanzados-de-funciones-opcional"><i class="fa fa-check"></i><b>4.2.7</b> Temas avanzados de funciones (OPCIONAL)</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="funciones.html"><a href="funciones.html#las-funciones-pueden-llamarse-a-si-mismas."><i class="fa fa-check"></i><b>4.3</b> <em>Las funciones pueden llamarse a si mismas.</em></a></li>
+<li class="chapter" data-level="4.4" data-path="funciones.html"><a href="funciones.html#las-funciones-pueden-regresar-funciones"><i class="fa fa-check"></i><b>4.4</b> <em>Las funciones pueden regresar funciones</em>:</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="vectores.html"><a href="vectores.html"><i class="fa fa-check"></i><b>5</b> Vectores</a><ul>
+<li class="chapter" data-level="5.1" data-path="vectores.html"><a href="vectores.html#que-aprendimos-la-clase-pasada-3"><i class="fa fa-check"></i><b>5.1</b> ¿Qué aprendimos la clase pasada?</a></li>
+<li class="chapter" data-level="5.2" data-path="vectores.html"><a href="vectores.html#vectores-listas-y-arreglos"><i class="fa fa-check"></i><b>5.2</b> Vectores, listas y arreglos</a></li>
+<li class="chapter" data-level="5.3" data-path="vectores.html"><a href="vectores.html#iteracion-en-r"><i class="fa fa-check"></i><b>5.3</b> Iteración en R</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="vectores.html"><a href="vectores.html#iteracion-imperativa"><i class="fa fa-check"></i><b>5.3.1</b> Iteración imperativa</a></li>
+<li class="chapter" data-level="5.3.2" data-path="vectores.html"><a href="vectores.html#iteracion-funcional"><i class="fa fa-check"></i><b>5.3.2</b> Iteración funcional</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="modelado.html"><a href="modelado.html"><i class="fa fa-check"></i><b>6</b> Modelado</a><ul>
+<li class="chapter" data-level="6.1" data-path="modelado.html"><a href="modelado.html#que-aprendimos-la-clase-pasada-4"><i class="fa fa-check"></i><b>6.1</b> ¿Qué aprendimos la clase pasada?</a></li>
+<li class="chapter" data-level="6.2" data-path="modelado.html"><a href="modelado.html#modelos"><i class="fa fa-check"></i><b>6.2</b> Modelos</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="modelado.html"><a href="modelado.html#generacion-de-hipotesis-vs-confirmacion-de-hipotesis"><i class="fa fa-check"></i><b>6.2.1</b> Generación de hipótesis vs confirmación de hipótesis</a></li>
+<li class="chapter" data-level="6.2.2" data-path="modelado.html"><a href="modelado.html#especificacion-de-modelos"><i class="fa fa-check"></i><b>6.2.2</b> Especificación de modelos</a></li>
+<li class="chapter" data-level="6.2.3" data-path="modelado.html"><a href="modelado.html#un-primer-modelo-simple"><i class="fa fa-check"></i><b>6.2.3</b> Un primer modelo simple</a></li>
+<li class="chapter" data-level="6.2.4" data-path="modelado.html"><a href="modelado.html#un-modelo-sobre-datos-mas-interesantes"><i class="fa fa-check"></i><b>6.2.4</b> Un modelo sobre datos más interesantes</a></li>
+<li class="chapter" data-level="6.2.5" data-path="modelado.html"><a href="modelado.html#visualizacion-de-predicciones"><i class="fa fa-check"></i><b>6.2.5</b> visualización de predicciones</a></li>
+<li class="chapter" data-level="6.2.6" data-path="modelado.html"><a href="modelado.html#visualizacion-de-residuales"><i class="fa fa-check"></i><b>6.2.6</b> visualización de residuales</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Minimal Book Example</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="funciones" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> Funciones</h1>
+<div id="que-aprendimos-la-clase-pasada-2" class="section level2">
+<h2><span class="header-section-number">4.1</span> ¿Qué aprendimos la clase pasada?</h2>
+<ul>
+<li>Se aprendió a usar el operador pipe %&gt;%</li>
+<li>Se mostró el concepto de hacer joins entre tablas</li>
+<li>Lectura de datos en R (excel)</li>
+<li>Breve introdución a los datos faltantes</li>
+</ul>
+</div>
+<div id="funciones-en-r-1" class="section level2">
+<h2><span class="header-section-number">4.2</span> Funciones en R</h2>
+<p>Las funciones permiten la automatización de tareas. La escritura de funciones tiene tres grandes ventajas:</p>
+<ul>
+<li>Puedes nombrar una función de una manera tal que nunca olvides qué hace, esto además hace a tu código más legible</li>
+<li>Cuando cambien los requerimientos de los trabajos día a día, deberás de modificar menos código.</li>
+<li>Se reduce la probabilidad de cometer errores llevando a cabo procesos manuales como copiar/pegar datos e instrucciones.</li>
+</ul>
+<p>Aprender a escrbir buenas funciones es un proceso que nunca termina. Siempre se encontrarán maneras novedosas de mejorar estilos a la hora de escribir funciones. Esta sección no tiene como objetivo profundizar en la escritura de funciones, si no empezar a escribir funciones útiles lo más pronto posible.</p>
+<div id="cuando-es-conveniente-escribir-funciones" class="section level3">
+<h3><span class="header-section-number">4.2.1</span> ¿Cuándo es conveniente escribir funciones?</h3>
+<p>Como regla general, si notamos que para llevar a cabo una cierta tarea se está copiando y pegando un bloque de código más de dos veces, es hora de escribir una función para ello. Motivaremos la discusión con el cálculo de areas y volúmenes. Si escribimos una función en R que permita llevar a cabo estas operaciones, las podremos usar en cualquier momento.</p>
+<div class="figure">
+<img src="imagenes/volume.png" />
+
+</div>
+</div>
+<div id="escribiendo-funciones-en-r" class="section level3">
+<h3><span class="header-section-number">4.2.2</span> Escribiendo funciones en R</h3>
+<p>Pasos para crear una función:</p>
+<ul>
+<li>Elegir un nombre apropiado</li>
+<li>Pensar en qué hace y cuántos argumentos necesita para ejecutarse</li>
+<li>Traducir lo que queremos que haga a código de R dentro de un bloque asociado a una función y a los argumentos anteriores</li>
+</ul>
+<p>Pensando en estos pasos decidamos que nuestra función se llame area_circulo() (sin acento, es en general, mala práctica utilizar caractéres especiales en código). Luego sabemos que la función recibe un único parámetro, el radio del círculo al que se le va a calcular el área. Finalmente se debe plasmar la fórmula para el cálculo del área de un círculo en R.</p>
+<p>Como un primer ejemplo escribamos una función que permita calcular el área de un círculo.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># nombre ------------- argumentos</span>
+area_circulo &lt;-<span class="st"> </span><span class="cf">function</span> (radio) {
+  <span class="cf">if</span> (radio <span class="op">&lt;</span><span class="st"> </span><span class="dv">0</span>) <span class="co"># expresión condicional se ejecuta en caso de que el radio sea negativo.</span>
+  {
+    <span class="kw">stop</span>(<span class="st">&quot;Para calcular un area es necesario un valor positivo o igual a 0.&quot;</span>) <span class="co"># detiene la ejecución</span>
+  } <span class="cf">else</span> <span class="co"># sigue la expresión condicional, este bloque se ejecutará cuando el radio sea positivo.</span>
+  {
+    area_calculada &lt;-<span class="st"> </span>pi <span class="op">*</span><span class="st"> </span>radio <span class="op">**</span><span class="st"> </span><span class="dv">2</span> <span class="co"># operamos sobre el radio del círculo</span>
+    <span class="kw">return</span>(area_calculada) <span class="co"># regresamos el resultado (se asigna después de aplicar esta función)</span>
+  }
+  
+}</code></pre></div>
+<p>Para probar la función la llamamos como cualquier función de una libreria, notemos que es posible asignar el resultado a una variable:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">area_radio_cinco &lt;-<span class="st"> </span><span class="kw">area_circulo</span>(<span class="dv">5</span>)
+area_radio_cinco</code></pre></div>
+<pre><code>## [1] 78.53982</code></pre>
+<p><img src="imagenes/manicule2.jpg" /> Ejercicio 1: Escribir una función análoga a la anterior pero para calcular el área de un rectángulo.</p>
+<p><img src="imagenes/manicule2.jpg" /> Ejercicio 2: ¿Como podría usar la función del ejercicio 1 para calcular el area de un cuadrado?</p>
+</div>
+<div id="expresiones-condicionales" class="section level3">
+<h3><span class="header-section-number">4.2.3</span> Expresiones condicionales</h3>
+<p>En ocasiones es deseable ejecutar bloques de código únicamente cuando cierta condición se cumple. Existe una sentencia que nos permite hacer esto y tiene la forma siguiente:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span> (cond) {
+  <span class="co"># código ejecutado en caso de que la condición sea verdadera (TRUE).</span>
+} <span class="cf">else</span> {
+  <span class="co"># código ejecutado en caso de que la condición sea falsa (FALSE).</span>
+}</code></pre></div>
+<p>Es posible omitir la segunda condición:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span> (cond) {
+  <span class="co"># si la condición es verdadera se ejecutará este bloque, en caso contrario no hará nada.</span>
+}</code></pre></div>
+<p>También es posible encadenar sentencias condicionales:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span> (cond_<span class="dv">1</span>) {
+  <span class="co"># código ejecutado en caso de que la condición 1 sea verdadera.</span>
+} <span class="cf">else</span> <span class="cf">if</span> (cond_<span class="dv">2</span>) {
+  <span class="co"># código ejecutado en caso de que la condición 1 sea falsa pero la condición 2 es verdadera.</span>
+} <span class="cf">else</span> {
+  <span class="co"># cuando ambas condiciones son falsas se ejecuta este bloque.</span>
+}</code></pre></div>
+<p>Regresando a nuestra función <em>area_circulo</em>, notemos que nuestra formulación tiene un problema. ¿Qué pasa cuando la función recibe números negativos? ¿Tiene sentido hablar de areas negativas? Usaremos las sentencias condicionales para arreglar este detalle:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># nombre ------------- argumentos</span>
+area_circulo &lt;-<span class="st"> </span><span class="cf">function</span> (radio) {
+  <span class="cf">if</span> (radio <span class="op">&lt;</span><span class="st"> </span><span class="dv">0</span>) <span class="co"># expresión condicional se ejecuta en caso de que el radio sea negativo.</span>
+  {
+    <span class="kw">stop</span>(<span class="st">&quot;Para calcular un area es necesario un valor positivo o igual a 0.&quot;</span>) <span class="co"># detiene la ejecución</span>
+  } <span class="cf">else</span> <span class="co"># sigue la expresión condicional, este bloque se ejecutará cuando el radio sea positivo.</span>
+  {
+    area_calculada &lt;-<span class="st"> </span>pi <span class="op">*</span><span class="st"> </span>radio<span class="op">^</span><span class="dv">2</span> <span class="co"># operamos sobre el radio del círculo</span>
+    <span class="kw">return</span>(area_calculada) <span class="co"># regresamos el resultado (se asigna después de aplicar esta función)</span>
+  }
+  
+}</code></pre></div>
+<p>Probemos nuestra función mejorada con ambos tipos de valores. ¿Qué pasa cuando la usamos con un número negativo?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># probemos nuestra función en</span>
+area_resultante &lt;-<span class="st"> </span><span class="kw">area_circulo</span>(<span class="op">-</span><span class="dv">10</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># probemos nuestra función en</span>
+area_resultante &lt;-<span class="st"> </span><span class="kw">area_circulo</span>(<span class="dv">7</span>)</code></pre></div>
+<p><img src="imagenes/manicule2.jpg" /> Ejercicio 3: Reescribir la función que calcula el área de un rectángulo para solventar el error permitir parámetros negativos.</p>
+<p><img src="imagenes/manicule2.jpg" /> Ejercicio 4: Escribir una función llamada salario que reciba un número que representara el salario de un empleado. Si el salario es mayor a 25,000 deberá regresar el texto “alto”, si el salario es menor a 5000 regresará “bajo”, en otro caso regresará “medio”. Si recibe un salario negativo la función debera detenerse y lanzar un mensaje de error.</p>
+</div>
+<div id="de-regreso-al-tidyverse" class="section level3">
+<h3><span class="header-section-number">4.2.4</span> De regreso al tidyverse</h3>
+<div class="figure">
+<img src="imagenes/ceci.jpg" />
+
+</div>
+<p>Para conectar con lo visto en clases pasadas veremos que es posible encadenar nuestras funciones con el método de los pipes. Para ejemplificar esto regresaremos a nuestro objetivo inicial, el cálculo de volúmenes. Recordemos que los volúmenes de figuras regulares se pueden calcular multiplicando el area de la base del objeto por su altura, nuestra función queda definida de la siguiente forma:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">volumen_regular &lt;-<span class="st"> </span><span class="cf">function</span> (area_base, altura) {
+  <span class="cf">if</span> (area_base <span class="op">&lt;</span><span class="st"> </span><span class="dv">0</span> <span class="op">||</span><span class="st"> </span>altura <span class="op">&lt;</span><span class="st"> </span><span class="dv">0</span>) { <span class="co"># nos aseguramos que ninguno de los argumentos sea negativo.</span>
+    <span class="kw">stop</span>(<span class="st">&quot;Tanto el area como la altura deben ser mayores o iguales a 0.&quot;</span>)
+  } <span class="cf">else</span> {
+    volumen &lt;-<span class="st"> </span>area_base <span class="op">*</span><span class="st"> </span>altura
+    <span class="kw">return</span>(volumen)
+  }
+}</code></pre></div>
+<p>Podemos calcular el volumen de un cilindro de area 3 y altura 7 de la siguiente forma:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># definimos las dimensiones</span>
+radio &lt;-<span class="st"> </span><span class="dv">3</span>
+altura &lt;-<span class="st"> </span><span class="dv">7</span>
+<span class="co"># calculamos área y volumen </span>
+area_base &lt;-<span class="st"> </span><span class="kw">area_circulo</span>(radio)
+volumen_cilindro &lt;-<span class="st"> </span><span class="kw">volumen_regular</span>(area_base, altura)
+<span class="co">#imprimimos el resultado</span>
+volumen_cilindro</code></pre></div>
+<pre><code>## [1] 197.9203</code></pre>
+<p>En una sola sentencia:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">volumen_cilindro &lt;-<span class="st"> </span><span class="kw">volumen_regular</span>(<span class="kw">area_circulo</span>(<span class="dv">3</span>), <span class="dv">7</span>)
+<span class="co">#imprimimos el resultado</span>
+volumen_cilindro</code></pre></div>
+<pre><code>## [1] 197.9203</code></pre>
+<p>Sin embargo nada impide hacer el uso del flujo que implementan los pipes. De este modo es posible hacer que el código sea más legible al encadenar las operaciones de izquierda a derecha en vez de adentro hacia afuera:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse)
+volumen_cilindro &lt;-<span class="st"> </span><span class="dv">3</span> <span class="op">%&gt;%</span>
+<span class="st">                      </span>area_circulo <span class="op">%&gt;%</span>
+<span class="st">                      </span><span class="kw">volumen_regular</span>(<span class="dv">7</span>)
+volumen_cilindro</code></pre></div>
+<pre><code>## [1] 197.9203</code></pre>
+<p>Nota: Recordemos que al usar los pipes, el resultado de una función en la cadena será el argumento de la siguiente. En caso de que la siguiente función requiera más de un argumento el resultado de la función se usará como el primer argumento y resto se tienen que especificar explícitamente.</p>
+<p><img src="imagenes/manicule2.jpg" /> Ejercicio 5: Reusa este procedimiento para calcular el volumen de un cubo de lado 6 y un paralelepípedo de dimensiones 4, 5 y 7.</p>
+</div>
+<div id="ambientes" class="section level3">
+<h3><span class="header-section-number">4.2.5</span> Ambientes</h3>
+<p>Otro componente de las funciones es el ambiente. Hasta ahora no ha sido mencionado porque hemos sido muy correctos en la definición de nuestras funciones. Cada variable dentro de la función ha sido pasada como un argumento o bien definida dentro de la función. ¿Qué pasaria si usaramos una variable que no ha sido definida dentro del cuerpo de la función ni ha sido pasada como argumento? Resulta que R es laxo con este tipo de situaciones y lo que hace es buscar si la variable ha sido definida en el contexto en el que se definió la función:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">y &lt;-<span class="st"> </span><span class="dv">19</span>
+
+suma_incorrecta &lt;-<span class="st"> </span><span class="cf">function</span>(x) {
+  <span class="kw">return</span>(x <span class="op">+</span><span class="st"> </span>y)
+}
+
+<span class="kw">suma_incorrecta</span>(<span class="dv">6</span>)</code></pre></div>
+<pre><code>## [1] 25</code></pre>
+<p>Esto no es recomendable ya que el valor de <em>y</em> puede perderse cuando se vuelva a reiniciar RStudio. Este tipo de código puede introducir errores difíciles de rastrear.</p>
+</div>
+<div id="estilos-de-codigo-y-buenas-practicas" class="section level3">
+<h3><span class="header-section-number">4.2.6</span> Estilos de código y buenas prácticas</h3>
+<p>Existen diversos estilos de programación, especialmente en R. Ninguno de estos estilos es correcto, pero la consistencia permite que leer y mantener el código sea más sencillo. Para nombrar variables y funciones existen varias convenciones:</p>
+<pre><code>este_se_llama_snake_case
+losProgramadoresSuelenUsarCamelCase
+a.mi.no.me.gusta.usar.puntos
+Some.menJust_WantTO.Watch.theWorld_BURN</code></pre>
+<p>Como han podido darse cuenta nosotros usamos snake case.</p>
+<p>Cuando los statements condicionales son de una sola sentencia es posible no usar las llaves { }. Sin embargo esto reduce la legilibidad del código.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># BIEN las llaves permiten identificar que el código será ejecutado cuando la condición se cumple</span>
+muestra_mensaje &lt;-<span class="st"> </span><span class="ot">TRUE</span>
+<span class="cf">if</span> (y <span class="op">&lt;</span><span class="st"> </span><span class="dv">0</span> <span class="op">&amp;&amp;</span><span class="st"> </span>muestra_mensaje) {
+  <span class="kw">message</span>(<span class="st">&quot;y es negativo&quot;</span>)
+}
+
+<span class="co"># MAL no hay jerarquía visual</span>
+muestra_mensaje &lt;-<span class="st"> </span><span class="ot">TRUE</span>
+<span class="cf">if</span> (y <span class="op">&lt;</span><span class="st"> </span><span class="dv">0</span> <span class="op">&amp;&amp;</span><span class="st"> </span>muestra_mensaje)
+<span class="kw">message</span>(<span class="st">&quot;y es negativo&quot;</span>)</code></pre></div>
+<p>Ahora que saben que se puede hacer… ¡No lo hagan!</p>
+<p>La elección de nombres es un tema importante a considerar. El código es un vínculo entre las instrucciones que una computadora puede ejecutar y la forma en la que nosotros resolvemos un problema. El lenguaje de programación nos permite expresar la serie de pasos necesarios para llegar a una solución. Por esto el lenguaje debe no solo ejecutarse correctamente sino también legible para el ojo humano. Los nombres en las variables nos pueden ayudar a esto. Revisemos los nombres de nuestras funciones de área:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># BIEN la ayuda de r aparece cuando escribo area y me permite recordar que nombre asigné a cada función</span>
+<span class="kw">area_circulo</span>(<span class="dv">4</span>)
+<span class="kw">area_cuadrado</span>(<span class="dv">3</span>)
+<span class="kw">area_rectangulo</span>(<span class="dv">5</span>,<span class="dv">6</span>)
+
+<span class="co"># MAL</span>
+<span class="kw">circulo_area</span>(<span class="dv">4</span>) <span class="co"># el elemento en comun de las funciones no está al principio, dificulta la búsqueda</span>
+<span class="kw">calcula_area_cuadrado</span>(<span class="dv">3</span>) <span class="co"># nomrbe demasiado largo, el verbo sobra porque está implícito</span>
+<span class="kw">mi_funcion</span>(<span class="dv">5</span>,<span class="dv">6</span>) <span class="co"># todo mal, ¡no tenemos idea que hace la función!</span></code></pre></div>
+<p>Repitiendo lo que se menciona al principio de la sección no hay una forma correcta de escribir código (existen muchas incorrectas), pero lo más importante es <strong>ser consistente</strong>.</p>
+</div>
+<div id="temas-avanzados-de-funciones-opcional" class="section level3">
+<h3><span class="header-section-number">4.2.7</span> Temas avanzados de funciones (OPCIONAL)</h3>
+<p>Esta sección solo es demostrativa de las cosas que permite el lenguaje R sobre las funciones. Se mencionan para hacer más amplio el repertorio en caso de que alguien se interese en indagar más al respecto.</p>
+<div id="funciones-recursivas" class="section level4">
+<h4><span class="header-section-number">4.2.7.1</span> Funciones recursivas</h4>
+</div>
+</div>
+</div>
+<div id="las-funciones-pueden-llamarse-a-si-mismas." class="section level2">
+<h2><span class="header-section-number">4.3</span> <em>Las funciones pueden llamarse a si mismas.</em></h2>
+<div class="figure">
+<img src="imagenes/fear.png" />
+
+</div>
+<p>¿Para que querríamos algo así? Las funciones recursivas permiten calcular problemas cuya repesentación se puede formular en terminos de si mismas. El ejemplo por excelencia es la operación factorial:</p>
+<p><span class="math display">\[
+n!=n\times(n-1)\times(n-2)\times\ldots\times2\times1
+\]</span></p>
+<p>Notemos que:</p>
+<p><span class="math display">\[
+n!=n\times(n-1)!
+\]</span> Y a su vez es:</p>
+<p><span class="math display">\[
+n!=n\times(n-1)\times(n-2)!
+\]</span></p>
+<p>Y sí sucesivamente hasta que llegamos hasta el <span class="math inline">\(1\)</span>.</p>
+<p>Por lo que podemos definir una función que calcule dicha operación haciendo uso de la misma definición:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">factorial &lt;-<span class="st"> </span><span class="cf">function</span> (n) {
+  <span class="cf">if</span>(n <span class="op">==</span><span class="st"> </span><span class="dv">1</span>) {
+    <span class="kw">return</span>(<span class="dv">1</span>) <span class="co"># caso base, no hace falta calcular más</span>
+  } <span class="cf">else</span>{
+    <span class="kw">return</span>(n <span class="op">*</span><span class="st"> </span><span class="kw">factorial</span>(n <span class="op">-</span><span class="st"> </span><span class="dv">1</span>)) <span class="co"># multiplico el número actual y calculo el factorial del número menos una unidad</span>
+  }
+}
+
+<span class="kw">factorial</span>(<span class="dv">5</span>)</code></pre></div>
+<pre><code>## [1] 120</code></pre>
+<div id="funciones-de-orden-alto" class="section level4">
+<h4><span class="header-section-number">4.3.0.1</span> Funciones de orden alto</h4>
+</div>
+</div>
+<div id="las-funciones-pueden-regresar-funciones" class="section level2">
+<h2><span class="header-section-number">4.4</span> <em>Las funciones pueden regresar funciones</em>:</h2>
+<div class="figure">
+<img src="imagenes/mind.png" />
+
+</div>
+<p>R es un lenguaje en el que las funciones son objetos que se pueden operar como los números, las cadenas de texto, los data frames.</p>
+<p>Con lo que hemos aprendido es posible crear una funcion que permita calcular el cuadrado de un número con ayuda del operador **:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">cuadrado &lt;-<span class="st"> </span><span class="cf">function</span> (x) {
+  <span class="kw">return</span>(x <span class="op">**</span><span class="st"> </span><span class="dv">2</span>)
+}
+
+<span class="kw">cuadrado</span>(<span class="dv">4</span>)</code></pre></div>
+<pre><code>## [1] 16</code></pre>
+<p>De la misma forma podemos obtener una función que calcule el cubo de un número:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">cubo &lt;-<span class="st"> </span><span class="cf">function</span> (x) {
+  <span class="kw">return</span>(x <span class="op">**</span><span class="st"> </span><span class="dv">3</span>)
+}
+
+<span class="kw">cubo</span>(<span class="dv">4</span>)</code></pre></div>
+<pre><code>## [1] 64</code></pre>
+<p>Pero la estructura es básicamente la misma. ¿Es indispensable repetir el mismo código cuando el patrón es tan claro? Resulta que R nos permite hacer plantillas para este tipo de casos:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">fabrica_potencia &lt;-<span class="st"> </span><span class="cf">function</span> (n) {
+  <span class="cf">function</span>(x) {
+    <span class="kw">return</span>(x <span class="op">**</span><span class="st"> </span>n)
+  }
+}</code></pre></div>
+<p>Probemos el resultado:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">cuadrado &lt;-<span class="st"> </span><span class="kw">fabrica_potencia</span>(<span class="dv">2</span>)
+<span class="kw">cuadrado</span>(<span class="dv">4</span>)</code></pre></div>
+<pre><code>## [1] 16</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">cubo &lt;-<span class="st"> </span><span class="kw">fabrica_potencia</span>(<span class="dv">3</span>)
+<span class="kw">cubo</span>(<span class="dv">4</span>)</code></pre></div>
+<pre><code>## [1] 64</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">potencia_doce &lt;-<span class="st"> </span><span class="kw">fabrica_potencia</span>(<span class="dv">12</span>)
+<span class="kw">potencia_doce</span>(<span class="dv">4</span>)</code></pre></div>
+<pre><code>## [1] 16777216</code></pre>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="transformacion-ii.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="vectores.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/Clase-5.Rmd",
+"text": "Edit"
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

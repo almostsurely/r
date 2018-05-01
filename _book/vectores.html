@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>A Minimal Book Example</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook.">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="A Minimal Book Example" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="A Minimal Book Example" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Yihui Xie">
+
+
+<meta name="date" content="2018-05-01">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="funciones.html">
+<link rel="next" href="modelado.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
+<li class="chapter" data-level="2" data-path="transformacion-i.html"><a href="transformacion-i.html"><i class="fa fa-check"></i><b>2</b> Transformación-I</a><ul>
+<li class="chapter" data-level="2.1" data-path="transformacion-i.html"><a href="transformacion-i.html#que-aprendimos-la-clase-pasada"><i class="fa fa-check"></i><b>2.1</b> ¿Qué aprendimos la clase pasada?</a></li>
+<li class="chapter" data-level="2.2" data-path="transformacion-i.html"><a href="transformacion-i.html#esta-clase"><i class="fa fa-check"></i><b>2.2</b> Esta clase:</a></li>
+<li class="chapter" data-level="2.3" data-path="transformacion-i.html"><a href="transformacion-i.html#esta-seccion-del-curso-se-compone-por-dos-clases.-en-la-siguiente"><i class="fa fa-check"></i><b>2.3</b> Esta sección del curso se compone por dos clases. En la siguiente:</a></li>
+<li class="chapter" data-level="2.4" data-path="transformacion-i.html"><a href="transformacion-i.html#conceptos-preliminares"><i class="fa fa-check"></i><b>2.4</b> Conceptos preliminares:</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="transformacion-i.html"><a href="transformacion-i.html#r-como-una-calculadora"><i class="fa fa-check"></i><b>2.4.1</b> R como una calculadora</a></li>
+<li class="chapter" data-level="2.4.2" data-path="transformacion-i.html"><a href="transformacion-i.html#asignacion-de-objetos-en-r"><i class="fa fa-check"></i><b>2.4.2</b> Asignación de objetos en R</a></li>
+<li class="chapter" data-level="2.4.3" data-path="transformacion-i.html"><a href="transformacion-i.html#funciones-en-r"><i class="fa fa-check"></i><b>2.4.3</b> Funciones en R</a></li>
+<li class="chapter" data-level="2.4.4" data-path="transformacion-i.html"><a href="transformacion-i.html#scripts-en-r"><i class="fa fa-check"></i><b>2.4.4</b> Scripts en R</a></li>
+<li class="chapter" data-level="2.4.5" data-path="transformacion-i.html"><a href="transformacion-i.html#diagnosticos-de-rstudio"><i class="fa fa-check"></i><b>2.4.5</b> Diagnósticos de RStudio</a></li>
+<li class="chapter" data-level="2.4.6" data-path="transformacion-i.html"><a href="transformacion-i.html#operadores-relacionales"><i class="fa fa-check"></i><b>2.4.6</b> Operadores relacionales</a></li>
+<li class="chapter" data-level="2.4.7" data-path="transformacion-i.html"><a href="transformacion-i.html#operadores-booleanos"><i class="fa fa-check"></i><b>2.4.7</b> Operadores booleanos</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="transformacion-i.html"><a href="transformacion-i.html#el-paquete-dplyr-instalado-con-el-tidyverse"><i class="fa fa-check"></i><b>2.5</b> El paquete dplyr (instalado con el tidyverse)</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="transformacion-i.html"><a href="transformacion-i.html#seleccionar-campos-de-un-data-frame-selectdf-columnas_a_seleccionar"><i class="fa fa-check"></i><b>2.5.1</b> 1. Seleccionar campos de un data frame: select(df, columnas_a_seleccionar)</a></li>
+<li class="chapter" data-level="2.5.2" data-path="transformacion-i.html"><a href="transformacion-i.html#filtrar-registros-de-un-data-frame-que-cumplen-cierta-condicion-filterdf-condiciones"><i class="fa fa-check"></i><b>2.5.2</b> 2. Filtrar registros de un data frame que cumplen cierta condición: filter(df, condiciones)</a></li>
+<li class="chapter" data-level="2.5.3" data-path="transformacion-i.html"><a href="transformacion-i.html#ordenar-registros-de-un-data-frame-por-los-valores-en-una-o-mas-variables-arrangedf-variables_de_ordenamiento"><i class="fa fa-check"></i><b>2.5.3</b> 3. Ordenar registros de un data frame por los valores en una o más variables: arrange(df, variables_de_ordenamiento)</a></li>
+<li class="chapter" data-level="2.5.4" data-path="transformacion-i.html"><a href="transformacion-i.html#crear-nuevas-variables-mutatedf-formulas"><i class="fa fa-check"></i><b>2.5.4</b> 4. Crear nuevas variables: mutate(df, formulas)</a></li>
+<li class="chapter" data-level="2.5.5" data-path="transformacion-i.html"><a href="transformacion-i.html#agrupar-por-ciertas-variables-group_bydata_frame-variables-y-crear-resumenes-por-grupo-summarisedata_frame-formulas"><i class="fa fa-check"></i><b>2.5.5</b> 5. Agrupar por ciertas variables: group_by(data_frame, variables) y crear resúmenes por grupo: summarise(data_frame, formulas)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="transformacion-ii.html"><a href="transformacion-ii.html"><i class="fa fa-check"></i><b>3</b> Transformación-II</a><ul>
+<li class="chapter" data-level="3.1" data-path="transformacion-ii.html"><a href="transformacion-ii.html#que-aprendimos-la-clase-pasada-1"><i class="fa fa-check"></i><b>3.1</b> ¿Qué aprendimos la clase pasada?</a></li>
+<li class="chapter" data-level="3.2" data-path="transformacion-ii.html"><a href="transformacion-ii.html#el-operador-pipeline"><i class="fa fa-check"></i><b>3.2</b> El operador pipeline %&gt;%</a></li>
+<li class="chapter" data-level="3.3" data-path="transformacion-ii.html"><a href="transformacion-ii.html#miscelanea-de-funcionalidades-avanzadas-de-transformacion-de-datos"><i class="fa fa-check"></i><b>3.3</b> Miscelánea de funcionalidades avanzadas de transformación de datos</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="transformacion-ii.html"><a href="transformacion-ii.html#joins-inner_joindf1-df2-columnas_a_seleccionar"><i class="fa fa-check"></i><b>3.3.1</b> 1. Joins: inner_join(df1, df2, columnas_a_seleccionar)</a></li>
+<li class="chapter" data-level="3.3.2" data-path="transformacion-ii.html"><a href="transformacion-ii.html#un-intermedio.-lectura-de-datos-en-r"><i class="fa fa-check"></i><b>3.3.2</b> Un intermedio. Lectura de datos en R</a></li>
+<li class="chapter" data-level="3.3.3" data-path="transformacion-ii.html"><a href="transformacion-ii.html#usar-spread-para-transformar-registros-de-un-data-frame-en-campos."><i class="fa fa-check"></i><b>3.3.3</b> 2. Usar spread para transformar registros de un data frame en campos.</a></li>
+<li class="chapter" data-level="3.3.4" data-path="transformacion-ii.html"><a href="transformacion-ii.html#usar-gather-para-transformar-campos-de-un-data-frame-en-registros"><i class="fa fa-check"></i><b>3.3.4</b> 3. Usar gather para transformar campos de un data frame en registros</a></li>
+<li class="chapter" data-level="3.3.5" data-path="transformacion-ii.html"><a href="transformacion-ii.html#separar-una-columna-en-dos-o-mas-separatedf-col-columna-into-cnueva_variable_1-nueva_variable_2-etc"><i class="fa fa-check"></i><b>3.3.5</b> 4. Separar una columna en dos o más: separate(df, col = columna, into = c(nueva_variable_1, nueva_variable_2, etc)</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="transformacion-ii.html"><a href="transformacion-ii.html#datos-faltantes"><i class="fa fa-check"></i><b>3.4</b> Datos faltantes</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="funciones.html"><a href="funciones.html"><i class="fa fa-check"></i><b>4</b> Funciones</a><ul>
+<li class="chapter" data-level="4.1" data-path="funciones.html"><a href="funciones.html#que-aprendimos-la-clase-pasada-2"><i class="fa fa-check"></i><b>4.1</b> ¿Qué aprendimos la clase pasada?</a></li>
+<li class="chapter" data-level="4.2" data-path="funciones.html"><a href="funciones.html#funciones-en-r-1"><i class="fa fa-check"></i><b>4.2</b> Funciones en R</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="funciones.html"><a href="funciones.html#cuando-es-conveniente-escribir-funciones"><i class="fa fa-check"></i><b>4.2.1</b> ¿Cuándo es conveniente escribir funciones?</a></li>
+<li class="chapter" data-level="4.2.2" data-path="funciones.html"><a href="funciones.html#escribiendo-funciones-en-r"><i class="fa fa-check"></i><b>4.2.2</b> Escribiendo funciones en R</a></li>
+<li class="chapter" data-level="4.2.3" data-path="funciones.html"><a href="funciones.html#expresiones-condicionales"><i class="fa fa-check"></i><b>4.2.3</b> Expresiones condicionales</a></li>
+<li class="chapter" data-level="4.2.4" data-path="funciones.html"><a href="funciones.html#de-regreso-al-tidyverse"><i class="fa fa-check"></i><b>4.2.4</b> De regreso al tidyverse</a></li>
+<li class="chapter" data-level="4.2.5" data-path="funciones.html"><a href="funciones.html#ambientes"><i class="fa fa-check"></i><b>4.2.5</b> Ambientes</a></li>
+<li class="chapter" data-level="4.2.6" data-path="funciones.html"><a href="funciones.html#estilos-de-codigo-y-buenas-practicas"><i class="fa fa-check"></i><b>4.2.6</b> Estilos de código y buenas prácticas</a></li>
+<li class="chapter" data-level="4.2.7" data-path="funciones.html"><a href="funciones.html#temas-avanzados-de-funciones-opcional"><i class="fa fa-check"></i><b>4.2.7</b> Temas avanzados de funciones (OPCIONAL)</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="funciones.html"><a href="funciones.html#las-funciones-pueden-llamarse-a-si-mismas."><i class="fa fa-check"></i><b>4.3</b> <em>Las funciones pueden llamarse a si mismas.</em></a></li>
+<li class="chapter" data-level="4.4" data-path="funciones.html"><a href="funciones.html#las-funciones-pueden-regresar-funciones"><i class="fa fa-check"></i><b>4.4</b> <em>Las funciones pueden regresar funciones</em>:</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="vectores.html"><a href="vectores.html"><i class="fa fa-check"></i><b>5</b> Vectores</a><ul>
+<li class="chapter" data-level="5.1" data-path="vectores.html"><a href="vectores.html#que-aprendimos-la-clase-pasada-3"><i class="fa fa-check"></i><b>5.1</b> ¿Qué aprendimos la clase pasada?</a></li>
+<li class="chapter" data-level="5.2" data-path="vectores.html"><a href="vectores.html#vectores-listas-y-arreglos"><i class="fa fa-check"></i><b>5.2</b> Vectores, listas y arreglos</a></li>
+<li class="chapter" data-level="5.3" data-path="vectores.html"><a href="vectores.html#iteracion-en-r"><i class="fa fa-check"></i><b>5.3</b> Iteración en R</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="vectores.html"><a href="vectores.html#iteracion-imperativa"><i class="fa fa-check"></i><b>5.3.1</b> Iteración imperativa</a></li>
+<li class="chapter" data-level="5.3.2" data-path="vectores.html"><a href="vectores.html#iteracion-funcional"><i class="fa fa-check"></i><b>5.3.2</b> Iteración funcional</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="modelado.html"><a href="modelado.html"><i class="fa fa-check"></i><b>6</b> Modelado</a><ul>
+<li class="chapter" data-level="6.1" data-path="modelado.html"><a href="modelado.html#que-aprendimos-la-clase-pasada-4"><i class="fa fa-check"></i><b>6.1</b> ¿Qué aprendimos la clase pasada?</a></li>
+<li class="chapter" data-level="6.2" data-path="modelado.html"><a href="modelado.html#modelos"><i class="fa fa-check"></i><b>6.2</b> Modelos</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="modelado.html"><a href="modelado.html#generacion-de-hipotesis-vs-confirmacion-de-hipotesis"><i class="fa fa-check"></i><b>6.2.1</b> Generación de hipótesis vs confirmación de hipótesis</a></li>
+<li class="chapter" data-level="6.2.2" data-path="modelado.html"><a href="modelado.html#especificacion-de-modelos"><i class="fa fa-check"></i><b>6.2.2</b> Especificación de modelos</a></li>
+<li class="chapter" data-level="6.2.3" data-path="modelado.html"><a href="modelado.html#un-primer-modelo-simple"><i class="fa fa-check"></i><b>6.2.3</b> Un primer modelo simple</a></li>
+<li class="chapter" data-level="6.2.4" data-path="modelado.html"><a href="modelado.html#un-modelo-sobre-datos-mas-interesantes"><i class="fa fa-check"></i><b>6.2.4</b> Un modelo sobre datos más interesantes</a></li>
+<li class="chapter" data-level="6.2.5" data-path="modelado.html"><a href="modelado.html#visualizacion-de-predicciones"><i class="fa fa-check"></i><b>6.2.5</b> visualización de predicciones</a></li>
+<li class="chapter" data-level="6.2.6" data-path="modelado.html"><a href="modelado.html#visualizacion-de-residuales"><i class="fa fa-check"></i><b>6.2.6</b> visualización de residuales</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Minimal Book Example</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="vectores" class="section level1">
+<h1><span class="header-section-number">Chapter 5</span> Vectores</h1>
+<div id="que-aprendimos-la-clase-pasada-3" class="section level2">
+<h2><span class="header-section-number">5.1</span> ¿Qué aprendimos la clase pasada?</h2>
+<ul>
+<li>Evitar repeticiones de código por medio de funciones</li>
+<li>Ejecutar bloques de código usando una condición de control</li>
+<li>Como usar funciones creadas por nosotros en conjunto con las herramientas del tidyverse</li>
+<li>Buenas prácticas para la escritura de código y por qué es deseable el código limpio</li>
+</ul>
+</div>
+<div id="vectores-listas-y-arreglos" class="section level2">
+<h2><span class="header-section-number">5.2</span> Vectores, listas y arreglos</h2>
+<p>Existen dos tipos de vectores en R:</p>
+<ul>
+<li>Los vectores atómicos, que son homogeneos, es decir contienen el mismo tipo de dato en cada una de sus entradas.</li>
+<li>Las listas, que son heterogeneas, es decir pueden contener distintos tipos de datos en cada entrada incluso otras listas.</li>
+</ul>
+<p>Los vectores atómicos pueden ser de 6 distintos tipos: <em>logical</em>, <em>integer</em>, <em>double</em>, <em>character</em>, <em>complex</em>, y <em>raw</em>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vector_logico &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>, <span class="ot">FALSE</span>, <span class="ot">TRUE</span>)
+vector_logico</code></pre></div>
+<pre><code>## [1]  TRUE FALSE FALSE  TRUE</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">typeof</span>(vector_logico)</code></pre></div>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vector_entero &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">4</span>
+vector_entero</code></pre></div>
+<pre><code>## [1] 1 2 3 4</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">typeof</span>(vector_entero)</code></pre></div>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vector_double &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">1.2</span>, pi, <span class="kw">sqrt</span>(<span class="dv">3</span>)) 
+vector_double</code></pre></div>
+<pre><code>## [1] 1.200000 3.141593 1.732051</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">typeof</span>(vector_double)</code></pre></div>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vector_char &lt;-<span class="st"> </span>letters[<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>]
+vector_char</code></pre></div>
+<pre><code>## [1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">typeof</span>(vector_char)</code></pre></div>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vector_complex &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span> <span class="op">+</span><span class="st"> </span>1i, 5i, <span class="dv">5</span>)
+vector_complex</code></pre></div>
+<pre><code>## [1] 1+1i 0+5i 5+0i</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">typeof</span>(vector_complex)</code></pre></div>
+<pre><code>## [1] &quot;complex&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vector_raw &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="kw">charToRaw</span>(<span class="st">&quot;the quick brown fox jumps over the lazy dog&quot;</span>))
+vector_raw</code></pre></div>
+<pre><code>##  [1] 74 68 65 20 71 75 69 63 6b 20 62 72 6f 77 6e 20 66 6f 78 20 6a 75 6d
+## [24] 70 73 20 6f 76 65 72 20 74 68 65 20 6c 61 7a 79 20 64 6f 67</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">typeof</span>(vector_raw)</code></pre></div>
+<pre><code>## [1] &quot;raw&quot;</code></pre>
+<p>Adicionalmente, los vectores integer y double se consideran en la categoría <em>numeric</em>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.numeric</span>(vector_entero)</code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.numeric</span>(vector_double)</code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<p>En R los números por default son de tipo <em>double</em>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">typeof</span>(<span class="dv">6</span>)</code></pre></div>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<p>si queremos un entero anexamos una “L” al final:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">typeof</span>(<span class="dv">1</span>)</code></pre></div>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<p>Tenemos que tener en cuenta que los <em>doubles</em> son aproximaciones entonces pueden pasar cosas como:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">2</span> <span class="op">==</span><span class="st"> </span><span class="kw">sqrt</span>(<span class="dv">2</span>) <span class="op">**</span><span class="st"> </span><span class="dv">2</span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<p>Cuando queremos comprobar igualdades con doubles es mejor usar la función near del paquete tidyverse:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse)
+<span class="kw">near</span>(<span class="dv">2</span>, <span class="kw">sqrt</span>(<span class="dv">2</span>) <span class="op">**</span><span class="st"> </span><span class="dv">2</span>)</code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<p>Existen valores especiales para los datos double:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>) <span class="op">/</span><span class="st"> </span><span class="dv">0</span></code></pre></div>
+<pre><code>## [1] -Inf  NaN  Inf</code></pre>
+<p>En lugar de usar “==” para comprobar igualdades, existen funciones especiales:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.infinite</span>(<span class="op">-</span><span class="dv">1</span><span class="op">/</span><span class="dv">0</span>)</code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.finite</span>(<span class="fl">1.5</span>)</code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.na</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">0</span>)</code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.nan</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">0</span>)</code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.infinite</span>(<span class="op">-</span><span class="dv">1</span><span class="op">/</span><span class="dv">0</span>)</code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.finite</span>(<span class="fl">1.5</span>)</code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.na</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">0</span>)</code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.nan</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">0</span>)</code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div id="coercion" class="section level4">
+<h4><span class="header-section-number">5.2.0.1</span> Coerción</h4>
+<p>Cuando usamos un tipo de valor en un contexto que no es el natural, R intentará convertir esos valores en el tipo adecuado para el contexto:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(<span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>, <span class="ot">FALSE</span>, <span class="ot">TRUE</span>, <span class="ot">TRUE</span>))</code></pre></div>
+<pre><code>## [1] 3</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>()
+
+<span class="cf">if</span>(<span class="kw">length</span>(x)){ <span class="co"># El valor 0 se interpreta como FALSE, cualquier otro valor como TRUE</span>
+  <span class="kw">print</span>(x)
+} <span class="cf">else</span> {
+  <span class="kw">print</span>(<span class="st">&quot;El vector está vacio.&quot;</span>)
+}</code></pre></div>
+<pre><code>## [1] &quot;El vector está vacio.&quot;</code></pre>
+<p>Las listas sirven para generar objetos más complejos:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x1 &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>), <span class="kw">c</span>(<span class="dv">3</span>, <span class="dv">4</span>))
+x1</code></pre></div>
+<pre><code>## [[1]]
+## [1] 1 2
+## 
+## [[2]]
+## [1] 3 4</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x2 &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="kw">list</span>(<span class="dv">1</span>, <span class="dv">2</span>), <span class="kw">list</span>(<span class="dv">3</span>, <span class="dv">4</span>))
+x2</code></pre></div>
+<pre><code>## [[1]]
+## [[1]][[1]]
+## [1] 1
+## 
+## [[1]][[2]]
+## [1] 2
+## 
+## 
+## [[2]]
+## [[2]][[1]]
+## [1] 3
+## 
+## [[2]][[2]]
+## [1] 4</code></pre>
+<p>Los arreglos son arreglos numéricos de varias dimensiones, por ejemplo matrices:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mi_matriz &lt;-<span class="st"> </span><span class="kw">array</span>(<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>), <span class="dt">dim=</span> <span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">2</span>))
+mi_matriz</code></pre></div>
+<pre><code>##      [,1] [,2]
+## [1,]    1    3
+## [2,]    2    4</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">typeof</span>(mi_matriz)</code></pre></div>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mi_matriz &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>), <span class="dt">ncol=</span> <span class="dv">2</span>, <span class="dt">nrow=</span><span class="dv">2</span>)
+mi_matriz</code></pre></div>
+<pre><code>##      [,1] [,2]
+## [1,]    1    3
+## [2,]    2    4</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">typeof</span>(mi_matriz)</code></pre></div>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+</div>
+</div>
+<div id="iteracion-en-r" class="section level2">
+<h2><span class="header-section-number">5.3</span> Iteración en R</h2>
+<p>En la sección anterior se vió cómo evitar duplicar código que se usa de manera recurrente utilizando funciones. Una función abstrae una tarea y permite llevarla a cabo sin escribir código adicional, sólo necesitando ciertos parámetros de entrada.</p>
+<p>Otra herramienta útil para evitar escribir más código son los mecanismos de iteración. Estos son útiles cuando se quiere llevar a cabo la misma tarea múltiples veces.</p>
+<p>En esta clase aprenderemos sobre dos paradigmas de iteración: la programación imperativa y la programación funcional.</p>
+<p>La primera es un paradigma más antiguo y permite introducirse fácilmente al tema pues hace que la iteración sea muy explícita. Como desventaja, las estructuras de este paradigma, llamados bucles (en inglés loops), tienden a ser más extensos en código. Por otro lado, la programación funcional ofrece herramientas para extraer todo el código duplicado para que cada bucle tenga su propia función. Después de un poco de práctica se puede resolver los problemas más comunes en iteración de manera más sencilla, utilizando menos código y por lo mismo cometiendo menos errores.</p>
+<p>Antes que nada, cargaremos el conjunto de datos que se usó hace dos clases sobre violencia en México:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;readxl&quot;</span>)
+ruta_relativa &lt;-<span class="st"> &quot;./datos/Estatal_Victimas_2015_2018_feb.xlsx&quot;</span>
+datos &lt;-<span class="st"> </span><span class="kw">read_excel</span>(ruta_relativa,<span class="dt">sheet=</span><span class="dv">1</span>)</code></pre></div>
+<div id="iteracion-imperativa" class="section level3">
+<h3><span class="header-section-number">5.3.1</span> Iteración imperativa</h3>
+<div id="bucle-for" class="section level4">
+<h4><span class="header-section-number">5.3.1.1</span> Bucle <em>for</em></h4>
+<p>Un bucle está compuesto de una secuencia y un cuerpo que se ejecuta con base en esta secuencia.</p>
+<p>Una secuencia:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">1</span><span class="op">:</span><span class="dv">5</span></code></pre></div>
+<pre><code>## [1] 1 2 3 4 5</code></pre>
+<p>Un bucle for puede ejecutar el mismo código (el contenido en su cuerpo) variando un iterador. Por ejemplo el siguiente código nos muestra uno por uno los números en la secuencia misma y en cada una de esas iteraciones nos muestra la palabra “gatito”.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dv">7</span>, <span class="st">&quot;a&quot;</span>, <span class="dv">6</span>, <span class="st">&quot;gatito&quot;</span>)
+<span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(x)) <span class="co"># para la secuancia del 1 al tamaño de la lista</span>
+{
+  <span class="kw">print</span>(<span class="kw">unlist</span>(x[i])) <span class="co"># ejecutar esto </span>
+}</code></pre></div>
+<pre><code>## [1] 7
+## [1] &quot;a&quot;
+## [1] 6
+## [1] &quot;gatito&quot;</code></pre>
+<p>Podríamos hacer un bucle que obtenga una suma análogo a lo que hace la funcion sum():</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">suma &lt;-<span class="st"> </span><span class="dv">0</span>
+
+<span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">20</span>) {
+  suma &lt;-<span class="st"> </span>suma <span class="op">+</span><span class="st"> </span>i
+}
+
+suma</code></pre></div>
+<pre><code>## [1] 210</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">20</span>)</code></pre></div>
+<pre><code>## [1] 210</code></pre>
+<p>La siguiente función determina si un número es par.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">es_par &lt;-<span class="st"> </span><span class="cf">function</span>(x) {
+  <span class="kw">return</span>(x <span class="op">%%</span><span class="st"> </span><span class="dv">2</span> <span class="op">==</span><span class="st"> </span><span class="dv">0</span>)
+}</code></pre></div>
+<p><img src="imagenes/manicule2.jpg" /> Ejercicio: Utilizar la función anterior para escribir los números del 1 al 100 si el número es impar, imprimir “impar” y si el número es par, escribir el número.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">impar
+<span class="dv">2</span>
+impar
+<span class="dv">4</span>
+impar
+<span class="dv">6</span>
+impar
+<span class="dv">8</span>
+.
+.
+.</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;readxl&quot;</span>)
+
+<span class="kw">setwd</span>(<span class="st">&quot;/Users/agutierrez/Documents/R/r/&quot;</span>)
+
+ruta_relativa &lt;-<span class="st"> &quot;./datos/Estatal_Victimas_2015_2018_feb.xlsx&quot;</span>
+datos &lt;-<span class="st"> </span><span class="kw">read_excel</span>(ruta_relativa,<span class="dt">sheet=</span><span class="dv">1</span>)
+
+datos &lt;-<span class="st"> </span>datos <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">          </span><span class="kw">mutate</span>(<span class="dt">Total =</span> <span class="kw">select</span>(.,Enero<span class="op">:</span>Diciembre) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">rowSums</span>())</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">total_zacatecas &lt;-<span class="st"> </span><span class="dv">0</span>
+
+<span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">nrow</span>(datos)) {
+  fila &lt;-<span class="st"> </span>datos[i,]
+  <span class="cf">if</span>(fila<span class="op">$</span>Entidad <span class="op">==</span><span class="st"> &quot;Aguascalientes&quot;</span> <span class="op">&amp;&amp;</span><span class="st"> </span>fila<span class="op">$</span><span class="st">`</span><span class="dt">Tipo de delito</span><span class="st">`</span> <span class="op">==</span><span class="st"> &quot;Homicidio&quot;</span>){
+    total_zacatecas =<span class="st"> </span>total_zacatecas <span class="op">+</span><span class="st"> </span>fila<span class="op">$</span>Total
+  }
+}
+
+<span class="kw">print</span>(total_zacatecas)</code></pre></div>
+<pre><code>## [1] 819</code></pre>
+<p>Ahora un ejemplo que une todo lo que hemos visto hasta el momento. Usando la función que extrae los datos de homicidios dolosos para un año y un bucle generaremos una gráfica de barras por año:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">extrae_homicidios_fecha &lt;-<span class="st"> </span><span class="cf">function</span>(datos, anio)
+{
+  datos &lt;-<span class="st"> </span>datos <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">    </span><span class="kw">select</span>(Año, Entidad,<span class="st">`</span><span class="dt">Tipo de delito</span><span class="st">`</span>, Modalidad, Total) <span class="op">%&gt;%</span>
+<span class="st">    </span><span class="kw">filter</span>(Año <span class="op">==</span><span class="st"> </span>anio)
+  <span class="kw">return</span>(datos)
+}
+
+<span class="co"># bucle</span>
+<span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">2015</span><span class="op">:</span><span class="dv">2018</span>)
+{
+  homicidios_anio &lt;-<span class="st"> </span><span class="kw">extrae_homicidios_fecha</span>(datos, i)
+  homicidios_fecha &lt;-<span class="st"> </span><span class="kw">toString</span>(i)
+  <span class="kw">print</span>(<span class="kw">ggplot</span>(<span class="dt">data =</span> homicidios_anio, <span class="kw">aes</span>(<span class="dt">x =</span> <span class="kw">reorder</span>(Entidad, Total), <span class="dt">y =</span> Total)) <span class="op">+</span><span class="st"> </span>
+<span class="st">                                                  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>) <span class="op">+</span><span class="st"> </span>
+<span class="st">                                                  </span><span class="kw">labs</span>(<span class="dt">y=</span>homicidios_fecha, <span class="dt">x=</span><span class="st">&quot;Entidad&quot;</span>) <span class="op">+</span><span class="st"> </span>
+<span class="st">                                                  </span><span class="kw">coord_flip</span>())
+}</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-89-1.png" width="672" /><img src="bookdown-demo_files/figure-html/unnamed-chunk-89-2.png" width="672" /><img src="bookdown-demo_files/figure-html/unnamed-chunk-89-3.png" width="672" /><img src="bookdown-demo_files/figure-html/unnamed-chunk-89-4.png" width="672" /></p>
+</div>
+<div id="bucle-while" class="section level4">
+<h4><span class="header-section-number">5.3.1.2</span> Bucle <em>while</em></h4>
+<p>While es otro tipo de bucle que se usa cuando no se conoce de antemano el número de itearaciones que se harán. ¿En qué contexto puede ocurrir esto? Usualmente ocurre en problemas de simulación o muestreo, por ejemplo:</p>
+<p>Si quisieramos simular un dado:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dado &lt;-<span class="st"> </span><span class="cf">function</span>(x) {
+  <span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">6</span>, <span class="dv">1</span>, <span class="dt">replace=</span><span class="ot">TRUE</span>)
+}</code></pre></div>
+<p>Ahora pensamos que nos interesa una muestra de tamaño 10 de tiros de dos dados, pero con la particularidad de que la suma de los números sea menor que 8:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">lanzamientos &lt;-<span class="st"> </span><span class="kw">list</span>()
+
+<span class="cf">while</span>(<span class="kw">length</span>(lanzamientos) <span class="op">&lt;</span><span class="st"> </span><span class="dv">10</span>) {
+  dado_a &lt;-<span class="st"> </span><span class="kw">dado</span>()
+  dado_b &lt;-<span class="st"> </span><span class="kw">dado</span>()
+  <span class="cf">if</span>(dado_a <span class="op">+</span><span class="st"> </span>dado_b <span class="op">&lt;</span><span class="st"> </span><span class="dv">8</span>) {
+    lanzamientos &lt;-<span class="st"> </span><span class="kw">c</span>(lanzamientos, <span class="kw">list</span>(<span class="kw">c</span>(dado_a, dado_b)))
+  }
+}
+
+
+lanzamientos</code></pre></div>
+<pre><code>## [[1]]
+## [1] 3 1
+## 
+## [[2]]
+## [1] 2 3
+## 
+## [[3]]
+## [1] 1 5
+## 
+## [[4]]
+## [1] 1 1
+## 
+## [[5]]
+## [1] 4 3
+## 
+## [[6]]
+## [1] 3 3
+## 
+## [[7]]
+## [1] 3 3
+## 
+## [[8]]
+## [1] 1 3
+## 
+## [[9]]
+## [1] 2 1
+## 
+## [[10]]
+## [1] 1 2</code></pre>
+</div>
+</div>
+<div id="iteracion-funcional" class="section level3">
+<h3><span class="header-section-number">5.3.2</span> Iteración funcional</h3>
+<p>Ya se introdujo la idea de que se puede utilizar una función dentro de otra función. En esta sección se aprenderá a utilizar el paquete purr, que elimina la necesidad de aprender a generar bucles complejos. La base de R tiene funciones con la misma idea (apply(), lapply(), tapply(), etc) pero purr tiende a ser más consistente y por lo tanto más fácil de aprender a usar.</p>
+<p>Si se quiere indagar en las funcones apply se puede consultar esta liga:</p>
+<p><a href="https://www.datacamp.com/community/tutorials/r-tutorial-apply-family#gs.bJ=BAKY" class="uri">https://www.datacamp.com/community/tutorials/r-tutorial-apply-family#gs.bJ=BAKY</a></p>
+<p>El objetivo de las funciones de purr es ayudar a romper las tareas de manipulación de listas en pedazos independientes:</p>
+<p>Primero se debe plantear la interrogante ¿Cómo se puede resolver el problema de interés para un único elemento de la lista? Luego purr ayuda a generalizarlo a cada elemento de la lista.</p>
+<div id="la-funcion-map" class="section level5">
+<h5><span class="header-section-number">5.3.2.0.1</span> La función map</h5>
+<p>La tarea de barrer un vector, hacer algo a cada elemento y luego guardar los resultados es tan común que el paquete purr provee una familia de funciones para llevar esto a cabo.</p>
+<p>Existe una función para cada tipo de salida:</p>
+<ul>
+<li>map() genera una lista.</li>
+<li>map_lgl() genera un vector de valores lógicos.</li>
+<li>map_int() genera un vector de valores enteros.</li>
+<li>map_dbl() genera un vector de valores dobles (números reales).</li>
+<li>map_chr() genera un vector de valores texto.</li>
+</ul>
+<p>Cada una de estas funciones recibe como entrada un vector, aplica una función elegida por el usuario a cada pedazo y regresa un vector de la misma longitud que el original (y con los mismos nombres).</p>
+<p>Por ejemplo para calcular la media de cada columna de la tabla de datos de coches basta con hacer</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">map_dbl</span>(mtcars, mean)</code></pre></div>
+<p>Supongamos que tenemos ahora diversas fuentes de datos que queremos operear en paralelo.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>)
+y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">32</span>, <span class="dv">54</span>, <span class="dv">52</span>, <span class="dv">53</span>, <span class="dv">67</span>, <span class="dv">89</span>, <span class="dv">100</span>, <span class="dv">54</span>, <span class="dv">75</span>, <span class="dv">27</span>)
+
+
+z &lt;-<span class="st"> </span><span class="kw">map2_dbl</span>(x, y, <span class="cf">function</span>(x,y){ <span class="kw">return</span>(x <span class="op">+</span><span class="st"> </span>y) })
+z</code></pre></div>
+<p>Para evitar la declaración de la función que suma dentro de la llamada podemos hacer:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mi_suma &lt;-<span class="st"> </span><span class="cf">function</span>(x,y){ 
+  <span class="kw">return</span>(x <span class="op">+</span><span class="st"> </span>y) 
+}
+
+z &lt;-<span class="st"> </span><span class="kw">map2_dbl</span>(x, y, mi_suma)
+z</code></pre></div>
+<p>Pero el paquete purrr (parte del tidyverse) permite una sintaxis especial. Sustituimos la palabra <em>function</em> por una “~” y accesamos a las variables de entrada por medio del placeholder “.”:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">z &lt;-<span class="st"> </span><span class="kw">map2_dbl</span>(x, y, <span class="op">~</span><span class="st"> </span>.x <span class="op">+</span><span class="st"> </span>.y)
+z</code></pre></div>
+<p><img src="imagenes/manicule2.jpg" /> Ejercicio: ¿Qué diferencia hay entre usar la función map2_dbl y la función map2?</p>
+<p><img src="imagenes/manicule2.jpg" /> Ejercicio: Existe un análogo a la función map2 para más fuentes de datos llamada pmap. Escribe un ejemplo para sumar 3 vectores usando esta función.</p>
+</div>
+<div id="la-funcion-walk" class="section level5">
+<h5><span class="header-section-number">5.3.2.0.2</span> La función walk</h5>
+<p>Es una alternativa a map cuando se quiere llamar una función más por sus efectos que por sus resultados. Esto es, sirve para llevar a cabo un proceso a lo largo de, por ejemplo, un vector.</p>
+<p>Un ejemplo muy simple</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dv">7</span>, <span class="st">&quot;a&quot;</span>, <span class="dv">6</span>, <span class="st">&quot;gatito&quot;</span>)
+
+x <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">walk</span>(print)  <span class="co"># si se fijan hace algo muy parecido a nuestro primer ejemplo de bucle</span></code></pre></div>
+<p>Las funciones map() y walk() iteran sobre múltiples arugmentos en paralelo, map2() y walk2() se especializan en el caso particular de 2 argumentos y pmap() y pwalk() en el caso de un número ilimitado de argumentos en una lista. La función walk, en general, no es tan útil como las funciones walk2() or pwalk().</p>
+<p>Para replicar el ejercicio de separar la tabla de datos de homicidios se puede usar map() seguido de pwalk() para además guardar los plots como pdf.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">plots &lt;-<span class="st"> </span>datos <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">         </span><span class="kw">split</span>(.<span class="op">$</span>Año) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># nota importante: &quot;.&quot; al usar map sirve para algo análogo a &quot;i&quot; en los bucles</span>
+<span class="st">         </span><span class="kw">map</span>(<span class="op">~</span><span class="kw">ggplot</span>(<span class="dt">data =</span> ., <span class="kw">aes</span>(<span class="dt">x =</span> <span class="kw">reorder</span>(Entidad, Total), <span class="dt">y =</span> Total)) <span class="op">+</span><span class="st"> </span>
+<span class="st">                                       </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>) <span class="op">+</span><span class="st"> </span>
+<span class="st">                                       </span><span class="kw">labs</span>(<span class="dt">y=</span>.<span class="op">$</span>Año, <span class="dt">x=</span><span class="st">&quot;Entidad&quot;</span>) <span class="op">+</span><span class="st"> </span>
+<span class="st">                                       </span><span class="kw">coord_flip</span>())
+
+
+<span class="kw">print</span>(plots)</code></pre></div>
+<pre><code>## $`2015`</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-97-1.png" width="672" /></p>
+<pre><code>## 
+## $`2016`</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-97-2.png" width="672" /></p>
+<pre><code>## 
+## $`2017`</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-97-3.png" width="672" /></p>
+<pre><code>## 
+## $`2018`</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-97-4.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">paths &lt;-<span class="st"> </span>stringr<span class="op">::</span><span class="kw">str_c</span>(<span class="kw">names</span>(plots), <span class="st">&quot;.pdf&quot;</span>)
+<span class="kw">pwalk</span>(<span class="kw">list</span>(paths, plots), ggsave, <span class="dt">path =</span> <span class="kw">getwd</span>())
+<span class="kw">getwd</span>()</code></pre></div>
+<p><img src="imagenes/manicule2.jpg" /> Tarea: desarrollar un script que incluya una función que lleve a cabo un proceso que generalmente llevarías a cabo usando otra herramienta, por ejemplo excel, sobre una tabla de datos propia. Explicar lo que se llevó a cabo.</p>
+
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="funciones.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="modelado.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/Clase-6.Rmd",
+"text": "Edit"
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+﻿identifier: MEX-INEGI.40.202.03-ENIGH-2014
+
+title: Encuesta Nacional de Ingresos y Gastos de los Hogares 2014
+
+description: INEGI. Encuesta Nacional de Ingresos y Gastos de los Hogares 2014. Información de Interés Nacional.
+La Encuesta Nacional de Ingresos y Gastos de los Hogares (ENIGH), tiene como objetivo; Proporcionar un panorama estadístico del comportamiento de los ingresos y gastos de los hogares en cuanto a su monto, procedencia y distribución. Adicionalmente ofrece información sobre las características ocupacionales y sociodemográficas de los integrantes del hogar, así como las características de la infraestructura de la vivienda y el equipamiento del hogar.
+La ENIGH forma parte del sistema de información de interés nacional (IIN), esto significa que los resultados obtenidos de este proyecto son de uso obligatorio para la Federación, los estados, el Distrito Federal y los municipios, a efecto de coadyuvar al desarrollo nacional.
+Esta encuesta ofrece de manera adicional información sobre las características ocupacionales y sociodemográficas de los integrantes del hogar, así como las características de la infraestructura de la vivienda y el equipamiento del hogar. 
+La ENIGH, con las estadísticas que genera, contribuye a la tarea institucional de proporcionar el servicio público de información estadística de interés nacional.
+Los resultados de la ENIGH son utilizados para distintos fines, entre los cuales se pueden mencionar los siguientes:
+
+• Generación de ponderadores para la realización del Índice Nacional de Precios al Consumidor.
+• Construcción de indicadores para el estudio de la pobreza. 
+• Conformación de la Cuenta de Hogares del Sistema de Cuentas Nacionales de México.
+• Cálculo de estadísticas sobre los niveles de vida.
+• Estudios del comportamiento de la economía nacional en el ámbito de la economía de los hogares y comparativos con otros países.
+
+modified: 2015-11-09
+
+publisher: Instituto Nacional de Estadística y Geografía, INEGI
+
+mbox: atencion.usuarios@inegi.org.mx
+
+license: http://www.beta.inegi.org.mx/inegi/terminos.html 
+
+dataDictionary: http://www3.inegi.org.mx/rnm/index.php/catalog/164/data_dictionary?idPro=#page=F12&tab=data-dictionary
+
+keyword: Ingreso, Gasto, Hogares
+
+contactPoint: Lic. José de Jesús Esquivel de la Rosa, 01800 111 4634
+
+temporal: 2014-08-21-2014-11-18
+
+spatial: Estados Unidos Mexicanos
+
+accrualPeriodicity: bienal 
+
+Distribution: http://www.beta.inegi.org.mx/proyectos/enchogares/regulares/enigh/tradicional/2014/default.html?init=3
