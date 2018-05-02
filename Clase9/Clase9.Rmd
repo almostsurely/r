@@ -242,4 +242,61 @@ library(tidyverse)
 ggplot(mpg) + 
   geom_point(aes(x = displ, y = hwy, color = class))
 ```
+Aprovechando que tenemos nuestra gráfica desplegada, mencionamos como guardarla en un archivo externo por medio de la función del paquete ggplot2 llamda ggsave:
+
+```{r}
+ggsave("mtcars.png")
+```
+
+
+## Visualización de datos
+
+La correcta visualización de nuestros análisis es un tema que no debemos dejar de lado. La simple elección de colores puede ser fundamental para poder transmitir nuestras ideas. Veamos el siguiente ejemplo usando un paleta de colores escogida por nosotros en vez de la estandar:
+
+```{r}
+ggplot(mpg) + 
+  geom_point(aes(x = displ, y = hwy, color = class)) + 
+  scale_color_manual(values=c("#ffd900", "#48ff00", "#00ff91", "#0091ff", "#4800ff", "#ff00dd", "#ff0000"))
+```
+
+Los colores parecen funcionar de forma correcta, con el contraste suficiente para que podamos diferenciar entre los objetos distintos sin embargo veamos como se vería esa misma paleta si fuera impresa en blanco y negro:
+
+![](./imagenes/mtcars-bw.png) 
+Afortunadamente, existen herramientas que nos ahorran el trabajo de escoger los colores manualmente, un ejemplo muy útil es [Color Brewer](http://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3) que proporciona paletas de colores pensados específicamente para la visualización de datos. Existe además un paquete de R basdado en esta herramienta:
+
+```{r, message=FALSE}
+library(RColorBrewer)
+
+ggplot(mpg) + 
+  geom_point(aes(x = displ, y = hwy, color = class)) + 
+  scale_color_manual(values=brewer.pal(7,"Greens"))
+```
+
+O bien un ejemplo más útil que toma en cuenta incluso a la gente que padece de ceguera al color:
+
+```{r, message=FALSE}
+ggplot(mpg) + 
+  geom_point(aes(x = displ, y = hwy, color = class)) + 
+  scale_color_manual(values=brewer.pal(7,"RdYlBu"))
+```
+
+Si queremos despleglar las paletas existentes para nuestros 7 tipos de coche:
+
+```{r}
+display.brewer.all(n=7, type="all", exact.n=TRUE, colorblindFriendly=TRUE)
+```
+
+Existen ciertos trucos que nos permiten desplegar aún más dimensiones sin abusar medio, por ejemplo podemos usar el tamaño de los puntos para mostrar una dimensión adicional:
+
+```{r, message=FALSE}
+ggplot(mpg) + 
+  geom_point(aes(x = displ, y = hwy, color = fl, size = cyl)) +
+  scale_color_manual(values=brewer.pal(7,"RdYlBu"))
+```
+
+El mejor ejemplo para una visualización de esta naturaleza es el de gap minder donde se muestran hasta 6 dimensiones de los datos contando una historia de manera muy astuta. En el eje y podemos observar la esperanza de vida para cada individuo, en el eje x el ingreso por individuo, el color de cada burbuja representa el continente, el tamaño de la burbuja representa la población, en la visualización original selecionar una burbuja revela el nombre del país, finalmente animar la gráfica usando el tiempo como parametro extra permite ver la evolución del panorama de los paises durante el último par de siglos.
+
+![](./imagenes/gapminder.gif)
+
+![](./imagenes/manicule2.jpg) Ejercicio 3: Crear un reporte con unos datos de tu elección que contenga una descripción de los mismos usando las herramientas estudiadas en el curso.
 
