@@ -349,10 +349,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <span class="kw">library</span>(<span class="st">&quot;tidyverse&quot;</span>)</code></pre></div>
 <pre><code>## ── Attaching packages ───────────</code></pre>
 <pre><code>## ✔ ggplot2 2.2.1     ✔ purrr   0.2.4
-## ✔ tibble  1.3.4     ✔ dplyr   0.7.4
-## ✔ tidyr   0.7.2     ✔ stringr 1.3.0
-## ✔ readr   1.1.1     ✔ forcats 0.2.0</code></pre>
-<pre><code>## Warning: package &#39;stringr&#39; was built under R version 3.4.3</code></pre>
+## ✔ tibble  1.4.2     ✔ dplyr   0.7.4
+## ✔ tidyr   0.8.0     ✔ stringr 1.3.0
+## ✔ readr   1.1.1     ✔ forcats 0.3.0</code></pre>
 <pre><code>## ── Conflicts ────────────────────
 ## ✖ dplyr::filter() masks stats::filter()
 ## ✖ dplyr::lag()    masks stats::lag()</code></pre>
@@ -391,34 +390,34 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 diamonds_columnas_selectas &lt;-<span class="st"> </span><span class="kw">select</span>(diamonds, carat, cut)
 diamonds_columnas_selectas</code></pre></div>
 <pre><code>## # A tibble: 53,940 x 2
-##    carat       cut
-##    &lt;dbl&gt;     &lt;ord&gt;
-##  1  0.23     Ideal
-##  2  0.21   Premium
-##  3  0.23      Good
-##  4  0.29   Premium
-##  5  0.31      Good
-##  6  0.24 Very Good
-##  7  0.24 Very Good
-##  8  0.26 Very Good
-##  9  0.22      Fair
-## 10  0.23 Very Good
+##    carat cut      
+##    &lt;dbl&gt; &lt;ord&gt;    
+##  1 0.23  Ideal    
+##  2 0.21  Premium  
+##  3 0.23  Good     
+##  4 0.290 Premium  
+##  5 0.31  Good     
+##  6 0.24  Very Good
+##  7 0.24  Very Good
+##  8 0.26  Very Good
+##  9 0.22  Fair     
+## 10 0.23  Very Good
 ## # ... with 53,930 more rows</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Otras maneras de seleccionar columnas:</span>
 <span class="kw">select</span>(diamonds, <span class="kw">starts_with</span>(<span class="st">&quot;c&quot;</span>))</code></pre></div>
 <pre><code>## # A tibble: 53,940 x 4
-##    carat       cut color clarity
-##    &lt;dbl&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;ord&gt;
-##  1  0.23     Ideal     E     SI2
-##  2  0.21   Premium     E     SI1
-##  3  0.23      Good     E     VS1
-##  4  0.29   Premium     I     VS2
-##  5  0.31      Good     J     SI2
-##  6  0.24 Very Good     J    VVS2
-##  7  0.24 Very Good     I    VVS1
-##  8  0.26 Very Good     H     SI1
-##  9  0.22      Fair     E     VS2
-## 10  0.23 Very Good     H     VS1
+##    carat cut       color clarity
+##    &lt;dbl&gt; &lt;ord&gt;     &lt;ord&gt; &lt;ord&gt;  
+##  1 0.23  Ideal     E     SI2    
+##  2 0.21  Premium   E     SI1    
+##  3 0.23  Good      E     VS1    
+##  4 0.290 Premium   I     VS2    
+##  5 0.31  Good      J     SI2    
+##  6 0.24  Very Good J     VVS2   
+##  7 0.24  Very Good I     VVS1   
+##  8 0.26  Very Good H     SI1    
+##  9 0.22  Fair      E     VS2    
+## 10 0.23  Very Good H     VS1    
 ## # ... with 53,930 more rows</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">select</span>(diamonds, <span class="kw">contains</span>(<span class="st">&quot;able&quot;</span>))</code></pre></div>
 <pre><code>## # A tibble: 53,940 x 1
@@ -438,17 +437,17 @@ diamonds_columnas_selectas</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">select</span>(diamonds, <span class="op">-</span>carat, <span class="op">-</span>cut, <span class="op">-</span>color)</code></pre></div>
 <pre><code>## # A tibble: 53,940 x 7
 ##    clarity depth table price     x     y     z
-##      &lt;ord&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-##  1     SI2  61.5    55   326  3.95  3.98  2.43
-##  2     SI1  59.8    61   326  3.89  3.84  2.31
-##  3     VS1  56.9    65   327  4.05  4.07  2.31
-##  4     VS2  62.4    58   334  4.20  4.23  2.63
-##  5     SI2  63.3    58   335  4.34  4.35  2.75
-##  6    VVS2  62.8    57   336  3.94  3.96  2.48
-##  7    VVS1  62.3    57   336  3.95  3.98  2.47
-##  8     SI1  61.9    55   337  4.07  4.11  2.53
-##  9     VS2  65.1    61   337  3.87  3.78  2.49
-## 10     VS1  59.4    61   338  4.00  4.05  2.39
+##    &lt;ord&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1 SI2      61.5    55   326  3.95  3.98  2.43
+##  2 SI1      59.8    61   326  3.89  3.84  2.31
+##  3 VS1      56.9    65   327  4.05  4.07  2.31
+##  4 VS2      62.4    58   334  4.2   4.23  2.63
+##  5 SI2      63.3    58   335  4.34  4.35  2.75
+##  6 VVS2     62.8    57   336  3.94  3.96  2.48
+##  7 VVS1     62.3    57   336  3.95  3.98  2.47
+##  8 SI1      61.9    55   337  4.07  4.11  2.53
+##  9 VS2      65.1    61   337  3.87  3.78  2.49
+## 10 VS1      59.4    61   338  4     4.05  2.39
 ## # ... with 53,930 more rows</code></pre>
 <p><img src="imagenes/manicule2.jpg" /> Crea un data frame nuevo a partir de diamonds con las columnas carat, x, y, z únicamente.</p>
 </div>
@@ -457,49 +456,49 @@ diamonds_columnas_selectas</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">diamonds_registros_selectos &lt;-<span class="st"> </span><span class="kw">filter</span>(diamonds, cut <span class="op">==</span><span class="st"> &quot;Ideal&quot;</span>, x <span class="op">&gt;</span><span class="st"> </span><span class="dv">4</span>)
 diamonds_registros_selectos</code></pre></div>
 <pre><code>## # A tibble: 21,449 x 10
-##    carat   cut color clarity depth table price     x     y     z
-##    &lt;dbl&gt; &lt;ord&gt; &lt;ord&gt;   &lt;ord&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-##  1  0.31 Ideal     J     SI2  62.2    54   344  4.35  4.37  2.71
-##  2  0.30 Ideal     I     SI2  62.0    54   348  4.31  4.34  2.68
-##  3  0.33 Ideal     I     SI2  61.8    55   403  4.49  4.51  2.78
-##  4  0.33 Ideal     I     SI2  61.2    56   403  4.49  4.50  2.75
-##  5  0.33 Ideal     J     SI1  61.1    56   403  4.49  4.55  2.76
-##  6  0.32 Ideal     I     SI1  60.9    55   404  4.45  4.48  2.72
-##  7  0.30 Ideal     I     SI2  61.0    59   405  4.30  4.33  2.63
-##  8  0.35 Ideal     I     VS1  60.9    57   552  4.54  4.59  2.78
-##  9  0.30 Ideal     D     SI1  62.5    57   552  4.29  4.32  2.69
-## 10  0.30 Ideal     D     SI1  62.1    56   552  4.30  4.33  2.68
+##    carat cut   color clarity depth table price     x     y     z
+##    &lt;dbl&gt; &lt;ord&gt; &lt;ord&gt; &lt;ord&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1  0.31 Ideal J     SI2      62.2    54   344  4.35  4.37  2.71
+##  2  0.3  Ideal I     SI2      62      54   348  4.31  4.34  2.68
+##  3  0.33 Ideal I     SI2      61.8    55   403  4.49  4.51  2.78
+##  4  0.33 Ideal I     SI2      61.2    56   403  4.49  4.5   2.75
+##  5  0.33 Ideal J     SI1      61.1    56   403  4.49  4.55  2.76
+##  6  0.32 Ideal I     SI1      60.9    55   404  4.45  4.48  2.72
+##  7  0.3  Ideal I     SI2      61      59   405  4.3   4.33  2.63
+##  8  0.35 Ideal I     VS1      60.9    57   552  4.54  4.59  2.78
+##  9  0.3  Ideal D     SI1      62.5    57   552  4.29  4.32  2.69
+## 10  0.3  Ideal D     SI1      62.1    56   552  4.3   4.33  2.68
 ## # ... with 21,439 more rows</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Otras maneras de filtrar registros</span>
 <span class="kw">filter</span>(diamonds, cut <span class="op">==</span><span class="st"> &quot;Ideal&quot;</span> <span class="op">&amp;</span><span class="st"> </span>x <span class="op">&gt;</span><span class="st"> </span><span class="dv">4</span>)</code></pre></div>
 <pre><code>## # A tibble: 21,449 x 10
-##    carat   cut color clarity depth table price     x     y     z
-##    &lt;dbl&gt; &lt;ord&gt; &lt;ord&gt;   &lt;ord&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-##  1  0.31 Ideal     J     SI2  62.2    54   344  4.35  4.37  2.71
-##  2  0.30 Ideal     I     SI2  62.0    54   348  4.31  4.34  2.68
-##  3  0.33 Ideal     I     SI2  61.8    55   403  4.49  4.51  2.78
-##  4  0.33 Ideal     I     SI2  61.2    56   403  4.49  4.50  2.75
-##  5  0.33 Ideal     J     SI1  61.1    56   403  4.49  4.55  2.76
-##  6  0.32 Ideal     I     SI1  60.9    55   404  4.45  4.48  2.72
-##  7  0.30 Ideal     I     SI2  61.0    59   405  4.30  4.33  2.63
-##  8  0.35 Ideal     I     VS1  60.9    57   552  4.54  4.59  2.78
-##  9  0.30 Ideal     D     SI1  62.5    57   552  4.29  4.32  2.69
-## 10  0.30 Ideal     D     SI1  62.1    56   552  4.30  4.33  2.68
+##    carat cut   color clarity depth table price     x     y     z
+##    &lt;dbl&gt; &lt;ord&gt; &lt;ord&gt; &lt;ord&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1  0.31 Ideal J     SI2      62.2    54   344  4.35  4.37  2.71
+##  2  0.3  Ideal I     SI2      62      54   348  4.31  4.34  2.68
+##  3  0.33 Ideal I     SI2      61.8    55   403  4.49  4.51  2.78
+##  4  0.33 Ideal I     SI2      61.2    56   403  4.49  4.5   2.75
+##  5  0.33 Ideal J     SI1      61.1    56   403  4.49  4.55  2.76
+##  6  0.32 Ideal I     SI1      60.9    55   404  4.45  4.48  2.72
+##  7  0.3  Ideal I     SI2      61      59   405  4.3   4.33  2.63
+##  8  0.35 Ideal I     VS1      60.9    57   552  4.54  4.59  2.78
+##  9  0.3  Ideal D     SI1      62.5    57   552  4.29  4.32  2.69
+## 10  0.3  Ideal D     SI1      62.1    56   552  4.3   4.33  2.68
 ## # ... with 21,439 more rows</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">filter</span>(diamonds, cut <span class="op">==</span><span class="st"> &quot;Ideal&quot;</span> <span class="op">|</span><span class="st"> </span>x <span class="op">&gt;</span><span class="st"> </span><span class="dv">4</span>)</code></pre></div>
 <pre><code>## # A tibble: 53,546 x 10
-##    carat       cut color clarity depth table price     x     y     z
-##    &lt;dbl&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;ord&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-##  1  0.23     Ideal     E     SI2  61.5    55   326  3.95  3.98  2.43
-##  2  0.23      Good     E     VS1  56.9    65   327  4.05  4.07  2.31
-##  3  0.29   Premium     I     VS2  62.4    58   334  4.20  4.23  2.63
-##  4  0.31      Good     J     SI2  63.3    58   335  4.34  4.35  2.75
-##  5  0.26 Very Good     H     SI1  61.9    55   337  4.07  4.11  2.53
-##  6  0.30      Good     J     SI1  64.0    55   339  4.25  4.28  2.73
-##  7  0.23     Ideal     J     VS1  62.8    56   340  3.93  3.90  2.46
-##  8  0.31     Ideal     J     SI2  62.2    54   344  4.35  4.37  2.71
-##  9  0.32   Premium     E      I1  60.9    58   345  4.38  4.42  2.68
-## 10  0.30     Ideal     I     SI2  62.0    54   348  4.31  4.34  2.68
+##    carat cut       color clarity depth table price     x     y     z
+##    &lt;dbl&gt; &lt;ord&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1 0.23  Ideal     E     SI2      61.5    55   326  3.95  3.98  2.43
+##  2 0.23  Good      E     VS1      56.9    65   327  4.05  4.07  2.31
+##  3 0.290 Premium   I     VS2      62.4    58   334  4.2   4.23  2.63
+##  4 0.31  Good      J     SI2      63.3    58   335  4.34  4.35  2.75
+##  5 0.26  Very Good H     SI1      61.9    55   337  4.07  4.11  2.53
+##  6 0.3   Good      J     SI1      64      55   339  4.25  4.28  2.73
+##  7 0.23  Ideal     J     VS1      62.8    56   340  3.93  3.9   2.46
+##  8 0.31  Ideal     J     SI2      62.2    54   344  4.35  4.37  2.71
+##  9 0.32  Premium   E     I1       60.9    58   345  4.38  4.42  2.68
+## 10 0.3   Ideal     I     SI2      62      54   348  4.31  4.34  2.68
 ## # ... with 53,536 more rows</code></pre>
 <p><img src="imagenes/manicule2.jpg" /> Crea un data frame nuevo a partir de diamonds que contenga los registros que cumplen la condición: ‘<strong>alguna</strong> de x, y, z es mayor a 3.5’</p>
 </div>
@@ -508,49 +507,49 @@ diamonds_registros_selectos</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">diamonds_ordenado &lt;-<span class="st"> </span><span class="kw">arrange</span>(diamonds, carat, depth)
 diamonds_ordenado</code></pre></div>
 <pre><code>## # A tibble: 53,940 x 10
-##    carat     cut color clarity depth table price     x     y     z
-##    &lt;dbl&gt;   &lt;ord&gt; &lt;ord&gt;   &lt;ord&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-##  1   0.2 Premium     E     VS2  59.0    60   367  3.81  3.78  2.24
-##  2   0.2 Premium     E     VS2  59.7    62   367  3.84  3.80  2.28
-##  3   0.2   Ideal     E     VS2  59.7    55   367  3.86  3.84  2.30
-##  4   0.2 Premium     E     VS2  59.8    62   367  3.79  3.77  2.26
-##  5   0.2 Premium     E     SI2  60.2    62   345  3.79  3.75  2.27
-##  6   0.2 Premium     E     VS2  61.1    59   367  3.81  3.78  2.32
-##  7   0.2   Ideal     D     VS2  61.5    57   367  3.81  3.77  2.33
-##  8   0.2 Premium     D     VS2  61.7    60   367  3.77  3.72  2.31
-##  9   0.2   Ideal     E     VS2  62.2    57   367  3.76  3.73  2.33
-## 10   0.2 Premium     D     VS2  62.3    60   367  3.73  3.68  2.31
+##    carat cut     color clarity depth table price     x     y     z
+##    &lt;dbl&gt; &lt;ord&gt;   &lt;ord&gt; &lt;ord&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1   0.2 Premium E     VS2      59      60   367  3.81  3.78  2.24
+##  2   0.2 Premium E     VS2      59.7    62   367  3.84  3.8   2.28
+##  3   0.2 Ideal   E     VS2      59.7    55   367  3.86  3.84  2.3 
+##  4   0.2 Premium E     VS2      59.8    62   367  3.79  3.77  2.26
+##  5   0.2 Premium E     SI2      60.2    62   345  3.79  3.75  2.27
+##  6   0.2 Premium E     VS2      61.1    59   367  3.81  3.78  2.32
+##  7   0.2 Ideal   D     VS2      61.5    57   367  3.81  3.77  2.33
+##  8   0.2 Premium D     VS2      61.7    60   367  3.77  3.72  2.31
+##  9   0.2 Ideal   E     VS2      62.2    57   367  3.76  3.73  2.33
+## 10   0.2 Premium D     VS2      62.3    60   367  3.73  3.68  2.31
 ## # ... with 53,930 more rows</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># desc(variable): ordena en sentido decreciente (Z-A), (mayor a menor, etc)</span>
 <span class="kw">arrange</span>(diamonds, carat, <span class="kw">desc</span>(depth))</code></pre></div>
 <pre><code>## # A tibble: 53,940 x 10
-##    carat       cut color clarity depth table price     x     y     z
-##    &lt;dbl&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;ord&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-##  1   0.2 Very Good     E     VS2  63.4    59   367  3.74  3.71  2.36
-##  2   0.2   Premium     F     VS2  62.6    59   367  3.73  3.71  2.33
-##  3   0.2   Premium     D     VS2  62.3    60   367  3.73  3.68  2.31
-##  4   0.2     Ideal     E     VS2  62.2    57   367  3.76  3.73  2.33
-##  5   0.2   Premium     D     VS2  61.7    60   367  3.77  3.72  2.31
-##  6   0.2     Ideal     D     VS2  61.5    57   367  3.81  3.77  2.33
-##  7   0.2   Premium     E     VS2  61.1    59   367  3.81  3.78  2.32
-##  8   0.2   Premium     E     SI2  60.2    62   345  3.79  3.75  2.27
-##  9   0.2   Premium     E     VS2  59.8    62   367  3.79  3.77  2.26
-## 10   0.2   Premium     E     VS2  59.7    62   367  3.84  3.80  2.28
+##    carat cut       color clarity depth table price     x     y     z
+##    &lt;dbl&gt; &lt;ord&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1   0.2 Very Good E     VS2      63.4    59   367  3.74  3.71  2.36
+##  2   0.2 Premium   F     VS2      62.6    59   367  3.73  3.71  2.33
+##  3   0.2 Premium   D     VS2      62.3    60   367  3.73  3.68  2.31
+##  4   0.2 Ideal     E     VS2      62.2    57   367  3.76  3.73  2.33
+##  5   0.2 Premium   D     VS2      61.7    60   367  3.77  3.72  2.31
+##  6   0.2 Ideal     D     VS2      61.5    57   367  3.81  3.77  2.33
+##  7   0.2 Premium   E     VS2      61.1    59   367  3.81  3.78  2.32
+##  8   0.2 Premium   E     SI2      60.2    62   345  3.79  3.75  2.27
+##  9   0.2 Premium   E     VS2      59.8    62   367  3.79  3.77  2.26
+## 10   0.2 Premium   E     VS2      59.7    62   367  3.84  3.8   2.28
 ## # ... with 53,930 more rows</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">arrange</span>(diamonds, <span class="kw">desc</span>(carat), depth)</code></pre></div>
 <pre><code>## # A tibble: 53,940 x 10
-##    carat       cut color clarity depth table price     x     y     z
-##    &lt;dbl&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;ord&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-##  1  5.01      Fair     J      I1  65.5    59 18018 10.74 10.54  6.98
-##  2  4.50      Fair     J      I1  65.8    58 18531 10.23 10.16  6.72
-##  3  4.13      Fair     H      I1  64.8    61 17329 10.00  9.85  6.43
-##  4  4.01   Premium     I      I1  61.0    61 15223 10.14 10.10  6.17
-##  5  4.01   Premium     J      I1  62.5    62 15223 10.02  9.94  6.24
-##  6  4.00 Very Good     I      I1  63.3    58 15984 10.01  9.94  6.31
-##  7  3.67   Premium     I      I1  62.4    56 16193  9.86  9.81  6.13
-##  8  3.65      Fair     H      I1  67.1    53 11668  9.53  9.48  6.38
-##  9  3.51   Premium     J     VS2  62.5    59 18701  9.66  9.63  6.03
-## 10  3.50     Ideal     H      I1  62.8    57 12587  9.65  9.59  6.03
+##    carat cut       color clarity depth table price     x     y     z
+##    &lt;dbl&gt; &lt;ord&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1  5.01 Fair      J     I1       65.5    59 18018 10.7  10.5   6.98
+##  2  4.5  Fair      J     I1       65.8    58 18531 10.2  10.2   6.72
+##  3  4.13 Fair      H     I1       64.8    61 17329 10     9.85  6.43
+##  4  4.01 Premium   I     I1       61      61 15223 10.1  10.1   6.17
+##  5  4.01 Premium   J     I1       62.5    62 15223 10.0   9.94  6.24
+##  6  4    Very Good I     I1       63.3    58 15984 10.0   9.94  6.31
+##  7  3.67 Premium   I     I1       62.4    56 16193  9.86  9.81  6.13
+##  8  3.65 Fair      H     I1       67.1    53 11668  9.53  9.48  6.38
+##  9  3.51 Premium   J     VS2      62.5    59 18701  9.66  9.63  6.03
+## 10  3.5  Ideal     H     I1       62.8    57 12587  9.65  9.59  6.03
 ## # ... with 53,930 more rows</code></pre>
 <p><img src="imagenes/manicule2.jpg" /> Crea un data frame nuevo a partir de diamonds que contenga los registros organizados alfabéticamente por “color”“, y por”carat&quot; de manera descendente.</p>
 </div>
@@ -572,7 +571,7 @@ diamonds_resumen</code></pre></div>
 <pre><code>## # A tibble: 1 x 2
 ##   promedio_depth mediana_price
 ##            &lt;dbl&gt;         &lt;dbl&gt;
-## 1        61.7494          2401</code></pre>
+## 1           61.7          2401</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Calcular el promedio de depth y la mediana de price y asignarlos a las variables</span>
 <span class="co"># &quot;promedio_depth&quot; y &quot;mediana_price&quot;, por nivel de &quot;cut&quot;</span>
 <span class="co"># Primero agrupo por la variable de interés</span>
@@ -580,30 +579,30 @@ diamonds_agrupado &lt;-<span class="st"> </span><span class="kw">group_by</span>
 diamonds_agrupado</code></pre></div>
 <pre><code>## # A tibble: 53,940 x 10
 ## # Groups:   cut [5]
-##    carat       cut color clarity depth table price     x     y     z
-##    &lt;dbl&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;ord&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-##  1  0.23     Ideal     E     SI2  61.5    55   326  3.95  3.98  2.43
-##  2  0.21   Premium     E     SI1  59.8    61   326  3.89  3.84  2.31
-##  3  0.23      Good     E     VS1  56.9    65   327  4.05  4.07  2.31
-##  4  0.29   Premium     I     VS2  62.4    58   334  4.20  4.23  2.63
-##  5  0.31      Good     J     SI2  63.3    58   335  4.34  4.35  2.75
-##  6  0.24 Very Good     J    VVS2  62.8    57   336  3.94  3.96  2.48
-##  7  0.24 Very Good     I    VVS1  62.3    57   336  3.95  3.98  2.47
-##  8  0.26 Very Good     H     SI1  61.9    55   337  4.07  4.11  2.53
-##  9  0.22      Fair     E     VS2  65.1    61   337  3.87  3.78  2.49
-## 10  0.23 Very Good     H     VS1  59.4    61   338  4.00  4.05  2.39
+##    carat cut       color clarity depth table price     x     y     z
+##    &lt;dbl&gt; &lt;ord&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1 0.23  Ideal     E     SI2      61.5    55   326  3.95  3.98  2.43
+##  2 0.21  Premium   E     SI1      59.8    61   326  3.89  3.84  2.31
+##  3 0.23  Good      E     VS1      56.9    65   327  4.05  4.07  2.31
+##  4 0.290 Premium   I     VS2      62.4    58   334  4.2   4.23  2.63
+##  5 0.31  Good      J     SI2      63.3    58   335  4.34  4.35  2.75
+##  6 0.24  Very Good J     VVS2     62.8    57   336  3.94  3.96  2.48
+##  7 0.24  Very Good I     VVS1     62.3    57   336  3.95  3.98  2.47
+##  8 0.26  Very Good H     SI1      61.9    55   337  4.07  4.11  2.53
+##  9 0.22  Fair      E     VS2      65.1    61   337  3.87  3.78  2.49
+## 10 0.23  Very Good H     VS1      59.4    61   338  4     4.05  2.39
 ## # ... with 53,930 more rows</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Y calculo resúmenes para cada nivel de dicha variable</span>
 diamonds_resumen_por_grupo &lt;-<span class="st"> </span><span class="kw">summarise</span>(diamonds_agrupado, <span class="dt">promedio_depth =</span> <span class="kw">mean</span>(depth), <span class="dt">mediana_price =</span> <span class="kw">median</span>(price))
 diamonds_resumen_por_grupo</code></pre></div>
 <pre><code>## # A tibble: 5 x 3
-##         cut promedio_depth mediana_price
-##       &lt;ord&gt;          &lt;dbl&gt;         &lt;dbl&gt;
-## 1      Fair       64.04168        3282.0
-## 2      Good       62.36588        3050.5
-## 3 Very Good       61.81828        2648.0
-## 4   Premium       61.26467        3185.0
-## 5     Ideal       61.70940        1810.0</code></pre>
+##   cut       promedio_depth mediana_price
+##   &lt;ord&gt;              &lt;dbl&gt;         &lt;dbl&gt;
+## 1 Fair                64.0         3282 
+## 2 Good                62.4         3050.
+## 3 Very Good           61.8         2648 
+## 4 Premium             61.3         3185 
+## 5 Ideal               61.7         1810</code></pre>
 <p>Algunos resúmenes útiles con <em>summarise</em> son:</p>
 <ul>
 <li>El mínimo de un campo x: <strong>min(x)</strong></li>

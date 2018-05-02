@@ -260,70 +260,70 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">diamonds_dollars_per_carat &lt;-<span class="st"> </span><span class="kw">mutate</span>(diamonds, <span class="dt">dollars_per_carat =</span> price <span class="op">/</span><span class="st"> </span>carat)
 diamonds_dollars_per_carat</code></pre></div>
 <pre><code>## # A tibble: 53,940 x 11
-##    carat       cut color clarity depth table price     x     y     z
-##    &lt;dbl&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;ord&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-##  1  0.23     Ideal     E     SI2  61.5    55   326  3.95  3.98  2.43
-##  2  0.21   Premium     E     SI1  59.8    61   326  3.89  3.84  2.31
-##  3  0.23      Good     E     VS1  56.9    65   327  4.05  4.07  2.31
-##  4  0.29   Premium     I     VS2  62.4    58   334  4.20  4.23  2.63
-##  5  0.31      Good     J     SI2  63.3    58   335  4.34  4.35  2.75
-##  6  0.24 Very Good     J    VVS2  62.8    57   336  3.94  3.96  2.48
-##  7  0.24 Very Good     I    VVS1  62.3    57   336  3.95  3.98  2.47
-##  8  0.26 Very Good     H     SI1  61.9    55   337  4.07  4.11  2.53
-##  9  0.22      Fair     E     VS2  65.1    61   337  3.87  3.78  2.49
-## 10  0.23 Very Good     H     VS1  59.4    61   338  4.00  4.05  2.39
-## # ... with 53,930 more rows, and 1 more variables: dollars_per_carat &lt;dbl&gt;</code></pre>
+##    carat cut       color clarity depth table price     x     y     z
+##    &lt;dbl&gt; &lt;ord&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1 0.23  Ideal     E     SI2      61.5    55   326  3.95  3.98  2.43
+##  2 0.21  Premium   E     SI1      59.8    61   326  3.89  3.84  2.31
+##  3 0.23  Good      E     VS1      56.9    65   327  4.05  4.07  2.31
+##  4 0.290 Premium   I     VS2      62.4    58   334  4.2   4.23  2.63
+##  5 0.31  Good      J     SI2      63.3    58   335  4.34  4.35  2.75
+##  6 0.24  Very Good J     VVS2     62.8    57   336  3.94  3.96  2.48
+##  7 0.24  Very Good I     VVS1     62.3    57   336  3.95  3.98  2.47
+##  8 0.26  Very Good H     SI1      61.9    55   337  4.07  4.11  2.53
+##  9 0.22  Fair      E     VS2      65.1    61   337  3.87  3.78  2.49
+## 10 0.23  Very Good H     VS1      59.4    61   338  4     4.05  2.39
+## # ... with 53,930 more rows, and 1 more variable: dollars_per_carat &lt;dbl&gt;</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">diamonds_dollars_per_carat_filtrado &lt;-<span class="st"> </span><span class="kw">filter</span>(diamonds_dollars_per_carat, dollars_per_carat <span class="op">&lt;</span><span class="st"> </span><span class="dv">4000</span>)
 diamonds_dollars_per_carat_filtrado</code></pre></div>
 <pre><code>## # A tibble: 32,083 x 11
-##    carat       cut color clarity depth table price     x     y     z
-##    &lt;dbl&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;ord&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-##  1  0.23     Ideal     E     SI2  61.5    55   326  3.95  3.98  2.43
-##  2  0.21   Premium     E     SI1  59.8    61   326  3.89  3.84  2.31
-##  3  0.23      Good     E     VS1  56.9    65   327  4.05  4.07  2.31
-##  4  0.29   Premium     I     VS2  62.4    58   334  4.20  4.23  2.63
-##  5  0.31      Good     J     SI2  63.3    58   335  4.34  4.35  2.75
-##  6  0.24 Very Good     J    VVS2  62.8    57   336  3.94  3.96  2.48
-##  7  0.24 Very Good     I    VVS1  62.3    57   336  3.95  3.98  2.47
-##  8  0.26 Very Good     H     SI1  61.9    55   337  4.07  4.11  2.53
-##  9  0.22      Fair     E     VS2  65.1    61   337  3.87  3.78  2.49
-## 10  0.23 Very Good     H     VS1  59.4    61   338  4.00  4.05  2.39
-## # ... with 32,073 more rows, and 1 more variables: dollars_per_carat &lt;dbl&gt;</code></pre>
+##    carat cut       color clarity depth table price     x     y     z
+##    &lt;dbl&gt; &lt;ord&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1 0.23  Ideal     E     SI2      61.5    55   326  3.95  3.98  2.43
+##  2 0.21  Premium   E     SI1      59.8    61   326  3.89  3.84  2.31
+##  3 0.23  Good      E     VS1      56.9    65   327  4.05  4.07  2.31
+##  4 0.290 Premium   I     VS2      62.4    58   334  4.2   4.23  2.63
+##  5 0.31  Good      J     SI2      63.3    58   335  4.34  4.35  2.75
+##  6 0.24  Very Good J     VVS2     62.8    57   336  3.94  3.96  2.48
+##  7 0.24  Very Good I     VVS1     62.3    57   336  3.95  3.98  2.47
+##  8 0.26  Very Good H     SI1      61.9    55   337  4.07  4.11  2.53
+##  9 0.22  Fair      E     VS2      65.1    61   337  3.87  3.78  2.49
+## 10 0.23  Very Good H     VS1      59.4    61   338  4     4.05  2.39
+## # ... with 32,073 more rows, and 1 more variable: dollars_per_carat &lt;dbl&gt;</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">diamonds_dollars_per_carat_filtrado_ordenado &lt;-<span class="st"> </span><span class="kw">arrange</span>(diamonds_dollars_per_carat_filtrado, <span class="kw">desc</span>(dollars_per_carat))
 diamonds_dollars_per_carat_filtrado_ordenado</code></pre></div>
 <pre><code>## # A tibble: 32,083 x 11
-##    carat       cut color clarity depth table price     x     y     z
-##    &lt;dbl&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;ord&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-##  1  1.05 Very Good     J     SI1  62.5    58  4199  6.47  6.52  4.06
-##  2  0.92 Very Good     E     SI2  63.2    54  3679  6.29  6.25  3.96
-##  3  0.92   Premium     E     SI2  61.8    59  3679  6.19  6.11  3.80
-##  4  0.91   Premium     E     SI2  61.1    59  3639  6.24  6.20  3.80
-##  5  0.91   Premium     E     SI2  62.8    61  3639  6.09  6.07  3.82
-##  6  0.90   Premium     E     SI2  62.6    60  3599  6.18  6.09  3.84
-##  7  0.90   Premium     E     SI2  62.2    60  3599  6.19  6.15  3.84
-##  8  0.90     Ideal     E     SI2  62.0    55  3599  6.23  6.15  3.84
-##  9  1.51   Premium     H      I1  61.9    58  6038  7.39  7.34  4.56
-## 10  0.74      Fair     G    VVS2  65.2    58  2959  5.70  5.60  3.69
-## # ... with 32,073 more rows, and 1 more variables: dollars_per_carat &lt;dbl&gt;</code></pre>
+##    carat cut       color clarity depth table price     x     y     z
+##    &lt;dbl&gt; &lt;ord&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1  1.05 Very Good J     SI1      62.5    58  4199  6.47  6.52  4.06
+##  2  0.92 Very Good E     SI2      63.2    54  3679  6.29  6.25  3.96
+##  3  0.92 Premium   E     SI2      61.8    59  3679  6.19  6.11  3.8 
+##  4  0.91 Premium   E     SI2      61.1    59  3639  6.24  6.2   3.8 
+##  5  0.91 Premium   E     SI2      62.8    61  3639  6.09  6.07  3.82
+##  6  0.9  Premium   E     SI2      62.6    60  3599  6.18  6.09  3.84
+##  7  0.9  Premium   E     SI2      62.2    60  3599  6.19  6.15  3.84
+##  8  0.9  Ideal     E     SI2      62      55  3599  6.23  6.15  3.84
+##  9  1.51 Premium   H     I1       61.9    58  6038  7.39  7.34  4.56
+## 10  0.74 Fair      G     VVS2     65.2    58  2959  5.7   5.6   3.69
+## # ... with 32,073 more rows, and 1 more variable: dollars_per_carat &lt;dbl&gt;</code></pre>
 <p>El ejemplo de la tarea 3 queda:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">diamonds <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Comenzando con el df diamonds:</span>
 <span class="st">  </span><span class="kw">mutate</span>(<span class="dt">dollars_per_carat =</span> price <span class="op">/</span><span class="st"> </span>carat) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Calcúlame la variable dollars per carat ... LUEGO</span>
 <span class="st">  </span><span class="kw">filter</span>(dollars_per_carat <span class="op">&lt;</span><span class="st"> </span><span class="dv">4000</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Seleccióname los registros en que la variable dollars_per_carat &lt; 4000 LUEGO</span>
 <span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(dollars_per_carat)) <span class="co"># Ordéname en orden descendente por la variable dollars per carat</span></code></pre></div>
 <pre><code>## # A tibble: 32,083 x 11
-##    carat       cut color clarity depth table price     x     y     z
-##    &lt;dbl&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;ord&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-##  1  1.05 Very Good     J     SI1  62.5    58  4199  6.47  6.52  4.06
-##  2  0.92 Very Good     E     SI2  63.2    54  3679  6.29  6.25  3.96
-##  3  0.92   Premium     E     SI2  61.8    59  3679  6.19  6.11  3.80
-##  4  0.91   Premium     E     SI2  61.1    59  3639  6.24  6.20  3.80
-##  5  0.91   Premium     E     SI2  62.8    61  3639  6.09  6.07  3.82
-##  6  0.90   Premium     E     SI2  62.6    60  3599  6.18  6.09  3.84
-##  7  0.90   Premium     E     SI2  62.2    60  3599  6.19  6.15  3.84
-##  8  0.90     Ideal     E     SI2  62.0    55  3599  6.23  6.15  3.84
-##  9  1.51   Premium     H      I1  61.9    58  6038  7.39  7.34  4.56
-## 10  0.74      Fair     G    VVS2  65.2    58  2959  5.70  5.60  3.69
-## # ... with 32,073 more rows, and 1 more variables: dollars_per_carat &lt;dbl&gt;</code></pre>
+##    carat cut       color clarity depth table price     x     y     z
+##    &lt;dbl&gt; &lt;ord&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1  1.05 Very Good J     SI1      62.5    58  4199  6.47  6.52  4.06
+##  2  0.92 Very Good E     SI2      63.2    54  3679  6.29  6.25  3.96
+##  3  0.92 Premium   E     SI2      61.8    59  3679  6.19  6.11  3.8 
+##  4  0.91 Premium   E     SI2      61.1    59  3639  6.24  6.2   3.8 
+##  5  0.91 Premium   E     SI2      62.8    61  3639  6.09  6.07  3.82
+##  6  0.9  Premium   E     SI2      62.6    60  3599  6.18  6.09  3.84
+##  7  0.9  Premium   E     SI2      62.2    60  3599  6.19  6.15  3.84
+##  8  0.9  Ideal     E     SI2      62      55  3599  6.23  6.15  3.84
+##  9  1.51 Premium   H     I1       61.9    58  6038  7.39  7.34  4.56
+## 10  0.74 Fair      G     VVS2     65.2    58  2959  5.7   5.6   3.69
+## # ... with 32,073 more rows, and 1 more variable: dollars_per_carat &lt;dbl&gt;</code></pre>
 <p>Podemos también asignar el resultado de TODAS las transformaciones anteriores a una variable</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">diamonds_transformado_<span class="dv">1</span> &lt;-<span class="st"> </span>diamonds <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">mutate</span>(<span class="dt">dollars_per_carat =</span> price <span class="op">/</span><span class="st"> </span>carat) <span class="op">%&gt;%</span>
@@ -331,19 +331,19 @@ diamonds_dollars_per_carat_filtrado_ordenado</code></pre></div>
 <span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(dollars_per_carat))
 diamonds_transformado_<span class="dv">1</span></code></pre></div>
 <pre><code>## # A tibble: 32,083 x 11
-##    carat       cut color clarity depth table price     x     y     z
-##    &lt;dbl&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;ord&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-##  1  1.05 Very Good     J     SI1  62.5    58  4199  6.47  6.52  4.06
-##  2  0.92 Very Good     E     SI2  63.2    54  3679  6.29  6.25  3.96
-##  3  0.92   Premium     E     SI2  61.8    59  3679  6.19  6.11  3.80
-##  4  0.91   Premium     E     SI2  61.1    59  3639  6.24  6.20  3.80
-##  5  0.91   Premium     E     SI2  62.8    61  3639  6.09  6.07  3.82
-##  6  0.90   Premium     E     SI2  62.6    60  3599  6.18  6.09  3.84
-##  7  0.90   Premium     E     SI2  62.2    60  3599  6.19  6.15  3.84
-##  8  0.90     Ideal     E     SI2  62.0    55  3599  6.23  6.15  3.84
-##  9  1.51   Premium     H      I1  61.9    58  6038  7.39  7.34  4.56
-## 10  0.74      Fair     G    VVS2  65.2    58  2959  5.70  5.60  3.69
-## # ... with 32,073 more rows, and 1 more variables: dollars_per_carat &lt;dbl&gt;</code></pre>
+##    carat cut       color clarity depth table price     x     y     z
+##    &lt;dbl&gt; &lt;ord&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1  1.05 Very Good J     SI1      62.5    58  4199  6.47  6.52  4.06
+##  2  0.92 Very Good E     SI2      63.2    54  3679  6.29  6.25  3.96
+##  3  0.92 Premium   E     SI2      61.8    59  3679  6.19  6.11  3.8 
+##  4  0.91 Premium   E     SI2      61.1    59  3639  6.24  6.2   3.8 
+##  5  0.91 Premium   E     SI2      62.8    61  3639  6.09  6.07  3.82
+##  6  0.9  Premium   E     SI2      62.6    60  3599  6.18  6.09  3.84
+##  7  0.9  Premium   E     SI2      62.2    60  3599  6.19  6.15  3.84
+##  8  0.9  Ideal     E     SI2      62      55  3599  6.23  6.15  3.84
+##  9  1.51 Premium   H     I1       61.9    58  6038  7.39  7.34  4.56
+## 10  0.74 Fair      G     VVS2     65.2    58  2959  5.7   5.6   3.69
+## # ... with 32,073 more rows, and 1 more variable: dollars_per_carat &lt;dbl&gt;</code></pre>
 <p>Otro ejemplo:</p>
 <ul>
 <li>Por combinación de cut y color,</li>
@@ -361,18 +361,18 @@ diamonds_transformado_<span class="dv">1</span></code></pre></div>
 diamonds_transformado_<span class="dv">2</span></code></pre></div>
 <pre><code>## # A tibble: 35 x 4
 ## # Groups:   cut [5]
-##          cut color minimo_x maximo_y
-##        &lt;ord&gt; &lt;ord&gt;    &lt;dbl&gt;    &lt;dbl&gt;
-##  1      Fair     J     4.24    10.54
-##  2      Good     J     4.22     9.19
-##  3 Very Good     J     3.94     8.93
-##  4   Premium     J     4.22     9.94
-##  5     Ideal     J     3.93     9.20
-##  6      Fair     I     4.62     9.02
-##  7      Good     I     4.19     9.31
-##  8 Very Good     I     3.95     9.94
-##  9   Premium     I     3.97    10.10
-## 10     Ideal     I     3.94     9.42
+##    cut       color minimo_x maximo_y
+##    &lt;ord&gt;     &lt;ord&gt;    &lt;dbl&gt;    &lt;dbl&gt;
+##  1 Fair      J         4.24    10.5 
+##  2 Good      J         4.22     9.19
+##  3 Very Good J         3.94     8.93
+##  4 Premium   J         4.22     9.94
+##  5 Ideal     J         3.93     9.2 
+##  6 Fair      I         4.62     9.02
+##  7 Good      I         4.19     9.31
+##  8 Very Good I         3.95     9.94
+##  9 Premium   I         3.97    10.1 
+## 10 Ideal     I         3.94     9.42
 ## # ... with 25 more rows</code></pre>
 </div>
 <div id="miscelanea-de-funcionalidades-avanzadas-de-transformacion-de-datos" class="section level2">
@@ -485,10 +485,10 @@ tipos_caracter &lt;-<span class="st"> </span><span class="kw">data_frame</span>(
 <span class="st">)</span>
 <span class="st">tipos_caracter</span></code></pre></div>
 <pre><code>## # A tibble: 3 x 2
-##      id              tipo
-##   &lt;dbl&gt;             &lt;chr&gt;
-## 1     1             letra
-## 2     2            número
+##      id tipo             
+##   &lt;dbl&gt; &lt;chr&gt;            
+## 1     1 letra            
+## 2     2 número           
 ## 3     3 caracter especial</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">caracteres &lt;-<span class="st"> </span><span class="kw">data_frame</span>(
   <span class="dt">id =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>,
@@ -498,47 +498,47 @@ tipos_caracter &lt;-<span class="st"> </span><span class="kw">data_frame</span>(
 caracteres</code></pre></div>
 <pre><code>## # A tibble: 10 x 3
 ##       id caracter tipo_caracter_id
-##    &lt;int&gt;    &lt;chr&gt;            &lt;dbl&gt;
-##  1     1        a                1
-##  2     2        2                2
-##  3     3        3                2
-##  4     4        1                2
-##  5     5        z                1
-##  6     6        5                2
-##  7     7        m                1
-##  8     8        7                2
-##  9     9        s                1
-## 10    10        x                1</code></pre>
+##    &lt;int&gt; &lt;chr&gt;               &lt;dbl&gt;
+##  1     1 a                       1
+##  2     2 2                       2
+##  3     3 3                       2
+##  4     4 1                       2
+##  5     5 z                       1
+##  6     6 5                       2
+##  7     7 m                       1
+##  8     8 7                       2
+##  9     9 s                       1
+## 10    10 x                       1</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Haciendo el join de las tablas anteriores</span>
 <span class="kw">inner_join</span>(caracteres, tipos_caracter, <span class="dt">by =</span> <span class="kw">c</span>(<span class="st">&quot;tipo_caracter_id&quot;</span> =<span class="st"> &quot;id&quot;</span>))</code></pre></div>
 <pre><code>## # A tibble: 10 x 4
-##       id caracter tipo_caracter_id   tipo
-##    &lt;int&gt;    &lt;chr&gt;            &lt;dbl&gt;  &lt;chr&gt;
-##  1     1        a                1  letra
-##  2     2        2                2 número
-##  3     3        3                2 número
-##  4     4        1                2 número
-##  5     5        z                1  letra
-##  6     6        5                2 número
-##  7     7        m                1  letra
-##  8     8        7                2 número
-##  9     9        s                1  letra
-## 10    10        x                1  letra</code></pre>
+##       id caracter tipo_caracter_id tipo  
+##    &lt;int&gt; &lt;chr&gt;               &lt;dbl&gt; &lt;chr&gt; 
+##  1     1 a                       1 letra 
+##  2     2 2                       2 número
+##  3     3 3                       2 número
+##  4     4 1                       2 número
+##  5     5 z                       1 letra 
+##  6     6 5                       2 número
+##  7     7 m                       1 letra 
+##  8     8 7                       2 número
+##  9     9 s                       1 letra 
+## 10    10 x                       1 letra</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Notemos que el orden importa para renombrar y ordenarlas columnas</span>
 <span class="kw">inner_join</span>(tipos_caracter, caracteres, <span class="dt">by =</span> <span class="kw">c</span>(<span class="st">&quot;id&quot;</span> =<span class="st"> &quot;tipo_caracter_id&quot;</span>))</code></pre></div>
 <pre><code>## # A tibble: 10 x 4
-##       id   tipo  id.y caracter
-##    &lt;dbl&gt;  &lt;chr&gt; &lt;int&gt;    &lt;chr&gt;
-##  1     1  letra     1        a
-##  2     1  letra     5        z
-##  3     1  letra     7        m
-##  4     1  letra     9        s
-##  5     1  letra    10        x
-##  6     2 número     2        2
-##  7     2 número     3        3
-##  8     2 número     4        1
-##  9     2 número     6        5
-## 10     2 número     8        7</code></pre>
+##       id tipo    id.y caracter
+##    &lt;dbl&gt; &lt;chr&gt;  &lt;int&gt; &lt;chr&gt;   
+##  1     1 letra      1 a       
+##  2     1 letra      5 z       
+##  3     1 letra      7 m       
+##  4     1 letra      9 s       
+##  5     1 letra     10 x       
+##  6     2 número     2 2       
+##  7     2 número     3 3       
+##  8     2 número     4 1       
+##  9     2 número     6 5       
+## 10     2 número     8 7</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Existen muchos tipos de joins, y también joins por más de un campo. Para ver</span>
 <span class="co"># estas opciones consultar la ayuda de R: ?inner_join.</span></code></pre></div>
 <p><img src="imagenes/manicule2.jpg" /> Expresa el join anterior usando el pipeline.</p>
@@ -639,18 +639,18 @@ cantidad_tipos_largos &lt;-<span class="st"> </span><span class="kw">gather</spa
 )
 instructores_curso_r</code></pre></div>
 <pre><code>## # A tibble: 3 x 2
-##      id           nombre
-##   &lt;dbl&gt;            &lt;chr&gt;
+##      id nombre          
+##   &lt;dbl&gt; &lt;chr&gt;           
 ## 1     1 Amaury Gutiérrez
-## 2     2     Teresa Ortiz
-## 3     3   Julian_Equihua</code></pre>
+## 2     2 Teresa Ortiz    
+## 3     3 Julian_Equihua</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">separate</span>(instructores_curso_r, nombre, <span class="dt">into =</span> <span class="kw">c</span>(<span class="st">&quot;nombre&quot;</span>, <span class="st">&quot;apellido_1&quot;</span>))</code></pre></div>
 <pre><code>## # A tibble: 3 x 3
 ##      id nombre apellido_1
-## * &lt;dbl&gt;  &lt;chr&gt;      &lt;chr&gt;
-## 1     1 Amaury  Gutiérrez
-## 2     2 Teresa      Ortiz
-## 3     3 Julian    Equihua</code></pre>
+##   &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;     
+## 1     1 Amaury Gutiérrez 
+## 2     2 Teresa Ortiz     
+## 3     3 Julian Equihua</code></pre>
 <p><img src="imagenes/manicule2.jpg" /> Evalúa las siguientes expresiones, y explica con tus palabras lo que sucede</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">instructores_curso_r_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">data_frame</span>(
   <span class="dt">id =</span> <span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>),
@@ -704,53 +704,53 @@ registro &lt;-<span class="st"> </span><span class="kw">data_frame</span>(
 )
 registro</code></pre></div>
 <pre><code>## # A tibble: 3 x 3
-##      id  persona numero_socio
-##   &lt;dbl&gt;    &lt;chr&gt;        &lt;dbl&gt;
+##      id persona  numero_socio
+##   &lt;dbl&gt; &lt;chr&gt;           &lt;dbl&gt;
 ## 1     1 Fernando           13
-## 2     2     &lt;NA&gt;           12
-## 3     3   Julián           NA</code></pre>
+## 2     2 &lt;NA&gt;               12
+## 3     3 Julián             NA</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Puedo seleccionar renglones con NA:</span>
 registro <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">filter</span>(<span class="kw">is.na</span>(persona))</code></pre></div>
 <pre><code>## # A tibble: 1 x 3
 ##      id persona numero_socio
-##   &lt;dbl&gt;   &lt;chr&gt;        &lt;dbl&gt;
-## 1     2    &lt;NA&gt;           12</code></pre>
+##   &lt;dbl&gt; &lt;chr&gt;          &lt;dbl&gt;
+## 1     2 &lt;NA&gt;              12</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># O renglones sin NA:</span>
 registro <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">filter</span>(<span class="op">!</span><span class="kw">is.na</span>(persona))</code></pre></div>
 <pre><code>## # A tibble: 2 x 3
-##      id  persona numero_socio
-##   &lt;dbl&gt;    &lt;chr&gt;        &lt;dbl&gt;
+##      id persona  numero_socio
+##   &lt;dbl&gt; &lt;chr&gt;           &lt;dbl&gt;
 ## 1     1 Fernando           13
-## 2     3   Julián           NA</code></pre>
+## 2     3 Julián             NA</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Puedo usar las reglas anteriores para calcular nuevas columnas:</span>
 registro <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">mutate</span>(<span class="dt">numero_socio_nuevo =</span> numero_socio <span class="op">+</span><span class="st"> </span><span class="dv">1</span>)</code></pre></div>
 <pre><code>## # A tibble: 3 x 4
-##      id  persona numero_socio numero_socio_nuevo
-##   &lt;dbl&gt;    &lt;chr&gt;        &lt;dbl&gt;              &lt;dbl&gt;
+##      id persona  numero_socio numero_socio_nuevo
+##   &lt;dbl&gt; &lt;chr&gt;           &lt;dbl&gt;              &lt;dbl&gt;
 ## 1     1 Fernando           13                 14
-## 2     2     &lt;NA&gt;           12                 13
-## 3     3   Julián           NA                 NA</code></pre>
+## 2     2 &lt;NA&gt;               12                 13
+## 3     3 Julián             NA                 NA</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Puedo ordenar y los NA&#39;s quedan al final</span>
 registro <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">arrange</span>(numero_socio)</code></pre></div>
 <pre><code>## # A tibble: 3 x 3
-##      id  persona numero_socio
-##   &lt;dbl&gt;    &lt;chr&gt;        &lt;dbl&gt;
-## 1     2     &lt;NA&gt;           12
+##      id persona  numero_socio
+##   &lt;dbl&gt; &lt;chr&gt;           &lt;dbl&gt;
+## 1     2 &lt;NA&gt;               12
 ## 2     1 Fernando           13
-## 3     3   Julián           NA</code></pre>
+## 3     3 Julián             NA</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Puedo ordenar y los NA&#39;s quedan al final</span>
 registro <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(numero_socio))</code></pre></div>
 <pre><code>## # A tibble: 3 x 3
-##      id  persona numero_socio
-##   &lt;dbl&gt;    &lt;chr&gt;        &lt;dbl&gt;
+##      id persona  numero_socio
+##   &lt;dbl&gt; &lt;chr&gt;           &lt;dbl&gt;
 ## 1     1 Fernando           13
-## 2     2     &lt;NA&gt;           12
-## 3     3   Julián           NA</code></pre>
+## 2     2 &lt;NA&gt;               12
+## 3     3 Julián             NA</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Tengo que tener cuidado con calcular resúmenes de data frames que contienen NA&#39;s</span>
 registro <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">summarise</span>(<span class="dt">promedio =</span> <span class="kw">mean</span>(numero_socio))</code></pre></div>

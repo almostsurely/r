@@ -250,14 +250,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <span class="kw">head</span>(sim1)</code></pre></div>
 <pre><code>## # A tibble: 6 x 2
-##       x         y
-##   &lt;int&gt;     &lt;dbl&gt;
-## 1     1  4.199913
-## 2     1  7.510634
-## 3     1  2.125473
-## 4     2  8.988857
-## 5     2 10.243105
-## 6     2 11.296823</code></pre>
+##       x     y
+##   &lt;int&gt; &lt;dbl&gt;
+## 1     1  4.20
+## 2     1  7.51
+## 3     1  2.13
+## 4     2  8.99
+## 5     2 10.2 
+## 6     2 11.3</code></pre>
 <p>Como podrán ver, consta de dos variables continuas únicamente (x,y).</p>
 <p>Podemos usar lo aprendido en clases pasadas para visualizar la relación entre estas dos variables:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(sim1, <span class="kw">aes</span>(x, y)) <span class="op">+</span><span class="st"> </span>
@@ -385,18 +385,18 @@ gradilla</code></pre></div>
 
 gradilla</code></pre></div>
 <pre><code>## # A tibble: 155 x 2
-##    GNI_capita_2010     pred
-##              &lt;dbl&gt;    &lt;dbl&gt;
-##  1             440 50.29206
-##  2             540 50.31826
-##  3             580 50.32874
-##  4             720 50.36543
-##  5             780 50.38115
-##  6             820 50.39163
-##  7             860 50.40211
-##  8             900 50.41259
-##  9             950 50.42569
-## 10             990 50.43617
+##    GNI_capita_2010  pred
+##              &lt;dbl&gt; &lt;dbl&gt;
+##  1             440  50.3
+##  2             540  50.3
+##  3             580  50.3
+##  4             720  50.4
+##  5             780  50.4
+##  6             820  50.4
+##  7             860  50.4
+##  8             900  50.4
+##  9             950  50.4
+## 10             990  50.4
 ## # ... with 145 more rows</code></pre>
 <p>Ahora podemos visualizar las predicciones. Te podrás preguntar por qué hacer todo esto si lo resolvimos antes de manera sencilla utilizando geom_abline(). La ventaja de esta manera de hacerlo es que funciona para cualquier modelo, del más simple al más complejo.</p>
 <p>Ver: <a href="http://vita.had.co.nz/papers/model-vis.html" class="uri">http://vita.had.co.nz/papers/model-vis.html</a>.</p>

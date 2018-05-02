@@ -702,18 +702,18 @@ columnas\_a\_seleccionar)}\label{seleccionar-campos-de-un-data-frame-selectdf-co
 
 \begin{verbatim}
 ## # A tibble: 53,940 x 2
-##    carat       cut
-##    <dbl>     <ord>
-##  1  0.23     Ideal
-##  2  0.21   Premium
-##  3  0.23      Good
-##  4  0.29   Premium
-##  5  0.31      Good
-##  6  0.24 Very Good
-##  7  0.24 Very Good
-##  8  0.26 Very Good
-##  9  0.22      Fair
-## 10  0.23 Very Good
+##    carat cut      
+##    <dbl> <ord>    
+##  1 0.23  Ideal    
+##  2 0.21  Premium  
+##  3 0.23  Good     
+##  4 0.290 Premium  
+##  5 0.31  Good     
+##  6 0.24  Very Good
+##  7 0.24  Very Good
+##  8 0.26  Very Good
+##  9 0.22  Fair     
+## 10 0.23  Very Good
 ## # ... with 53,930 more rows
 \end{verbatim}
 
@@ -726,18 +726,18 @@ columnas\_a\_seleccionar)}\label{seleccionar-campos-de-un-data-frame-selectdf-co
 
 \begin{verbatim}
 ## # A tibble: 53,940 x 4
-##    carat       cut color clarity
-##    <dbl>     <ord> <ord>   <ord>
-##  1  0.23     Ideal     E     SI2
-##  2  0.21   Premium     E     SI1
-##  3  0.23      Good     E     VS1
-##  4  0.29   Premium     I     VS2
-##  5  0.31      Good     J     SI2
-##  6  0.24 Very Good     J    VVS2
-##  7  0.24 Very Good     I    VVS1
-##  8  0.26 Very Good     H     SI1
-##  9  0.22      Fair     E     VS2
-## 10  0.23 Very Good     H     VS1
+##    carat cut       color clarity
+##    <dbl> <ord>     <ord> <ord>  
+##  1 0.23  Ideal     E     SI2    
+##  2 0.21  Premium   E     SI1    
+##  3 0.23  Good      E     VS1    
+##  4 0.290 Premium   I     VS2    
+##  5 0.31  Good      J     SI2    
+##  6 0.24  Very Good J     VVS2   
+##  7 0.24  Very Good I     VVS1   
+##  8 0.26  Very Good H     SI1    
+##  9 0.22  Fair      E     VS2    
+## 10 0.23  Very Good H     VS1    
 ## # ... with 53,930 more rows
 \end{verbatim}
 
@@ -773,17 +773,17 @@ columnas\_a\_seleccionar)}\label{seleccionar-campos-de-un-data-frame-selectdf-co
 \begin{verbatim}
 ## # A tibble: 53,940 x 7
 ##    clarity depth table price     x     y     z
-##      <ord> <dbl> <dbl> <int> <dbl> <dbl> <dbl>
-##  1     SI2  61.5    55   326  3.95  3.98  2.43
-##  2     SI1  59.8    61   326  3.89  3.84  2.31
-##  3     VS1  56.9    65   327  4.05  4.07  2.31
-##  4     VS2  62.4    58   334  4.20  4.23  2.63
-##  5     SI2  63.3    58   335  4.34  4.35  2.75
-##  6    VVS2  62.8    57   336  3.94  3.96  2.48
-##  7    VVS1  62.3    57   336  3.95  3.98  2.47
-##  8     SI1  61.9    55   337  4.07  4.11  2.53
-##  9     VS2  65.1    61   337  3.87  3.78  2.49
-## 10     VS1  59.4    61   338  4.00  4.05  2.39
+##    <ord>   <dbl> <dbl> <int> <dbl> <dbl> <dbl>
+##  1 SI2      61.5    55   326  3.95  3.98  2.43
+##  2 SI1      59.8    61   326  3.89  3.84  2.31
+##  3 VS1      56.9    65   327  4.05  4.07  2.31
+##  4 VS2      62.4    58   334  4.2   4.23  2.63
+##  5 SI2      63.3    58   335  4.34  4.35  2.75
+##  6 VVS2     62.8    57   336  3.94  3.96  2.48
+##  7 VVS1     62.3    57   336  3.95  3.98  2.47
+##  8 SI1      61.9    55   337  4.07  4.11  2.53
+##  9 VS2      65.1    61   337  3.87  3.78  2.49
+## 10 VS1      59.4    61   338  4     4.05  2.39
 ## # ... with 53,930 more rows
 \end{verbatim}
 
@@ -803,18 +803,18 @@ condiciones)}\label{filtrar-registros-de-un-data-frame-que-cumplen-cierta-condic
 
 \begin{verbatim}
 ## # A tibble: 21,449 x 10
-##    carat   cut color clarity depth table price     x     y     z
-##    <dbl> <ord> <ord>   <ord> <dbl> <dbl> <int> <dbl> <dbl> <dbl>
-##  1  0.31 Ideal     J     SI2  62.2    54   344  4.35  4.37  2.71
-##  2  0.30 Ideal     I     SI2  62.0    54   348  4.31  4.34  2.68
-##  3  0.33 Ideal     I     SI2  61.8    55   403  4.49  4.51  2.78
-##  4  0.33 Ideal     I     SI2  61.2    56   403  4.49  4.50  2.75
-##  5  0.33 Ideal     J     SI1  61.1    56   403  4.49  4.55  2.76
-##  6  0.32 Ideal     I     SI1  60.9    55   404  4.45  4.48  2.72
-##  7  0.30 Ideal     I     SI2  61.0    59   405  4.30  4.33  2.63
-##  8  0.35 Ideal     I     VS1  60.9    57   552  4.54  4.59  2.78
-##  9  0.30 Ideal     D     SI1  62.5    57   552  4.29  4.32  2.69
-## 10  0.30 Ideal     D     SI1  62.1    56   552  4.30  4.33  2.68
+##    carat cut   color clarity depth table price     x     y     z
+##    <dbl> <ord> <ord> <ord>   <dbl> <dbl> <int> <dbl> <dbl> <dbl>
+##  1  0.31 Ideal J     SI2      62.2    54   344  4.35  4.37  2.71
+##  2  0.3  Ideal I     SI2      62      54   348  4.31  4.34  2.68
+##  3  0.33 Ideal I     SI2      61.8    55   403  4.49  4.51  2.78
+##  4  0.33 Ideal I     SI2      61.2    56   403  4.49  4.5   2.75
+##  5  0.33 Ideal J     SI1      61.1    56   403  4.49  4.55  2.76
+##  6  0.32 Ideal I     SI1      60.9    55   404  4.45  4.48  2.72
+##  7  0.3  Ideal I     SI2      61      59   405  4.3   4.33  2.63
+##  8  0.35 Ideal I     VS1      60.9    57   552  4.54  4.59  2.78
+##  9  0.3  Ideal D     SI1      62.5    57   552  4.29  4.32  2.69
+## 10  0.3  Ideal D     SI1      62.1    56   552  4.3   4.33  2.68
 ## # ... with 21,439 more rows
 \end{verbatim}
 
@@ -827,18 +827,18 @@ condiciones)}\label{filtrar-registros-de-un-data-frame-que-cumplen-cierta-condic
 
 \begin{verbatim}
 ## # A tibble: 21,449 x 10
-##    carat   cut color clarity depth table price     x     y     z
-##    <dbl> <ord> <ord>   <ord> <dbl> <dbl> <int> <dbl> <dbl> <dbl>
-##  1  0.31 Ideal     J     SI2  62.2    54   344  4.35  4.37  2.71
-##  2  0.30 Ideal     I     SI2  62.0    54   348  4.31  4.34  2.68
-##  3  0.33 Ideal     I     SI2  61.8    55   403  4.49  4.51  2.78
-##  4  0.33 Ideal     I     SI2  61.2    56   403  4.49  4.50  2.75
-##  5  0.33 Ideal     J     SI1  61.1    56   403  4.49  4.55  2.76
-##  6  0.32 Ideal     I     SI1  60.9    55   404  4.45  4.48  2.72
-##  7  0.30 Ideal     I     SI2  61.0    59   405  4.30  4.33  2.63
-##  8  0.35 Ideal     I     VS1  60.9    57   552  4.54  4.59  2.78
-##  9  0.30 Ideal     D     SI1  62.5    57   552  4.29  4.32  2.69
-## 10  0.30 Ideal     D     SI1  62.1    56   552  4.30  4.33  2.68
+##    carat cut   color clarity depth table price     x     y     z
+##    <dbl> <ord> <ord> <ord>   <dbl> <dbl> <int> <dbl> <dbl> <dbl>
+##  1  0.31 Ideal J     SI2      62.2    54   344  4.35  4.37  2.71
+##  2  0.3  Ideal I     SI2      62      54   348  4.31  4.34  2.68
+##  3  0.33 Ideal I     SI2      61.8    55   403  4.49  4.51  2.78
+##  4  0.33 Ideal I     SI2      61.2    56   403  4.49  4.5   2.75
+##  5  0.33 Ideal J     SI1      61.1    56   403  4.49  4.55  2.76
+##  6  0.32 Ideal I     SI1      60.9    55   404  4.45  4.48  2.72
+##  7  0.3  Ideal I     SI2      61      59   405  4.3   4.33  2.63
+##  8  0.35 Ideal I     VS1      60.9    57   552  4.54  4.59  2.78
+##  9  0.3  Ideal D     SI1      62.5    57   552  4.29  4.32  2.69
+## 10  0.3  Ideal D     SI1      62.1    56   552  4.3   4.33  2.68
 ## # ... with 21,439 more rows
 \end{verbatim}
 
@@ -850,18 +850,18 @@ condiciones)}\label{filtrar-registros-de-un-data-frame-que-cumplen-cierta-condic
 
 \begin{verbatim}
 ## # A tibble: 53,546 x 10
-##    carat       cut color clarity depth table price     x     y     z
-##    <dbl>     <ord> <ord>   <ord> <dbl> <dbl> <int> <dbl> <dbl> <dbl>
-##  1  0.23     Ideal     E     SI2  61.5    55   326  3.95  3.98  2.43
-##  2  0.23      Good     E     VS1  56.9    65   327  4.05  4.07  2.31
-##  3  0.29   Premium     I     VS2  62.4    58   334  4.20  4.23  2.63
-##  4  0.31      Good     J     SI2  63.3    58   335  4.34  4.35  2.75
-##  5  0.26 Very Good     H     SI1  61.9    55   337  4.07  4.11  2.53
-##  6  0.30      Good     J     SI1  64.0    55   339  4.25  4.28  2.73
-##  7  0.23     Ideal     J     VS1  62.8    56   340  3.93  3.90  2.46
-##  8  0.31     Ideal     J     SI2  62.2    54   344  4.35  4.37  2.71
-##  9  0.32   Premium     E      I1  60.9    58   345  4.38  4.42  2.68
-## 10  0.30     Ideal     I     SI2  62.0    54   348  4.31  4.34  2.68
+##    carat cut       color clarity depth table price     x     y     z
+##    <dbl> <ord>     <ord> <ord>   <dbl> <dbl> <int> <dbl> <dbl> <dbl>
+##  1 0.23  Ideal     E     SI2      61.5    55   326  3.95  3.98  2.43
+##  2 0.23  Good      E     VS1      56.9    65   327  4.05  4.07  2.31
+##  3 0.290 Premium   I     VS2      62.4    58   334  4.2   4.23  2.63
+##  4 0.31  Good      J     SI2      63.3    58   335  4.34  4.35  2.75
+##  5 0.26  Very Good H     SI1      61.9    55   337  4.07  4.11  2.53
+##  6 0.3   Good      J     SI1      64      55   339  4.25  4.28  2.73
+##  7 0.23  Ideal     J     VS1      62.8    56   340  3.93  3.9   2.46
+##  8 0.31  Ideal     J     SI2      62.2    54   344  4.35  4.37  2.71
+##  9 0.32  Premium   E     I1       60.9    58   345  4.38  4.42  2.68
+## 10 0.3   Ideal     I     SI2      62      54   348  4.31  4.34  2.68
 ## # ... with 53,536 more rows
 \end{verbatim}
 
@@ -882,18 +882,18 @@ variables\_de\_ordenamiento)}\label{ordenar-registros-de-un-data-frame-por-los-v
 
 \begin{verbatim}
 ## # A tibble: 53,940 x 10
-##    carat     cut color clarity depth table price     x     y     z
-##    <dbl>   <ord> <ord>   <ord> <dbl> <dbl> <int> <dbl> <dbl> <dbl>
-##  1   0.2 Premium     E     VS2  59.0    60   367  3.81  3.78  2.24
-##  2   0.2 Premium     E     VS2  59.7    62   367  3.84  3.80  2.28
-##  3   0.2   Ideal     E     VS2  59.7    55   367  3.86  3.84  2.30
-##  4   0.2 Premium     E     VS2  59.8    62   367  3.79  3.77  2.26
-##  5   0.2 Premium     E     SI2  60.2    62   345  3.79  3.75  2.27
-##  6   0.2 Premium     E     VS2  61.1    59   367  3.81  3.78  2.32
-##  7   0.2   Ideal     D     VS2  61.5    57   367  3.81  3.77  2.33
-##  8   0.2 Premium     D     VS2  61.7    60   367  3.77  3.72  2.31
-##  9   0.2   Ideal     E     VS2  62.2    57   367  3.76  3.73  2.33
-## 10   0.2 Premium     D     VS2  62.3    60   367  3.73  3.68  2.31
+##    carat cut     color clarity depth table price     x     y     z
+##    <dbl> <ord>   <ord> <ord>   <dbl> <dbl> <int> <dbl> <dbl> <dbl>
+##  1   0.2 Premium E     VS2      59      60   367  3.81  3.78  2.24
+##  2   0.2 Premium E     VS2      59.7    62   367  3.84  3.8   2.28
+##  3   0.2 Ideal   E     VS2      59.7    55   367  3.86  3.84  2.3 
+##  4   0.2 Premium E     VS2      59.8    62   367  3.79  3.77  2.26
+##  5   0.2 Premium E     SI2      60.2    62   345  3.79  3.75  2.27
+##  6   0.2 Premium E     VS2      61.1    59   367  3.81  3.78  2.32
+##  7   0.2 Ideal   D     VS2      61.5    57   367  3.81  3.77  2.33
+##  8   0.2 Premium D     VS2      61.7    60   367  3.77  3.72  2.31
+##  9   0.2 Ideal   E     VS2      62.2    57   367  3.76  3.73  2.33
+## 10   0.2 Premium D     VS2      62.3    60   367  3.73  3.68  2.31
 ## # ... with 53,930 more rows
 \end{verbatim}
 
@@ -906,18 +906,18 @@ variables\_de\_ordenamiento)}\label{ordenar-registros-de-un-data-frame-por-los-v
 
 \begin{verbatim}
 ## # A tibble: 53,940 x 10
-##    carat       cut color clarity depth table price     x     y     z
-##    <dbl>     <ord> <ord>   <ord> <dbl> <dbl> <int> <dbl> <dbl> <dbl>
-##  1   0.2 Very Good     E     VS2  63.4    59   367  3.74  3.71  2.36
-##  2   0.2   Premium     F     VS2  62.6    59   367  3.73  3.71  2.33
-##  3   0.2   Premium     D     VS2  62.3    60   367  3.73  3.68  2.31
-##  4   0.2     Ideal     E     VS2  62.2    57   367  3.76  3.73  2.33
-##  5   0.2   Premium     D     VS2  61.7    60   367  3.77  3.72  2.31
-##  6   0.2     Ideal     D     VS2  61.5    57   367  3.81  3.77  2.33
-##  7   0.2   Premium     E     VS2  61.1    59   367  3.81  3.78  2.32
-##  8   0.2   Premium     E     SI2  60.2    62   345  3.79  3.75  2.27
-##  9   0.2   Premium     E     VS2  59.8    62   367  3.79  3.77  2.26
-## 10   0.2   Premium     E     VS2  59.7    62   367  3.84  3.80  2.28
+##    carat cut       color clarity depth table price     x     y     z
+##    <dbl> <ord>     <ord> <ord>   <dbl> <dbl> <int> <dbl> <dbl> <dbl>
+##  1   0.2 Very Good E     VS2      63.4    59   367  3.74  3.71  2.36
+##  2   0.2 Premium   F     VS2      62.6    59   367  3.73  3.71  2.33
+##  3   0.2 Premium   D     VS2      62.3    60   367  3.73  3.68  2.31
+##  4   0.2 Ideal     E     VS2      62.2    57   367  3.76  3.73  2.33
+##  5   0.2 Premium   D     VS2      61.7    60   367  3.77  3.72  2.31
+##  6   0.2 Ideal     D     VS2      61.5    57   367  3.81  3.77  2.33
+##  7   0.2 Premium   E     VS2      61.1    59   367  3.81  3.78  2.32
+##  8   0.2 Premium   E     SI2      60.2    62   345  3.79  3.75  2.27
+##  9   0.2 Premium   E     VS2      59.8    62   367  3.79  3.77  2.26
+## 10   0.2 Premium   E     VS2      59.7    62   367  3.84  3.8   2.28
 ## # ... with 53,930 more rows
 \end{verbatim}
 
@@ -929,18 +929,18 @@ variables\_de\_ordenamiento)}\label{ordenar-registros-de-un-data-frame-por-los-v
 
 \begin{verbatim}
 ## # A tibble: 53,940 x 10
-##    carat       cut color clarity depth table price     x     y     z
-##    <dbl>     <ord> <ord>   <ord> <dbl> <dbl> <int> <dbl> <dbl> <dbl>
-##  1  5.01      Fair     J      I1  65.5    59 18018 10.74 10.54  6.98
-##  2  4.50      Fair     J      I1  65.8    58 18531 10.23 10.16  6.72
-##  3  4.13      Fair     H      I1  64.8    61 17329 10.00  9.85  6.43
-##  4  4.01   Premium     I      I1  61.0    61 15223 10.14 10.10  6.17
-##  5  4.01   Premium     J      I1  62.5    62 15223 10.02  9.94  6.24
-##  6  4.00 Very Good     I      I1  63.3    58 15984 10.01  9.94  6.31
-##  7  3.67   Premium     I      I1  62.4    56 16193  9.86  9.81  6.13
-##  8  3.65      Fair     H      I1  67.1    53 11668  9.53  9.48  6.38
-##  9  3.51   Premium     J     VS2  62.5    59 18701  9.66  9.63  6.03
-## 10  3.50     Ideal     H      I1  62.8    57 12587  9.65  9.59  6.03
+##    carat cut       color clarity depth table price     x     y     z
+##    <dbl> <ord>     <ord> <ord>   <dbl> <dbl> <int> <dbl> <dbl> <dbl>
+##  1  5.01 Fair      J     I1       65.5    59 18018 10.7  10.5   6.98
+##  2  4.5  Fair      J     I1       65.8    58 18531 10.2  10.2   6.72
+##  3  4.13 Fair      H     I1       64.8    61 17329 10     9.85  6.43
+##  4  4.01 Premium   I     I1       61      61 15223 10.1  10.1   6.17
+##  5  4.01 Premium   J     I1       62.5    62 15223 10.0   9.94  6.24
+##  6  4    Very Good I     I1       63.3    58 15984 10.0   9.94  6.31
+##  7  3.67 Premium   I     I1       62.4    56 16193  9.86  9.81  6.13
+##  8  3.65 Fair      H     I1       67.1    53 11668  9.53  9.48  6.38
+##  9  3.51 Premium   J     VS2      62.5    59 18701  9.66  9.63  6.03
+## 10  3.5  Ideal     H     I1       62.8    57 12587  9.65  9.59  6.03
 ## # ... with 53,930 more rows
 \end{verbatim}
 
@@ -991,7 +991,7 @@ formulas)}\label{agrupar-por-ciertas-variables-group_bydata_frame-variables-y-cr
 ## # A tibble: 1 x 2
 ##   promedio_depth mediana_price
 ##            <dbl>         <dbl>
-## 1        61.7494          2401
+## 1           61.7          2401
 \end{verbatim}
 
 \begin{Shaded}
@@ -1007,18 +1007,18 @@ formulas)}\label{agrupar-por-ciertas-variables-group_bydata_frame-variables-y-cr
 \begin{verbatim}
 ## # A tibble: 53,940 x 10
 ## # Groups:   cut [5]
-##    carat       cut color clarity depth table price     x     y     z
-##    <dbl>     <ord> <ord>   <ord> <dbl> <dbl> <int> <dbl> <dbl> <dbl>
-##  1  0.23     Ideal     E     SI2  61.5    55   326  3.95  3.98  2.43
-##  2  0.21   Premium     E     SI1  59.8    61   326  3.89  3.84  2.31
-##  3  0.23      Good     E     VS1  56.9    65   327  4.05  4.07  2.31
-##  4  0.29   Premium     I     VS2  62.4    58   334  4.20  4.23  2.63
-##  5  0.31      Good     J     SI2  63.3    58   335  4.34  4.35  2.75
-##  6  0.24 Very Good     J    VVS2  62.8    57   336  3.94  3.96  2.48
-##  7  0.24 Very Good     I    VVS1  62.3    57   336  3.95  3.98  2.47
-##  8  0.26 Very Good     H     SI1  61.9    55   337  4.07  4.11  2.53
-##  9  0.22      Fair     E     VS2  65.1    61   337  3.87  3.78  2.49
-## 10  0.23 Very Good     H     VS1  59.4    61   338  4.00  4.05  2.39
+##    carat cut       color clarity depth table price     x     y     z
+##    <dbl> <ord>     <ord> <ord>   <dbl> <dbl> <int> <dbl> <dbl> <dbl>
+##  1 0.23  Ideal     E     SI2      61.5    55   326  3.95  3.98  2.43
+##  2 0.21  Premium   E     SI1      59.8    61   326  3.89  3.84  2.31
+##  3 0.23  Good      E     VS1      56.9    65   327  4.05  4.07  2.31
+##  4 0.290 Premium   I     VS2      62.4    58   334  4.2   4.23  2.63
+##  5 0.31  Good      J     SI2      63.3    58   335  4.34  4.35  2.75
+##  6 0.24  Very Good J     VVS2     62.8    57   336  3.94  3.96  2.48
+##  7 0.24  Very Good I     VVS1     62.3    57   336  3.95  3.98  2.47
+##  8 0.26  Very Good H     SI1      61.9    55   337  4.07  4.11  2.53
+##  9 0.22  Fair      E     VS2      65.1    61   337  3.87  3.78  2.49
+## 10 0.23  Very Good H     VS1      59.4    61   338  4     4.05  2.39
 ## # ... with 53,930 more rows
 \end{verbatim}
 
@@ -1032,13 +1032,13 @@ formulas)}\label{agrupar-por-ciertas-variables-group_bydata_frame-variables-y-cr
 
 \begin{verbatim}
 ## # A tibble: 5 x 3
-##         cut promedio_depth mediana_price
-##       <ord>          <dbl>         <dbl>
-## 1      Fair       64.04168        3282.0
-## 2      Good       62.36588        3050.5
-## 3 Very Good       61.81828        2648.0
-## 4   Premium       61.26467        3185.0
-## 5     Ideal       61.70940        1810.0
+##   cut       promedio_depth mediana_price
+##   <ord>              <dbl>         <dbl>
+## 1 Fair                64.0         3282 
+## 2 Good                62.4         3050.
+## 3 Very Good           61.8         2648 
+## 4 Premium             61.3         3185 
+## 5 Ideal               61.7         1810
 \end{verbatim}
 
 Algunos resúmenes útiles con \emph{summarise} son:
@@ -1172,19 +1172,19 @@ Retomemos el ejemplo de la tarea 3. En lugar de:
 
 \begin{verbatim}
 ## # A tibble: 53,940 x 11
-##    carat       cut color clarity depth table price     x     y     z
-##    <dbl>     <ord> <ord>   <ord> <dbl> <dbl> <int> <dbl> <dbl> <dbl>
-##  1  0.23     Ideal     E     SI2  61.5    55   326  3.95  3.98  2.43
-##  2  0.21   Premium     E     SI1  59.8    61   326  3.89  3.84  2.31
-##  3  0.23      Good     E     VS1  56.9    65   327  4.05  4.07  2.31
-##  4  0.29   Premium     I     VS2  62.4    58   334  4.20  4.23  2.63
-##  5  0.31      Good     J     SI2  63.3    58   335  4.34  4.35  2.75
-##  6  0.24 Very Good     J    VVS2  62.8    57   336  3.94  3.96  2.48
-##  7  0.24 Very Good     I    VVS1  62.3    57   336  3.95  3.98  2.47
-##  8  0.26 Very Good     H     SI1  61.9    55   337  4.07  4.11  2.53
-##  9  0.22      Fair     E     VS2  65.1    61   337  3.87  3.78  2.49
-## 10  0.23 Very Good     H     VS1  59.4    61   338  4.00  4.05  2.39
-## # ... with 53,930 more rows, and 1 more variables: dollars_per_carat <dbl>
+##    carat cut       color clarity depth table price     x     y     z
+##    <dbl> <ord>     <ord> <ord>   <dbl> <dbl> <int> <dbl> <dbl> <dbl>
+##  1 0.23  Ideal     E     SI2      61.5    55   326  3.95  3.98  2.43
+##  2 0.21  Premium   E     SI1      59.8    61   326  3.89  3.84  2.31
+##  3 0.23  Good      E     VS1      56.9    65   327  4.05  4.07  2.31
+##  4 0.290 Premium   I     VS2      62.4    58   334  4.2   4.23  2.63
+##  5 0.31  Good      J     SI2      63.3    58   335  4.34  4.35  2.75
+##  6 0.24  Very Good J     VVS2     62.8    57   336  3.94  3.96  2.48
+##  7 0.24  Very Good I     VVS1     62.3    57   336  3.95  3.98  2.47
+##  8 0.26  Very Good H     SI1      61.9    55   337  4.07  4.11  2.53
+##  9 0.22  Fair      E     VS2      65.1    61   337  3.87  3.78  2.49
+## 10 0.23  Very Good H     VS1      59.4    61   338  4     4.05  2.39
+## # ... with 53,930 more rows, and 1 more variable: dollars_per_carat <dbl>
 \end{verbatim}
 
 \begin{Shaded}
@@ -1196,19 +1196,19 @@ Retomemos el ejemplo de la tarea 3. En lugar de:
 
 \begin{verbatim}
 ## # A tibble: 32,083 x 11
-##    carat       cut color clarity depth table price     x     y     z
-##    <dbl>     <ord> <ord>   <ord> <dbl> <dbl> <int> <dbl> <dbl> <dbl>
-##  1  0.23     Ideal     E     SI2  61.5    55   326  3.95  3.98  2.43
-##  2  0.21   Premium     E     SI1  59.8    61   326  3.89  3.84  2.31
-##  3  0.23      Good     E     VS1  56.9    65   327  4.05  4.07  2.31
-##  4  0.29   Premium     I     VS2  62.4    58   334  4.20  4.23  2.63
-##  5  0.31      Good     J     SI2  63.3    58   335  4.34  4.35  2.75
-##  6  0.24 Very Good     J    VVS2  62.8    57   336  3.94  3.96  2.48
-##  7  0.24 Very Good     I    VVS1  62.3    57   336  3.95  3.98  2.47
-##  8  0.26 Very Good     H     SI1  61.9    55   337  4.07  4.11  2.53
-##  9  0.22      Fair     E     VS2  65.1    61   337  3.87  3.78  2.49
-## 10  0.23 Very Good     H     VS1  59.4    61   338  4.00  4.05  2.39
-## # ... with 32,073 more rows, and 1 more variables: dollars_per_carat <dbl>
+##    carat cut       color clarity depth table price     x     y     z
+##    <dbl> <ord>     <ord> <ord>   <dbl> <dbl> <int> <dbl> <dbl> <dbl>
+##  1 0.23  Ideal     E     SI2      61.5    55   326  3.95  3.98  2.43
+##  2 0.21  Premium   E     SI1      59.8    61   326  3.89  3.84  2.31
+##  3 0.23  Good      E     VS1      56.9    65   327  4.05  4.07  2.31
+##  4 0.290 Premium   I     VS2      62.4    58   334  4.2   4.23  2.63
+##  5 0.31  Good      J     SI2      63.3    58   335  4.34  4.35  2.75
+##  6 0.24  Very Good J     VVS2     62.8    57   336  3.94  3.96  2.48
+##  7 0.24  Very Good I     VVS1     62.3    57   336  3.95  3.98  2.47
+##  8 0.26  Very Good H     SI1      61.9    55   337  4.07  4.11  2.53
+##  9 0.22  Fair      E     VS2      65.1    61   337  3.87  3.78  2.49
+## 10 0.23  Very Good H     VS1      59.4    61   338  4     4.05  2.39
+## # ... with 32,073 more rows, and 1 more variable: dollars_per_carat <dbl>
 \end{verbatim}
 
 \begin{Shaded}
@@ -1220,19 +1220,19 @@ Retomemos el ejemplo de la tarea 3. En lugar de:
 
 \begin{verbatim}
 ## # A tibble: 32,083 x 11
-##    carat       cut color clarity depth table price     x     y     z
-##    <dbl>     <ord> <ord>   <ord> <dbl> <dbl> <int> <dbl> <dbl> <dbl>
-##  1  1.05 Very Good     J     SI1  62.5    58  4199  6.47  6.52  4.06
-##  2  0.92 Very Good     E     SI2  63.2    54  3679  6.29  6.25  3.96
-##  3  0.92   Premium     E     SI2  61.8    59  3679  6.19  6.11  3.80
-##  4  0.91   Premium     E     SI2  61.1    59  3639  6.24  6.20  3.80
-##  5  0.91   Premium     E     SI2  62.8    61  3639  6.09  6.07  3.82
-##  6  0.90   Premium     E     SI2  62.6    60  3599  6.18  6.09  3.84
-##  7  0.90   Premium     E     SI2  62.2    60  3599  6.19  6.15  3.84
-##  8  0.90     Ideal     E     SI2  62.0    55  3599  6.23  6.15  3.84
-##  9  1.51   Premium     H      I1  61.9    58  6038  7.39  7.34  4.56
-## 10  0.74      Fair     G    VVS2  65.2    58  2959  5.70  5.60  3.69
-## # ... with 32,073 more rows, and 1 more variables: dollars_per_carat <dbl>
+##    carat cut       color clarity depth table price     x     y     z
+##    <dbl> <ord>     <ord> <ord>   <dbl> <dbl> <int> <dbl> <dbl> <dbl>
+##  1  1.05 Very Good J     SI1      62.5    58  4199  6.47  6.52  4.06
+##  2  0.92 Very Good E     SI2      63.2    54  3679  6.29  6.25  3.96
+##  3  0.92 Premium   E     SI2      61.8    59  3679  6.19  6.11  3.8 
+##  4  0.91 Premium   E     SI2      61.1    59  3639  6.24  6.2   3.8 
+##  5  0.91 Premium   E     SI2      62.8    61  3639  6.09  6.07  3.82
+##  6  0.9  Premium   E     SI2      62.6    60  3599  6.18  6.09  3.84
+##  7  0.9  Premium   E     SI2      62.2    60  3599  6.19  6.15  3.84
+##  8  0.9  Ideal     E     SI2      62      55  3599  6.23  6.15  3.84
+##  9  1.51 Premium   H     I1       61.9    58  6038  7.39  7.34  4.56
+## 10  0.74 Fair      G     VVS2     65.2    58  2959  5.7   5.6   3.69
+## # ... with 32,073 more rows, and 1 more variable: dollars_per_carat <dbl>
 \end{verbatim}
 
 El ejemplo de la tarea 3 queda:
@@ -1248,19 +1248,19 @@ El ejemplo de la tarea 3 queda:
 
 \begin{verbatim}
 ## # A tibble: 32,083 x 11
-##    carat       cut color clarity depth table price     x     y     z
-##    <dbl>     <ord> <ord>   <ord> <dbl> <dbl> <int> <dbl> <dbl> <dbl>
-##  1  1.05 Very Good     J     SI1  62.5    58  4199  6.47  6.52  4.06
-##  2  0.92 Very Good     E     SI2  63.2    54  3679  6.29  6.25  3.96
-##  3  0.92   Premium     E     SI2  61.8    59  3679  6.19  6.11  3.80
-##  4  0.91   Premium     E     SI2  61.1    59  3639  6.24  6.20  3.80
-##  5  0.91   Premium     E     SI2  62.8    61  3639  6.09  6.07  3.82
-##  6  0.90   Premium     E     SI2  62.6    60  3599  6.18  6.09  3.84
-##  7  0.90   Premium     E     SI2  62.2    60  3599  6.19  6.15  3.84
-##  8  0.90     Ideal     E     SI2  62.0    55  3599  6.23  6.15  3.84
-##  9  1.51   Premium     H      I1  61.9    58  6038  7.39  7.34  4.56
-## 10  0.74      Fair     G    VVS2  65.2    58  2959  5.70  5.60  3.69
-## # ... with 32,073 more rows, and 1 more variables: dollars_per_carat <dbl>
+##    carat cut       color clarity depth table price     x     y     z
+##    <dbl> <ord>     <ord> <ord>   <dbl> <dbl> <int> <dbl> <dbl> <dbl>
+##  1  1.05 Very Good J     SI1      62.5    58  4199  6.47  6.52  4.06
+##  2  0.92 Very Good E     SI2      63.2    54  3679  6.29  6.25  3.96
+##  3  0.92 Premium   E     SI2      61.8    59  3679  6.19  6.11  3.8 
+##  4  0.91 Premium   E     SI2      61.1    59  3639  6.24  6.2   3.8 
+##  5  0.91 Premium   E     SI2      62.8    61  3639  6.09  6.07  3.82
+##  6  0.9  Premium   E     SI2      62.6    60  3599  6.18  6.09  3.84
+##  7  0.9  Premium   E     SI2      62.2    60  3599  6.19  6.15  3.84
+##  8  0.9  Ideal     E     SI2      62      55  3599  6.23  6.15  3.84
+##  9  1.51 Premium   H     I1       61.9    58  6038  7.39  7.34  4.56
+## 10  0.74 Fair      G     VVS2     65.2    58  2959  5.7   5.6   3.69
+## # ... with 32,073 more rows, and 1 more variable: dollars_per_carat <dbl>
 \end{verbatim}
 
 Podemos también asignar el resultado de TODAS las transformaciones
@@ -1278,19 +1278,19 @@ anteriores a una variable
 
 \begin{verbatim}
 ## # A tibble: 32,083 x 11
-##    carat       cut color clarity depth table price     x     y     z
-##    <dbl>     <ord> <ord>   <ord> <dbl> <dbl> <int> <dbl> <dbl> <dbl>
-##  1  1.05 Very Good     J     SI1  62.5    58  4199  6.47  6.52  4.06
-##  2  0.92 Very Good     E     SI2  63.2    54  3679  6.29  6.25  3.96
-##  3  0.92   Premium     E     SI2  61.8    59  3679  6.19  6.11  3.80
-##  4  0.91   Premium     E     SI2  61.1    59  3639  6.24  6.20  3.80
-##  5  0.91   Premium     E     SI2  62.8    61  3639  6.09  6.07  3.82
-##  6  0.90   Premium     E     SI2  62.6    60  3599  6.18  6.09  3.84
-##  7  0.90   Premium     E     SI2  62.2    60  3599  6.19  6.15  3.84
-##  8  0.90     Ideal     E     SI2  62.0    55  3599  6.23  6.15  3.84
-##  9  1.51   Premium     H      I1  61.9    58  6038  7.39  7.34  4.56
-## 10  0.74      Fair     G    VVS2  65.2    58  2959  5.70  5.60  3.69
-## # ... with 32,073 more rows, and 1 more variables: dollars_per_carat <dbl>
+##    carat cut       color clarity depth table price     x     y     z
+##    <dbl> <ord>     <ord> <ord>   <dbl> <dbl> <int> <dbl> <dbl> <dbl>
+##  1  1.05 Very Good J     SI1      62.5    58  4199  6.47  6.52  4.06
+##  2  0.92 Very Good E     SI2      63.2    54  3679  6.29  6.25  3.96
+##  3  0.92 Premium   E     SI2      61.8    59  3679  6.19  6.11  3.8 
+##  4  0.91 Premium   E     SI2      61.1    59  3639  6.24  6.2   3.8 
+##  5  0.91 Premium   E     SI2      62.8    61  3639  6.09  6.07  3.82
+##  6  0.9  Premium   E     SI2      62.6    60  3599  6.18  6.09  3.84
+##  7  0.9  Premium   E     SI2      62.2    60  3599  6.19  6.15  3.84
+##  8  0.9  Ideal     E     SI2      62      55  3599  6.23  6.15  3.84
+##  9  1.51 Premium   H     I1       61.9    58  6038  7.39  7.34  4.56
+## 10  0.74 Fair      G     VVS2     65.2    58  2959  5.7   5.6   3.69
+## # ... with 32,073 more rows, and 1 more variable: dollars_per_carat <dbl>
 \end{verbatim}
 
 Otro ejemplo:
@@ -1322,18 +1322,18 @@ Otro ejemplo:
 \begin{verbatim}
 ## # A tibble: 35 x 4
 ## # Groups:   cut [5]
-##          cut color minimo_x maximo_y
-##        <ord> <ord>    <dbl>    <dbl>
-##  1      Fair     J     4.24    10.54
-##  2      Good     J     4.22     9.19
-##  3 Very Good     J     3.94     8.93
-##  4   Premium     J     4.22     9.94
-##  5     Ideal     J     3.93     9.20
-##  6      Fair     I     4.62     9.02
-##  7      Good     I     4.19     9.31
-##  8 Very Good     I     3.95     9.94
-##  9   Premium     I     3.97    10.10
-## 10     Ideal     I     3.94     9.42
+##    cut       color minimo_x maximo_y
+##    <ord>     <ord>    <dbl>    <dbl>
+##  1 Fair      J         4.24    10.5 
+##  2 Good      J         4.22     9.19
+##  3 Very Good J         3.94     8.93
+##  4 Premium   J         4.22     9.94
+##  5 Ideal     J         3.93     9.2 
+##  6 Fair      I         4.62     9.02
+##  7 Good      I         4.19     9.31
+##  8 Very Good I         3.95     9.94
+##  9 Premium   I         3.97    10.1 
+## 10 Ideal     I         3.94     9.42
 ## # ... with 25 more rows
 \end{verbatim}
 
@@ -1436,10 +1436,10 @@ usando campos en común.
 
 \begin{verbatim}
 ## # A tibble: 3 x 2
-##      id              tipo
-##   <dbl>             <chr>
-## 1     1             letra
-## 2     2            número
+##      id tipo             
+##   <dbl> <chr>            
+## 1     1 letra            
+## 2     2 número           
 ## 3     3 caracter especial
 \end{verbatim}
 
@@ -1457,17 +1457,17 @@ usando campos en común.
 \begin{verbatim}
 ## # A tibble: 10 x 3
 ##       id caracter tipo_caracter_id
-##    <int>    <chr>            <dbl>
-##  1     1        a                1
-##  2     2        2                2
-##  3     3        3                2
-##  4     4        1                2
-##  5     5        z                1
-##  6     6        5                2
-##  7     7        m                1
-##  8     8        7                2
-##  9     9        s                1
-## 10    10        x                1
+##    <int> <chr>               <dbl>
+##  1     1 a                       1
+##  2     2 2                       2
+##  3     3 3                       2
+##  4     4 1                       2
+##  5     5 z                       1
+##  6     6 5                       2
+##  7     7 m                       1
+##  8     8 7                       2
+##  9     9 s                       1
+## 10    10 x                       1
 \end{verbatim}
 
 \begin{Shaded}
@@ -1479,18 +1479,18 @@ usando campos en común.
 
 \begin{verbatim}
 ## # A tibble: 10 x 4
-##       id caracter tipo_caracter_id   tipo
-##    <int>    <chr>            <dbl>  <chr>
-##  1     1        a                1  letra
-##  2     2        2                2 número
-##  3     3        3                2 número
-##  4     4        1                2 número
-##  5     5        z                1  letra
-##  6     6        5                2 número
-##  7     7        m                1  letra
-##  8     8        7                2 número
-##  9     9        s                1  letra
-## 10    10        x                1  letra
+##       id caracter tipo_caracter_id tipo  
+##    <int> <chr>               <dbl> <chr> 
+##  1     1 a                       1 letra 
+##  2     2 2                       2 número
+##  3     3 3                       2 número
+##  4     4 1                       2 número
+##  5     5 z                       1 letra 
+##  6     6 5                       2 número
+##  7     7 m                       1 letra 
+##  8     8 7                       2 número
+##  9     9 s                       1 letra 
+## 10    10 x                       1 letra
 \end{verbatim}
 
 \begin{Shaded}
@@ -1502,18 +1502,18 @@ usando campos en común.
 
 \begin{verbatim}
 ## # A tibble: 10 x 4
-##       id   tipo  id.y caracter
-##    <dbl>  <chr> <int>    <chr>
-##  1     1  letra     1        a
-##  2     1  letra     5        z
-##  3     1  letra     7        m
-##  4     1  letra     9        s
-##  5     1  letra    10        x
-##  6     2 número     2        2
-##  7     2 número     3        3
-##  8     2 número     4        1
-##  9     2 número     6        5
-## 10     2 número     8        7
+##       id tipo    id.y caracter
+##    <dbl> <chr>  <int> <chr>   
+##  1     1 letra      1 a       
+##  2     1 letra      5 z       
+##  3     1 letra      7 m       
+##  4     1 letra      9 s       
+##  5     1 letra     10 x       
+##  6     2 número     2 2       
+##  7     2 número     3 3       
+##  8     2 número     4 1       
+##  9     2 número     6 5       
+## 10     2 número     8 7
 \end{verbatim}
 
 \begin{Shaded}
@@ -1770,11 +1770,11 @@ ejemplo:
 
 \begin{verbatim}
 ## # A tibble: 3 x 2
-##      id           nombre
-##   <dbl>            <chr>
+##      id nombre          
+##   <dbl> <chr>           
 ## 1     1 Amaury Gutiérrez
-## 2     2     Teresa Ortiz
-## 3     3   Julian_Equihua
+## 2     2 Teresa Ortiz    
+## 3     3 Julian_Equihua
 \end{verbatim}
 
 \begin{Shaded}
@@ -1786,10 +1786,10 @@ ejemplo:
 \begin{verbatim}
 ## # A tibble: 3 x 3
 ##      id nombre apellido_1
-## * <dbl>  <chr>      <chr>
-## 1     1 Amaury  Gutiérrez
-## 2     2 Teresa      Ortiz
-## 3     3 Julian    Equihua
+##   <dbl> <chr>  <chr>     
+## 1     1 Amaury Gutiérrez 
+## 2     2 Teresa Ortiz     
+## 3     3 Julian Equihua
 \end{verbatim}
 
 \includegraphics{./imagenes/manicule2.jpg} Evalúa las siguientes
@@ -1967,11 +1967,11 @@ pensar como ``no sé''}
 
 \begin{verbatim}
 ## # A tibble: 3 x 3
-##      id  persona numero_socio
-##   <dbl>    <chr>        <dbl>
+##      id persona  numero_socio
+##   <dbl> <chr>           <dbl>
 ## 1     1 Fernando           13
-## 2     2     <NA>           12
-## 3     3   Julián           NA
+## 2     2 <NA>               12
+## 3     3 Julián             NA
 \end{verbatim}
 
 \begin{Shaded}
@@ -1985,8 +1985,8 @@ pensar como ``no sé''}
 \begin{verbatim}
 ## # A tibble: 1 x 3
 ##      id persona numero_socio
-##   <dbl>   <chr>        <dbl>
-## 1     2    <NA>           12
+##   <dbl> <chr>          <dbl>
+## 1     2 <NA>              12
 \end{verbatim}
 
 \begin{Shaded}
@@ -1999,10 +1999,10 @@ pensar como ``no sé''}
 
 \begin{verbatim}
 ## # A tibble: 2 x 3
-##      id  persona numero_socio
-##   <dbl>    <chr>        <dbl>
+##      id persona  numero_socio
+##   <dbl> <chr>           <dbl>
 ## 1     1 Fernando           13
-## 2     3   Julián           NA
+## 2     3 Julián             NA
 \end{verbatim}
 
 \begin{Shaded}
@@ -2015,11 +2015,11 @@ pensar como ``no sé''}
 
 \begin{verbatim}
 ## # A tibble: 3 x 4
-##      id  persona numero_socio numero_socio_nuevo
-##   <dbl>    <chr>        <dbl>              <dbl>
+##      id persona  numero_socio numero_socio_nuevo
+##   <dbl> <chr>           <dbl>              <dbl>
 ## 1     1 Fernando           13                 14
-## 2     2     <NA>           12                 13
-## 3     3   Julián           NA                 NA
+## 2     2 <NA>               12                 13
+## 3     3 Julián             NA                 NA
 \end{verbatim}
 
 \begin{Shaded}
@@ -2032,11 +2032,11 @@ pensar como ``no sé''}
 
 \begin{verbatim}
 ## # A tibble: 3 x 3
-##      id  persona numero_socio
-##   <dbl>    <chr>        <dbl>
-## 1     2     <NA>           12
+##      id persona  numero_socio
+##   <dbl> <chr>           <dbl>
+## 1     2 <NA>               12
 ## 2     1 Fernando           13
-## 3     3   Julián           NA
+## 3     3 Julián             NA
 \end{verbatim}
 
 \begin{Shaded}
@@ -2049,11 +2049,11 @@ pensar como ``no sé''}
 
 \begin{verbatim}
 ## # A tibble: 3 x 3
-##      id  persona numero_socio
-##   <dbl>    <chr>        <dbl>
+##      id persona  numero_socio
+##   <dbl> <chr>           <dbl>
 ## 1     1 Fernando           13
-## 2     2     <NA>           12
-## 3     3   Julián           NA
+## 2     2 <NA>               12
+## 3     3 Julián             NA
 \end{verbatim}
 
 \begin{Shaded}
@@ -3344,31 +3344,31 @@ menor que 8:
 ## [1] 3 3
 ## 
 ## [[2]]
-## [1] 6 1
+## [1] 5 1
 ## 
 ## [[3]]
-## [1] 3 4
+## [1] 4 1
 ## 
 ## [[4]]
-## [1] 1 4
+## [1] 1 2
 ## 
 ## [[5]]
-## [1] 3 3
-## 
-## [[6]]
-## [1] 3 3
-## 
-## [[7]]
-## [1] 1 6
-## 
-## [[8]]
 ## [1] 1 3
 ## 
+## [[6]]
+## [1] 5 1
+## 
+## [[7]]
+## [1] 3 3
+## 
+## [[8]]
+## [1] 1 1
+## 
 ## [[9]]
-## [1] 4 3
+## [1] 1 2
 ## 
 ## [[10]]
-## [1] 4 1
+## [1] 1 1
 \end{verbatim}
 
 \subsection{Iteración funcional}\label{iteracion-funcional}
@@ -3691,14 +3691,14 @@ tidyverse)
 
 \begin{verbatim}
 ## # A tibble: 6 x 2
-##       x         y
-##   <int>     <dbl>
-## 1     1  4.199913
-## 2     1  7.510634
-## 3     1  2.125473
-## 4     2  8.988857
-## 5     2 10.243105
-## 6     2 11.296823
+##       x     y
+##   <int> <dbl>
+## 1     1  4.20
+## 2     1  7.51
+## 3     1  2.13
+## 4     2  8.99
+## 5     2 10.2 
+## 6     2 11.3
 \end{verbatim}
 
 Como podrán ver, consta de dos variables continuas únicamente (x,y).
@@ -3959,18 +3959,18 @@ add\_predictions(). Las agrega a una nueva columna del data frame.
 
 \begin{verbatim}
 ## # A tibble: 155 x 2
-##    GNI_capita_2010     pred
-##              <dbl>    <dbl>
-##  1             440 50.29206
-##  2             540 50.31826
-##  3             580 50.32874
-##  4             720 50.36543
-##  5             780 50.38115
-##  6             820 50.39163
-##  7             860 50.40211
-##  8             900 50.41259
-##  9             950 50.42569
-## 10             990 50.43617
+##    GNI_capita_2010  pred
+##              <dbl> <dbl>
+##  1             440  50.3
+##  2             540  50.3
+##  3             580  50.3
+##  4             720  50.4
+##  5             780  50.4
+##  6             820  50.4
+##  7             860  50.4
+##  8             900  50.4
+##  9             950  50.4
+## 10             990  50.4
 ## # ... with 145 more rows
 \end{verbatim}
 
